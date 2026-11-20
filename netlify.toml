@@ -1,0 +1,9 @@
+[build]
+  base = ""
+  publish = "site"
+  command = "node tests/slots.test.js"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
