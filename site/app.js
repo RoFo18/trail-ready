@@ -425,7 +425,7 @@ function showMatch(run, q) {
   const right = shuffle(q.pairs.map((p) => p[1]), rng);
   const assign = {}; // leftIndex -> rightIndex
   let selL = -1;
-  const COLORS = ["#2dd4bf", "#f59e0b", "#60a5fa", "#86efac", "#818cf8", "#fcd34d"];
+  const COLORS = ["#005A9C", "#1E7B3A", "#B45309", "#003F87", "#0F766E", "#5F6670"];
   render();
   function render(result) {
     const usedR = Object.values(assign);

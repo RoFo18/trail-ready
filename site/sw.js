@@ -1,9 +1,9 @@
 // Offline-first service worker: precache everything on install.
-const CACHE = "trail-ready-v2";
+const CACHE = "trail-ready-v3";
 const FILES = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.js", "./questions.js", "./engine.js",
   "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-180.png",
-  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2", "./fonts/atkinson-hyperlegible-latin-700-normal.woff2",
+  "./fonts/atkinson-hyperlegible-latin-400-normal.woff2", "./fonts/atkinson-hyperlegible-latin-700-normal.woff2", "./fonts/marcellus-latin-400-normal.woff2",
 ];
 
 self.addEventListener("install", (e) => {

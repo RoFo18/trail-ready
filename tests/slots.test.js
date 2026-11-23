@@ -19,17 +19,22 @@ if (shares.some(x => x > 30)) { console.log("FAIL: a slot exceeds 30%"); fail = 
 if (maxRun >= 3) { console.log("FAIL: three in a row"); fail = true; }
 // layout puts correct at the chosen slot
 for (let s = 0; s < 4; s++) { const o = layoutOptions("C", ["x","y","z"], s, rng); if (o[s] !== "C" || o.length !== 4) { fail = true; console.log("FAIL layout"); } }
-// longest-answer tell
-let sets = 0, longest = 0;
+// test-wise guessing strategies must stay near chance (25%)
+const { report } = await import("./cues.mjs");
+const r = report();
+for (const [k, v] of Object.entries(r)) {
+  if (k === "n") continue;
+  const pct = 100 * v;
+  console.log(`strategy ${k}: ${pct.toFixed(1)}%`);
+  if (pct > 33 || pct < 15) { console.log(`FAIL: strategy ${k} is a usable cue`); fail = true; }
+}
 for (const q of QUESTIONS) {
   const groups = [];
   if (q.type === "mc") groups.push([q.correct, q.wrong.map(w => w[0])]);
   if (q.type === "tier") groups.push([q.correct, q.wrong], [q.bcorrect, q.bwrong]);
   if (q.type === "odd") groups.push([q.oddOne, q.others], [q.bcorrect, q.bwrong]);
-  for (const [c, w] of groups) { sets++; if (w.every(x => c.length > x.length)) longest++; if (w.includes(c)) { fail = true; console.log("FAIL duplicate answer", q.id); } }
+  for (const [c, w] of groups) if (w.includes(c)) { fail = true; console.log("FAIL duplicate answer", q.id); }
 }
-console.log(`correct answer is longest in ${longest}/${sets} sets (${(100*longest/sets).toFixed(0)}%)`);
-if (longest / sets > 0.3) { console.log("FAIL: longest-answer tell"); fail = true; }
 // order/match sanity
 for (const q of QUESTIONS) {
   if (q.type === "order" && new Set(q.steps).size !== q.steps.length) { fail = true; console.log("FAIL dup step", q.id); }
