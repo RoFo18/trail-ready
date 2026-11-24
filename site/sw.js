@@ -1,5 +1,5 @@
 // Offline-first service worker: precache everything on install.
-const CACHE = "trail-ready-v3";
+const CACHE = "trail-ready-v4";
 const FILES = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.js", "./questions.js", "./engine.js",
   "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-180.png",

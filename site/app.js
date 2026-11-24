@@ -15,7 +15,16 @@ function save() {
   try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { memoryOnly = S; }
 }
 
-let S = load();
+// Content version. The question bank was rebuilt for the La Jolla edition, so
+// old per-question progress no longer lines up; keep XP, streak and settings.
+const CONTENT = 2;
+function migrate(st) {
+  if (st.content === CONTENT) return st;
+  const keep = { xp: st.xp, streak: st.streak, settings: st.settings };
+  return Object.assign(freshState(), keep, { content: CONTENT });
+}
+let S = migrate(load());
+save();
 const rng = makeRng((Date.now() ^ 0x9e3779b9) >>> 0);
 const slots = new SlotPicker(rng);
 const REQ_TOPIC = Object.fromEntries(REQS.map((r) => [r.id, r.topic]));
@@ -112,7 +121,7 @@ function home() {
   <header class="top">
     <div>
       <h1>Trail Ready</h1>
-      <p class="sub">Second Class, plus First Class extras</p>
+      <p class="sub">Second Class · La Jolla edition</p>
     </div>
     <div class="stats">
       ${offlineBadge()}
@@ -127,7 +136,7 @@ function home() {
   <nav class="menu">
     <button class="big" data-go="quick"><span class="ico">⚡</span><span><b>Quick Round</b><small>6 questions, mixed. Best daily habit.</small></span></button>
     <button class="big" data-go="topics"><span class="ico">🗺️</span><span><b>Pick a Topic</b><small>Warm-up, learn cards, then a round.</small></span></button>
-    <button class="big" data-go="story"><span class="ico">🏜️</span><span><b>Campout Story</b><small>A night at Joshua Tree. Your choices matter.</small></span></button>
+    <button class="big" data-go="story"><span class="ico">🏖️</span><span><b>Campout Story</b><small>A coast campout and a low-tide day in La Jolla. Your choices matter.</small></span></button>
     <button class="big" data-go="order"><span class="ico">🔢</span><span><b>Put It In Order</b><small>Steps and sequences.</small></span></button>
     <button class="big" data-go="connect"><span class="ico">🔗</span><span><b>Connect It</b><small>Match, odd one out, answer + because.</small></span></button>
     <button class="big accent" data-go="signoff"><span class="ico">✅</span><span><b>Sign-Off Ready</b><small>See what's ready. Practice saying it out loud.</small></span></button>
@@ -226,7 +235,7 @@ function qHeader(run, q) {
   return `${backBar(run.opts.title)}
     ${progress(run)}
     ${run.opts.note ? `<p class="note">${esc(run.opts.note)}</p>` : ""}
-    <div class="chip" style="--c:${t.color}">${t.icon} ${r.rank === "1C" ? "First Class" : "Second Class"} ${r.id.slice(3)} · ${esc(r.label)}</div>`;
+    <div class="chip" style="--c:${t.color}">${t.icon} Second Class ${r.id.slice(3)} · ${esc(r.label)}</div>`;
 }
 
 function showQ(run) {
@@ -491,7 +500,7 @@ function feedback(run, q, ok, sure, info) {
     ${!ok && info.answer ? `<p class="answer"><b>Correct:</b><br>${esc(info.answer).replace(/\n/g, "<br>")}</p>` : ""}
     ${info.note ? `<p class="small">${esc(info.note)}</p>` : ""}
     <p>${esc(q.why)}</p>
-    ${q.jt ? `<p class="jt">🌵 Why it matters at Joshua Tree: ${esc(q.jt)}</p>` : ""}
+    ${q.local ? `<p class="jt">🌊 La Jolla link: ${esc(q.local)}</p>` : ""}
     ${guessNote}${hyperNote}
     <button class="primary" id="next">${run.i + 1 < run.qs.length ? "Next" : "Finish"}</button>
   </div>`;
@@ -576,7 +585,7 @@ function signoffScreen() {
   h(`${backBar("Sign-Off Ready")}
     <p class="note">Green means: mastered in the app <b>and</b> practiced out loud. Show this screen to a leader: "I'm ready for these."</p>
     <div class="legend"><span><i class="marker gray"></i>Not started</span><span><i class="marker partial"></i>In progress</span><span><i class="marker green"></i>Ready</span></div>
-    ${group("2C", "Second Class")}${group("1C", "First Class extras")}`);
+    ${group("2C", "Second Class")}`);
   bindBack();
   app.querySelectorAll("[data-r]").forEach((b) => b.onclick = () => reqScreen(b.dataset.r));
 }
@@ -588,7 +597,7 @@ function reqScreen(id) {
   const d = statusDot(r);
   const checks = TEACH[id] || [];
   h(`${backBar("Sign-Off Ready", "signoff")}
-    <div class="chip" style="--c:${t.color}">${t.icon} ${r.rank === "1C" ? "First Class" : "Second Class"} ${id.slice(3)}</div>
+    <div class="chip" style="--c:${t.color}">${t.icon} Second Class ${id.slice(3)}</div>
     <h2 class="q">${esc(r.label)}</h2>
     <div class="task"><p class="kicker">The requirement</p><p>${esc(r.task)}</p></div>
     <div class="bar"><span style="width:${d.st.pct}%"></span></div><p class="small">${d.st.pct}% mastered in the app</p>

@@ -184,7 +184,7 @@ button:disabled { cursor: default; }
 /* celebration */
 .burst { position: fixed; left: 50%; top: 40%; pointer-events: none; z-index: 50; }
 .burst span { position: absolute; font-size: 1.6rem; color: var(--blue); animation: fly .85s ease-out forwards; transform: rotate(var(--a)) translateY(0); }
-.burst span:nth-child(3n) { color: var(--red); }
+.burst span:nth-child(3n) { color: #003F87; }
 .burst span:nth-child(3n+1) { color: var(--gold); }
 @keyframes fly { to { transform: rotate(var(--a)) translateY(-120px); opacity: 0; } }
 
