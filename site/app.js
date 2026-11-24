@@ -1,4 +1,5 @@
 import { TOPICS, REQS, LEARN, QUESTIONS, STORY, TEACH, SPIRIT } from "./data.js";
+import { OLD_TO_NEW } from "./migrate-map.js";
 import { makeRng, shuffle, SlotPicker, layoutOptions, freshState, recordAnswer, reqStatus, buildRound, touchStreak, itemState } from "./engine.js";
 
 // ---------- storage (wrapped: storage can be missing or throw) ----------
@@ -15,11 +16,17 @@ function save() {
   try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { memoryOnly = S; }
 }
 
-// Content version. The question bank was rebuilt for the La Jolla edition, so
-// old per-question progress no longer lines up; keep XP, streak and settings.
-const CONTENT = 2;
+// Content versions. v2 was the La Jolla release (counter IDs). v3 uses stable
+// IDs, so v2 progress is carried over through OLD_TO_NEW. Anything older
+// starts fresh but keeps XP, streak and settings.
+const CONTENT = 3;
 function migrate(st) {
   if (st.content === CONTENT) return st;
+  if (st.content === 2) {
+    const items = {};
+    for (const [oldId, it] of Object.entries(st.items || {})) if (OLD_TO_NEW[oldId]) items[OLD_TO_NEW[oldId]] = it;
+    return Object.assign(freshState(), st, { items, content: CONTENT });
+  }
   const keep = { xp: st.xp, streak: st.streak, settings: st.settings };
   return Object.assign(freshState(), keep, { content: CONTENT });
 }
@@ -107,12 +114,12 @@ if ("serviceWorker" in navigator) {
 // =====================================================================
 function counts() {
   let green = 0, partial = 0;
-  for (const r of REQS) {
-    const st = reqStatus(S, r.id, QUESTIONS).status;
-    const ready = st === "green" && (S.teach[r.id] || !TEACH[r.id]);
-    if (ready) green++; else if (st !== "gray" || S.teach[r.id]) partial++;
+  const rs = REQS.filter((r) => r.rank === "2C");
+  for (const r of rs) {
+    const d = statusDot(r);
+    if (d.ready) green++; else if (d.cls === "partial") partial++;
   }
-  return { green, partial, total: REQS.length };
+  return { green, partial, total: rs.length };
 }
 
 function home() {
@@ -121,7 +128,7 @@ function home() {
   <header class="top">
     <div>
       <h1>Trail Ready</h1>
-      <p class="sub">Second Class · La Jolla edition</p>
+      <p class="sub">Second Class · Joshua Tree campout · La Jolla wildlife</p>
     </div>
     <div class="stats">
       ${offlineBadge()}
@@ -131,15 +138,17 @@ function home() {
   </header>
   <section class="trail-summary" aria-label="Requirements ready">
     <div class="bar"><span style="width:${Math.round((100 * c.green) / c.total)}%"></span></div>
-    <p><strong>${c.green}</strong> of ${c.total} requirements ready · ${c.partial} in progress</p>
+    <p><strong>${c.green}</strong> of ${c.total} requirements signed-off ready · ${c.partial} in progress</p>
   </section>
   <nav class="menu">
-    <button class="big" data-go="quick"><span class="ico">⚡</span><span><b>Quick Round</b><small>6 questions, mixed. Best daily habit.</small></span></button>
+    <button class="big" data-go="quick"><span class="ico">⚡</span><span><b>Quick Round</b><small>6 questions, mixed.</small></span></button>
     <button class="big" data-go="topics"><span class="ico">🗺️</span><span><b>Pick a Topic</b><small>Warm-up, learn cards, then a round.</small></span></button>
-    <button class="big" data-go="story"><span class="ico">🏖️</span><span><b>Campout Story</b><small>A coast campout and a low-tide day in La Jolla. Your choices matter.</small></span></button>
+    <button class="big" data-go="story"><span class="ico">🏜️</span><span><b>Campout Story</b><small>A Joshua Tree campout, then a low-tide day in La Jolla. Your choices matter.</small></span></button>
+    <button class="big" data-go="pledge"><span class="ico">✋</span><span><b>Pledge Drill</b><small>"I pledge allegiance." Every word, every time.</small></span></button>
     <button class="big" data-go="order"><span class="ico">🔢</span><span><b>Put It In Order</b><small>Steps and sequences.</small></span></button>
     <button class="big" data-go="connect"><span class="ico">🔗</span><span><b>Connect It</b><small>Match, odd one out, answer + because.</small></span></button>
-    <button class="big accent" data-go="signoff"><span class="ico">✅</span><span><b>Sign-Off Ready</b><small>See what's ready. Practice saying it out loud.</small></span></button>
+    <button class="big accent" data-go="signoff"><span class="ico">✅</span><span><b>Sign-Off Ready</b><small>Know it, say it, do it. See what's ready.</small></span></button>
+    <button class="big" data-go="logs"><span class="ico">📒</span><span><b>My Logs</b><small>Activity, earning plan, service hours, outings.</small></span></button>
   </nav>
   <footer class="foot"><button class="link" data-go="settings">Settings</button></footer>`);
   app.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => go(b.dataset.go)));
@@ -148,7 +157,9 @@ function home() {
 function go(where, arg) {
   if (where === "home") return home();
 checkOffline();
-  if (where === "quick") return startRound({ title: "Quick Round", excludeMastered: true });
+  if (where === "quick") return startRound({ title: "Quick Round", excludeMastered: true, pledgeMix: true });
+  if (where === "pledge") return pledgeStart();
+  if (where === "logs") return logsScreen();
   if (where === "topics") return topicsScreen();
   if (where === "story") return storyNode(STORY.start);
   if (where === "order") return startRound({ title: "Put It In Order", types: ["order"], size: 4 });
@@ -163,7 +174,7 @@ checkOffline();
 // =====================================================================
 function topicsScreen() {
   const items = Object.entries(TOPICS).filter(([k]) => k !== "spirit").map(([k, t]) => {
-    const rs = REQS.filter((r) => r.topic === k);
+    const rs = REQS.filter((r) => r.topic === k && !r.doOnly);
     const pct = Math.round(rs.reduce((a, r) => a + reqStatus(S, r.id, QUESTIONS).pct, 0) / rs.length);
     return `<button class="tile" data-t="${k}" style="--c:${t.color}">
       <span class="ico">${t.icon}</span><b>${t.name}</b>
@@ -192,17 +203,39 @@ function topicStart(topic) {
 
 function learnCards(topic, i) {
   const cards = LEARN[topic] || [];
-  if (i >= cards.length) return startRound({ title: TOPICS[topic].name, topic });
+  if (i >= cards.length) return startRound({ title: TOPICS[topic].name, topic, pledgeMix: topic === "citizen" });
   const t = TOPICS[topic];
+  const c = cards[i];
+  // Show prediction choices in a shuffled order so the "real" answer moves around.
+  const order = shuffle(c.options.map((_, k) => k), rng);
   h(`${backBar(t.name)}
     <div class="learn" style="--c:${t.color}">
-      <div class="learn-ico">${t.icon}</div>
-      <p class="kicker">Learn card ${i + 1} of ${cards.length}</p>
-      <p class="learn-text">${esc(cards[i])}</p>
-      <button class="primary" id="gotit">Got it</button>
+      <p class="kicker">${t.icon} Try this · ${i + 1} of ${cards.length}</p>
+      <p class="learn-hook">${esc(c.hook)}</p>
+      <h2 class="q">${esc(c.ask)}</h2>
+      <p class="small">Make a guess first. Guessing before you know is part of how this sticks.</p>
+      <div class="opts">${order.map((k, n) => `<button class="opt" data-p="${k}"><span class="let">${LETTERS[n]}</span><span>${esc(c.options[k])}</span></button>`).join("")}</div>
+      <div id="reveal"></div>
     </div>`);
   bindBack();
-  document.getElementById("gotit").addEventListener("click", () => learnCards(topic, i + 1));
+  app.querySelectorAll("[data-p]").forEach((b) => b.onclick = () => {
+    const k = +b.dataset.p;
+    app.querySelectorAll("[data-p]").forEach((x) => { x.disabled = true; if (+x.dataset.p === c.answer) x.classList.add("right"); });
+    if (k !== c.answer) b.classList.add("guess");
+    const r = document.getElementById("reveal");
+    r.innerHTML = `<div class="reveal">
+        <p class="verdict">${k === c.answer ? "You called it." : "Here's what actually happens."}</p>
+        <p>${esc(c.reveal)}</p>
+        <p class="picture">🖼️ <b>Picture it:</b> ${esc(c.picture)}</p>
+        <div class="tryit"><p class="kicker">Now you try</p><p><b>${esc(c.tryQ)}</b></p>
+          <p class="small">Answer it in your head or out loud first.</p>
+          <button class="secondary" id="showTry">Show answer</button><p id="tryA" class="hidden">${esc(c.tryA)}</p></div>
+        <button class="primary" id="next">${i + 1 < cards.length ? "Next" : "Start the round"}</button>
+      </div>`;
+    r.scrollIntoView({ behavior: S.settings.reduceMotion ? "auto" : "smooth", block: "start" });
+    document.getElementById("showTry").onclick = (e) => { document.getElementById("tryA").classList.remove("hidden"); e.target.remove(); };
+    document.getElementById("next").onclick = () => learnCards(topic, i + 1);
+  });
 }
 
 // =====================================================================
@@ -211,7 +244,13 @@ function learnCards(topic, i) {
 function startRound(opts) {
   S.round++;
   slots.newRound();
-  const qs = buildRound(S, QUESTIONS, rng, { ...opts, reqTopic: REQ_TOPIC });
+  const pool = opts.topic === "pledge" ? QUESTIONS : QUESTIONS.filter((q) => q.req !== "PL");
+  let qs = buildRound(S, pool, rng, { ...opts, reqTopic: REQ_TOPIC });
+  if (opts.pledgeMix && pledgeDue()) {
+    const p = pickPledge();
+    qs = qs.slice(0, Math.max(1, qs.length - 1));
+    qs.splice(Math.floor(rng() * (qs.length + 1)), 0, p);
+  }
   if (!qs.length) return home();
 checkOffline();
   runQueue(qs, opts);
@@ -235,13 +274,13 @@ function qHeader(run, q) {
   return `${backBar(run.opts.title)}
     ${progress(run)}
     ${run.opts.note ? `<p class="note">${esc(run.opts.note)}</p>` : ""}
-    <div class="chip" style="--c:${t.color}">${t.icon} Second Class ${r.id.slice(3)} · ${esc(r.label)}</div>`;
+    <div class="chip" style="--c:${t.color}">${t.icon} ${esc(r.label)}</div>`;
 }
 
 function showQ(run) {
   if (run.i >= run.qs.length) return finish(run);
   const q = run.qs[run.i];
-  ({ mc: showMC, tier: showTier, odd: showOdd, order: showOrder, match: showMatch })[q.type](run, q);
+  ({ mc: showMC, tier: showTier, odd: showOdd, order: showOrder, match: showMatch, build: showBuild, typed: showTyped, recall: showRecall })[q.type](run, q);
 }
 
 function optionButtons(opts, name) {
@@ -278,7 +317,8 @@ function showMC(run, q) {
   const slot = slots.next(q.wrong.length + 1);
   const wrongTexts = q.wrong.map((w) => w[0]);
   const opts = layoutOptions(q.correct, wrongTexts, slot, rng);
-  h(`${qHeader(run, q)}<h2 class="q">${esc(q.q)}</h2>${optionButtons(opts, "o")}${confidenceBar()}<div id="fb"></div>`);
+  const img = q.img ? `<figure class="photo"><img src="${esc(q.img.src)}" alt="" loading="eager" onerror="this.outerHTML='<p class=&quot;hint&quot;>This photo needs an internet connection the first time. After that it works offline.</p>'"><figcaption>${esc(q.img.credit)}</figcaption></figure>` : "";
+  h(`${qHeader(run, q)}<h2 class="q">${esc(q.q)}</h2>${img}${optionButtons(opts, "o")}${confidenceBar()}<div id="fb"></div>`);
   bindBack();
   let pick = -1;
   bindSelect("o", (k) => { pick = k; bindConfidence(submit); });
@@ -326,7 +366,7 @@ function showTier(run, q) {
     let mine = "";
     if (!ok1 && ok2) mine = "You had the right reason but the wrong answer. The reason should lead you to the answer.";
     if (ok1 && !ok2) mine = "Right answer, but not the right reason. Knowing WHY is what lets you handle new situations.";
-    feedback(run, q, ok1 && ok2, sure, { mine, answer: `${q.correct}. Because: ${q.bcorrect}` });
+    feedback(run, q, ok1 && ok2, sure, { mine, answer: `${q.correct}. Because: ${q.bcorrect}`, half: ok1 !== ok2 });
   }
 }
 
@@ -349,7 +389,7 @@ function showOdd(run, q) {
     const ok1 = o1[p1] === q.oddOne, ok2 = o2[p2] === q.bcorrect;
     lockOptions("a", o1, q.oddOne, p1);
     lockOptions("b", o2, q.bcorrect, p2);
-    feedback(run, q, ok1 && ok2, sure, { mine: ok1 && !ok2 ? "You found the odd one. The reason is the part that builds the connection." : "", answer: `${q.oddOne}. Why: ${q.bcorrect}` });
+    feedback(run, q, ok1 && ok2, sure, { mine: ok1 && !ok2 ? "You found the odd one. The reason is the part that builds the connection." : !ok1 && ok2 ? "Right reason, wrong pick. Use the reason to find the odd one." : "", answer: `${q.oddOne}. Why: ${q.bcorrect}`, half: ok1 !== ok2 });
   }
 }
 
@@ -387,7 +427,7 @@ function showOrder(run, q) {
     const marks = cur.map((s, k) => s === q.steps[k]);
     const ok = marks.every(Boolean);
     render(marks);
-    if (ok) return feedback(run, q, tries === 1, true, { answer: "" , note: tries > 1 ? "Fixed on the second try. It will come back for review." : "" });
+    if (ok) return feedback(run, q, true, tries === 1, { answer: "", secondTry: tries > 1 });
     if (tries === 1) {
       const right = marks.filter(Boolean).length;
       document.getElementById("act").innerHTML = `<p class="hint">${right} of ${q.steps.length} are in the right spot (green). Think: what has to happen before each orange step?</p><button class="primary" id="retry">Try again</button>`;
@@ -486,21 +526,25 @@ function showMatch(run, q) {
 // ----- Feedback (shared) -----
 function feedback(run, q, ok, sure, info) {
   recordAnswer(S, q, { correct: ok, sure });
+  if (q.req === "PL") notePledge(q, ok, sure);
   touchStreak(S, today());
   save();
   if (ok) { run.right++; tone(true); buzz(true); burst(); } else { tone(false); buzz(false); }
   const conf = document.getElementById("conf");
   if (conf) conf.remove();
-  const guessNote = ok && !sure ? `<p class="small">You guessed right. It will come back until you're sure.</p>` : "";
+  const guessNote = info.secondTry ? `<p class="small">Fixed on the second try. It will come back for review until you get it first try.</p>` : ok && !sure ? `<p class="small">You guessed right. It will come back until you're sure.</p>` : "";
+  const verdict = ok ? (info.secondTry ? "✓ Right on the second try" : "✓ Right!") : info.half ? "Half right." : "Not quite.";
+  const reasons = q.reasons ? `<div class="reasons"><p class="kicker">Why this order</p><ol>${q.steps.map((st, k) => `<li><b>${esc(st)}</b><br><span>${esc(q.reasons[k])}</span></li>`).join("")}</ol></div>` : "";
   const hyperNote = !ok && sure ? `<p class="small">You were sure, so this one comes back first next round. Sure-but-wrong answers are the easiest to fix once you see them.</p>` : "";
   const fb = document.getElementById("fb");
   fb.innerHTML = `<div class="feedback ${ok ? "good" : "bad"}" role="status">
-    <p class="verdict">${ok ? "✓ Right!" : "Not quite."}</p>
+    <p class="verdict">${verdict}</p>
     ${info.mine ? `<p>${esc(info.mine)}</p>` : ""}
-    ${!ok && info.answer ? `<p class="answer"><b>Correct:</b><br>${esc(info.answer).replace(/\n/g, "<br>")}</p>` : ""}
+    ${!ok && info.answer && !q.reasons ? `<p class="answer"><b>Correct:</b><br>${esc(info.answer).replace(/\n/g, "<br>")}</p>` : ""}
     ${info.note ? `<p class="small">${esc(info.note)}</p>` : ""}
     <p>${esc(q.why)}</p>
-    ${q.local ? `<p class="jt">🌊 La Jolla link: ${esc(q.local)}</p>` : ""}
+    ${reasons}
+    ${q.local ? `<p class="jt">📍 Local link: ${esc(q.local)}</p>` : ""}
     ${guessNote}${hyperNote}
     <button class="primary" id="next">${run.i + 1 < run.qs.length ? "Next" : "Finish"}</button>
   </div>`;
@@ -532,7 +576,7 @@ function storyNode(id) {
   const node = STORY.nodes[id];
   if (node.end) {
     S.storyDone = true; S.xp += 30; save();
-    h(`${backBar("Campout Story")}<div class="finish"><div class="big-num">🏕️</div><h2>Campout complete</h2><p>${esc(node.text)}</p>
+    h(`${backBar("Campout Story")}<div class="finish"><div class="big-num">🏜️</div><h2>Both trips complete</h2><p>${esc(node.text)}</p>
       <button class="primary" id="again">Play again</button><button class="secondary" id="toHome">Home</button></div>`);
     burst();
     document.getElementById("again").onclick = () => storyNode(STORY.start);
@@ -565,62 +609,96 @@ function storyNode(id) {
 // =====================================================================
 // SIGN-OFF READY + TEACH-BACK
 // =====================================================================
-function statusDot(r) {
+// A requirement is ready only when every part it has is done:
+// Know it (quiz mastery), Say it (talk-through checklist), Do it (hands-on, leader saw it).
+function parts(r) {
+  const hasQuiz = QUESTIONS.some((q) => q.req === r.id);
   const st = reqStatus(S, r.id, QUESTIONS);
-  const hasTeach = !!TEACH[r.id];
-  const ready = (r.id === "2C-10") ? !!S.teach[r.id] : st.status === "green" && (!hasTeach || S.teach[r.id]);
-  const cls = ready ? "green" : (st.status !== "gray" || S.teach[r.id]) ? "partial" : "gray";
-  return { cls, st, ready };
+  const know = hasQuiz ? st.status === "green" : null;
+  const say = r.id === "2C-10" ? !!S.teach[r.id] : TEACH[r.id] ? !!S.teach[r.id] : null;
+  const d = S.doit[r.id] || [];
+  const doDone = r.doit ? r.doit.every((_, k) => d[k]) : null;
+  const doAny = r.doit ? r.doit.some((_, k) => d[k]) : false;
+  return { hasQuiz, st, know, say, doDone, doAny };
+}
+function statusDot(r) {
+  const p = parts(r);
+  const all = [p.know, p.say, p.doDone].filter((x) => x !== null);
+  const ready = all.length > 0 && all.every(Boolean);
+  const started = (p.st.status !== "gray" && p.hasQuiz) || S.teach[r.id] || p.doAny;
+  return { cls: ready ? "green" : started ? "partial" : "gray", st: p.st, ready, p };
+}
+function partChips(p) {
+  const chip = (label, v) => v === null ? "" : `<span class="pc ${v ? "on" : ""}">${v ? "✓" : "○"} ${label}</span>`;
+  return `${chip("Know", p.know)}${chip("Say", p.say)}${chip("Do", p.doDone)}`;
 }
 
 function signoffScreen() {
-  const group = (rank, title) => `<h2 class="group">${title}</h2>` + REQS.filter((r) => r.rank === rank).map((r) => {
+  const rows = REQS.filter((r) => r.rank === "2C").map((r) => {
     const d = statusDot(r);
     const t = TOPICS[r.topic];
     return `<button class="req" data-r="${r.id}"><span class="marker ${d.cls}"></span>
       <span class="req-body"><b>${r.id.slice(3)} · ${esc(r.label)}</b>
-      <small>${d.ready ? "Ready for sign-off" : r.id === "2C-10" ? "Coaching, no quiz" : `${d.st.pct}% mastered${TEACH[r.id] ? (S.teach[r.id] ? " · said it out loud ✓" : " · say it out loud next") : ""}`}</small></span>
+      <small>${d.ready ? "Ready for sign-off" : ""}</small><span class="pcs">${partChips(d.p)}</span></span>
       <span class="ico sm">${t.icon}</span></button>`;
   }).join("");
   h(`${backBar("Sign-Off Ready")}
-    <p class="note">Green means: mastered in the app <b>and</b> practiced out loud. Show this screen to a leader: "I'm ready for these."</p>
+    <p class="note">Each requirement has up to three parts. <b>Know it</b>: mastered in the quizzes. <b>Say it</b>: explained out loud. <b>Do it</b>: done for real, with a leader watching. Green means every part is done.</p>
     <div class="legend"><span><i class="marker gray"></i>Not started</span><span><i class="marker partial"></i>In progress</span><span><i class="marker green"></i>Ready</span></div>
-    ${group("2C", "Second Class")}`);
+    <h2 class="group">Second Class</h2>${rows}`);
   bindBack();
   app.querySelectorAll("[data-r]").forEach((b) => b.onclick = () => reqScreen(b.dataset.r));
 }
+
+const TRACKER = { "2C-7a": "activity", "2C-8c": "earn", "2C-8d": "earn", "2C-8e": "service", "2C-1a": "outings" };
 
 function reqScreen(id) {
   if (id === "2C-10") return spiritScreen();
   const r = REQ_BY_ID[id];
   const t = TOPICS[r.topic];
-  const d = statusDot(r);
+  const p = parts(r);
   const checks = TEACH[id] || [];
+  const d = S.doit[id] || [];
+  const know = p.hasQuiz ? `<div class="part"><h3>${p.know ? "✓" : "1."} Know it</h3>
+      <div class="bar"><span style="width:${p.st.pct}%"></span></div><p class="small">${p.st.pct}% mastered</p>
+      <button class="primary" id="practice">Practice this one</button></div>` : "";
+  const say = checks.length ? `<div class="part teach"><h3>${p.say ? "✓" : "2."} Say it</h3>
+      <p>Say it <b>out loud</b>, like you're talking to your Scoutmaster. Then check what you covered. Be honest: missing one just means another try.</p>
+      ${checks.map((c, k) => `<label class="check"><input type="checkbox" data-c="${k}" ${S.teach[id] ? "checked" : ""}><span>${esc(c)}</span></label>`).join("")}
+      <p class="small" id="teachMsg">${S.teach[id] ? "✓ You can explain this one." : ""}</p></div>` : "";
+  const tr = TRACKER[id] ? `<button class="secondary" id="tracker">Open my log</button>` : "";
+  const doit = r.doit ? `<div class="part"><h3>${p.doDone ? "✓" : "3."} Do it</h3>
+      ${r.need ? `<p class="need">⚠️ ${esc(r.need)}</p>` : ""}
+      ${r.doit.map((c, k) => `<label class="check"><input type="checkbox" data-d="${k}" ${d[k] ? "checked" : ""}><span>${esc(c)}</span></label>`).join("")}
+      ${tr}</div>` : "";
   h(`${backBar("Sign-Off Ready", "signoff")}
     <div class="chip" style="--c:${t.color}">${t.icon} Second Class ${id.slice(3)}</div>
     <h2 class="q">${esc(r.label)}</h2>
     <div class="task"><p class="kicker">The requirement</p><p>${esc(r.task)}</p></div>
-    <div class="bar"><span style="width:${d.st.pct}%"></span></div><p class="small">${d.st.pct}% mastered in the app</p>
-    <button class="primary" id="practice">Practice this one</button>
-    <div class="teach">
-      <h3>Say It to the Scoutmaster</h3>
-      <p>Say your answer <b>out loud</b>, like you're talking to your Scoutmaster. Then check what you covered. Be honest: missing one just means another try.</p>
-      ${checks.map((c, k) => `<label class="check"><input type="checkbox" data-c="${k}" ${S.teach[id] ? "checked" : ""}><span>${esc(c)}</span></label>`).join("")}
-      <p class="small" id="teachMsg">${S.teach[id] ? "✓ Done. You're ready to explain this one." : ""}</p>
-    </div>`);
+    ${r.why ? `<p class="why">💡 <b>Why it matters:</b> ${esc(r.why)}</p>` : ""}
+    ${know}${say}${doit}`);
   bindBack("signoff");
-  document.getElementById("practice").onclick = () => {
+  const pr = document.getElementById("practice");
+  if (pr) pr.onclick = () => {
     S.round++; slots.newRound();
     const qs = shuffle(QUESTIONS.filter((q) => q.req === id), rng).slice(0, 6);
     runQueue(qs, { title: r.label });
   };
+  const trb = document.getElementById("tracker");
+  if (trb) trb.onclick = () => logScreen(TRACKER[id]);
   const boxes = [...app.querySelectorAll("[data-c]")];
   boxes.forEach((b) => b.onchange = () => {
     const all = boxes.every((x) => x.checked);
     S.teach[id] = all;
     if (all) { S.xp += 15; burst(); tone(true); }
     save();
-    document.getElementById("teachMsg").textContent = all ? "✓ Done. You're ready to explain this one." : "";
+    document.getElementById("teachMsg").textContent = all ? "✓ You can explain this one." : "";
+  });
+  app.querySelectorAll("[data-d]").forEach((b) => b.onchange = () => {
+    const arr = S.doit[id] || (S.doit[id] = []);
+    arr[+b.dataset.d] = b.checked;
+    if (r.doit.every((_, k) => arr[k])) { S.xp += 25; burst(); tone(true); }
+    save();
   });
 }
 
@@ -693,6 +771,204 @@ checkOffline();
   };
 }
 
+// =====================================================================
+// NEW QUESTION TYPES
+// =====================================================================
+const norm = (x) => String(x).toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+
+// Tap word tiles into order; traps are mixed in.
+function showBuild(run, q) {
+  const tiles = shuffle([...q.target, ...q.extra].map((w, k) => ({ w, k })), rng);
+  const picked = [];
+  render();
+  function render(done) {
+    h(`${qHeader(run, q)}
+      <p class="kicker">Build it · tap the words in order</p>
+      <h2 class="q">${esc(q.q)}</h2>
+      <div class="built">${picked.length ? picked.map((t, n) => `<button class="tile-w on" data-u="${n}">${esc(t.w)}</button>`).join("") : `<span class="small">Tap words below</span>`}</div>
+      <div class="tiles-w">${tiles.map((t, n) => picked.includes(t) ? "" : `<button class="tile-w" data-t="${n}">${esc(t.w)}</button>`).join("")}</div>
+      <div id="act">${done ? "" : `<button class="primary" id="check" ${picked.length ? "" : "disabled"}>Check</button>`}</div><div id="fb"></div>`);
+    bindBack();
+    if (done) return;
+    app.querySelectorAll("[data-t]").forEach((b) => b.onclick = () => { picked.push(tiles[+b.dataset.t]); render(); });
+    app.querySelectorAll("[data-u]").forEach((b) => b.onclick = () => { picked.splice(+b.dataset.u, 1); render(); });
+    document.getElementById("check").onclick = () => {
+      const said = picked.map((t) => t.w).join(" ");
+      const ok = norm(said) === norm(q.target.join(" "));
+      render(true);
+      feedback(run, q, ok, true, { mine: ok ? "" : `You built: "${said}"`, answer: q.target.join(" ") });
+    };
+  }
+}
+
+// Type the answer.
+function showTyped(run, q) {
+  h(`${qHeader(run, q)}
+    <p class="kicker">Type it</p>
+    <h2 class="q">${esc(q.q)}</h2>
+    <input class="typein" id="ans" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="${esc(q.placeholder || "")}">
+    <div id="act"><button class="primary" id="check">Check</button></div><div id="fb"></div>`);
+  bindBack();
+  const inp = document.getElementById("ans");
+  inp.focus();
+  const go2 = () => {
+    const v = norm(inp.value);
+    if (!v) return;
+    inp.disabled = true;
+    document.getElementById("act").innerHTML = "";
+    const ok = q.accept.some((a) => norm(a) === v);
+    const trap = !ok && Object.entries(q.traps || {}).find(([k]) => norm(k) === v);
+    feedback(run, q, ok, true, { mine: trap ? trap[1] : ok ? "" : `You typed: "${inp.value}"`, answer: q.accept[0] });
+  };
+  document.getElementById("check").onclick = go2;
+  inp.addEventListener("keydown", (e) => { if (e.key === "Enter") go2(); });
+}
+
+// Say it from memory, then reveal and self-check.
+function showRecall(run, q) {
+  h(`${qHeader(run, q)}
+    <p class="kicker">Say it from memory</p>
+    <h2 class="q">${esc(q.q)}</h2>
+    <p>Say it out loud, all the way through, before you look.</p>
+    <div id="act"><button class="primary" id="show">I said it. Show me.</button></div><div id="fb"></div>`);
+  bindBack();
+  document.getElementById("show").onclick = () => {
+    document.getElementById("act").innerHTML = `<ol class="recall">${q.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
+      <p>Did you get every one, in order?</p>
+      <div class="conf-row"><button class="sure" id="all">Got them all</button><button class="guess" id="miss">Missed or mixed some</button></div>`;
+    document.getElementById("all").onclick = () => { document.getElementById("act").querySelector(".conf-row").remove(); feedback(run, q, true, true, {}); };
+    document.getElementById("miss").onclick = () => { document.getElementById("act").querySelector(".conf-row").remove(); feedback(run, q, false, false, { mine: "Say it again tomorrow. Each try makes it stick." }); };
+  };
+}
+
+// =====================================================================
+// PLEDGE DRILL
+// =====================================================================
+// The opening is "locked in" after correct, sure answers on 3 different days.
+// Any miss resets the count. Until locked, every Quick Round and citizenship
+// round includes one Pledge item; after that, every third round.
+const PLEDGE_QS = QUESTIONS.filter((q) => q.req === "PL");
+function pledgeLocked() { return (S.pledge.days || []).length >= 3; }
+function pledgeDue() { return !pledgeLocked() || S.round % 3 === 0; }
+function pickPledge() {
+  const pool = PLEDGE_QS.filter((q) => q.type !== "order" && q.type !== "recall");
+  const scored = shuffle(pool, rng).map((q) => { const it = S.items[q.id]; return { q, p: (it ? it.box * 10 + (it.hyper ? -20 : 0) : -5) + rng() * 5 }; });
+  scored.sort((a, b) => a.p - b.p);
+  return scored[0].q;
+}
+function notePledge(q, ok, sure) {
+  const P = S.pledge || (S.pledge = { days: [] });
+  if (!ok) { P.days = []; return; }
+  if (sure && !P.days.includes(today())) P.days.push(today());
+}
+function pledgeStart() {
+  S.round++; slots.newRound();
+  const order = ["mc", "build", "typed", "tier", "odd", "mc", "order", "recall"];
+  const used = new Set();
+  const qs = [];
+  for (const t of order) {
+    const q = shuffle(PLEDGE_QS.filter((x) => x.type === t && !used.has(x.id)), rng)[0];
+    if (q) { used.add(q.id); qs.push(q); }
+  }
+  const n = (S.pledge.days || []).length;
+  runQueue(qs, { title: "Pledge Drill", note: pledgeLocked() ? "Locked in. Keep it that way." : `Right on ${n} of 3 different days. A miss starts the count over.` });
+}
+
+// =====================================================================
+// MY LOGS (the hands-on parts that take weeks)
+// =====================================================================
+function weekStart(d) { const x = new Date(d + "T12:00:00"); const day = (x.getDay() + 6) % 7; x.setDate(x.getDate() - day); return x.toISOString().slice(0, 10); }
+function activityWeeks() {
+  const byDay = {};
+  for (const e of S.logs.activity) byDay[e.date] = (byDay[e.date] || 0) + (+e.minutes || 0);
+  const weeks = {};
+  for (const [d, m] of Object.entries(byDay)) if (m >= 30) { const w = weekStart(d); weeks[w] = (weeks[w] || 0) + 1; }
+  const good = Object.keys(weeks).filter((w) => weeks[w] >= 5).sort();
+  let best = 0, run = 0, prev = null;
+  for (const w of good) {
+    const p = prev ? new Date(prev + "T12:00:00") : null;
+    if (p) p.setDate(p.getDate() + 7);
+    run = p && p.toISOString().slice(0, 10) === w ? run + 1 : 1;
+    best = Math.max(best, run); prev = w;
+  }
+  return { weeks, best };
+}
+function logsScreen() {
+  const a = activityWeeks();
+  const svc = S.logs.service.reduce((x, e) => x + (+e.hours || 0), 0);
+  const out = S.logs.outings, outdoor = out.filter((o) => o.outdoor).length, night = out.filter((o) => o.overnight).length;
+  const E = S.logs.earn, earned = E.entries.reduce((x, e) => x + (+e.amount || 0), 0);
+  h(`${backBar("My Logs")}
+    <p class="note">These are the parts that take weeks. Log them as you go, then show a leader.</p>
+    <button class="req" data-l="activity"><span class="ico">🏃</span><span class="req-body"><b>Activity log</b><small>${a.best} of 4 weeks in a row with 5+ active days</small></span></button>
+    <button class="req" data-l="earn"><span class="ico">💵</span><span class="req-body"><b>Earning plan</b><small>${E.item ? `${esc(E.item)}: $${earned} of $${E.cost || "?"}` : "Not started"} · ${E.prices.length} of 3 prices compared</small></span></button>
+    <button class="req" data-l="service"><span class="ico">🤝</span><span class="req-body"><b>Service hours</b><small>${svc} of 2 hours</small></span></button>
+    <button class="req" data-l="outings"><span class="ico">🏕️</span><span class="req-body"><b>Outings</b><small>${out.length} of 5 activities · ${outdoor} outdoor · ${night} overnight</small></span></button>`);
+  bindBack();
+  app.querySelectorAll("[data-l]").forEach((b) => b.onclick = () => logScreen(b.dataset.l));
+}
+function logScreen(kind) {
+  const L = S.logs;
+  const back = () => logScreen(kind);
+  const list = (arr, fmt, key) => arr.length ? `<ul class="loglist">${arr.map((e, n) => `<li>${fmt(e)} <button class="link" data-del="${key}:${n}">remove</button></li>`).join("")}</ul>` : `<p class="small">Nothing logged yet.</p>`;
+  let body = "";
+  if (kind === "activity") {
+    const a = activityWeeks();
+    body = `<p>Goal: at least 30 minutes a day, 5 days a week, for 4 weeks in a row. Use the talk test: you can talk, but not sing.</p>
+      <p><b>${a.best} of 4</b> weeks in a row done.</p>
+      <div class="form"><input type="date" id="f1" value="${today()}"><input id="f2" type="number" min="1" placeholder="Minutes"><input id="f3" placeholder="What did you do?"><button class="primary" id="add">Add</button></div>
+      ${list([...L.activity].reverse(), (e) => `${esc(e.date)}: ${esc(e.minutes)} min, ${esc(e.what)}`, "activity")}`;
+  } else if (kind === "service") {
+    const tot = L.service.reduce((x, e) => x + (+e.hours || 0), 0);
+    body = `<p>Goal: 2 hours of service your Scoutmaster approved. Be ready to explain how it connects to "help other people at all times."</p>
+      <p><b>${tot} of 2</b> hours.</p>
+      <div class="form"><input type="date" id="f1" value="${today()}"><input id="f2" type="number" step="0.5" min="0.5" placeholder="Hours"><input id="f3" placeholder="Project, and who approved it"><button class="primary" id="add">Add</button></div>
+      ${list(L.service, (e) => `${esc(e.date)}: ${esc(e.hours)} h, ${esc(e.what)}`, "service")}`;
+  } else if (kind === "outings") {
+    body = `<p>Goal: 5 troop or patrol activities. At least 3 outdoors, and at least 2 of those overnight, in a tent you pitched.</p>
+      <div class="form"><input type="date" id="f1" value="${today()}"><input id="f3" placeholder="What was it?"><label class="check"><input type="checkbox" id="o1"><span>Outdoors</span></label><label class="check"><input type="checkbox" id="o2"><span>Overnight</span></label><button class="primary" id="add">Add</button></div>
+      ${list(L.outings, (e) => `${esc(e.date)}: ${esc(e.what)}${e.outdoor ? " · outdoors" : ""}${e.overnight ? " · overnight" : ""}`, "outings")}`;
+  } else if (kind === "earn") {
+    const E = L.earn, earned = E.entries.reduce((x, e) => x + (+e.amount || 0), 0);
+    const weeks = E.cost && E.perWeek ? Math.ceil(+E.cost / +E.perWeek) : null;
+    body = `<p>Plan with a parent. Pick an item, find its cost, and plan how you'll earn it.</p>
+      <div class="form col"><input id="e1" placeholder="Item" value="${esc(E.item)}"><input id="e2" type="number" placeholder="Cost ($)" value="${esc(E.cost)}"><input id="e3" type="number" placeholder="I can earn per week ($)" value="${esc(E.perWeek)}"><input id="e4" placeholder="How I'll earn it" value="${esc(E.how)}"><button class="secondary" id="savePlan">Save plan</button></div>
+      ${weeks ? `<p>At $${esc(E.perWeek)} a week, that's <b>${weeks} weeks</b>. Earned so far: <b>$${earned}</b>.</p>` : ""}
+      <h3>Money earned</h3>
+      <div class="form"><input type="date" id="f1" value="${today()}"><input id="f2" type="number" placeholder="$"><input id="f3" placeholder="For what work?"><button class="primary" id="add">Add</button></div>
+      ${list(E.entries, (e) => `${esc(e.date)}: $${esc(e.amount)}, ${esc(e.what)}`, "earn.entries")}
+      <h3>Compare at three places</h3>
+      <div class="form"><input id="p1" placeholder="Store"><input id="p2" type="number" placeholder="Price $"><input id="p3" type="number" placeholder="Tax + shipping $"><button class="primary" id="addP">Add</button></div>
+      ${list(E.prices, (e) => `${esc(e.store)}: $${(+e.price + (+e.extra || 0)).toFixed(2)} total`, "earn.prices")}
+      <h3>What I decided</h3>
+      <div class="form col"><select id="dec"><option value="">Choose…</option>${["Use it as planned", "Save all or part", "Use it for something else"].map((o) => `<option ${E.decision === o ? "selected" : ""}>${o}</option>`).join("")}</select></div>`;
+  }
+  const titles = { activity: "Activity log", service: "Service hours", outings: "Outings", earn: "Earning plan" };
+  h(`${backBar(titles[kind], "logs")}${body}`);
+  bindBack("logs");
+  const val = (id) => (document.getElementById(id) || {}).value;
+  const add = document.getElementById("add");
+  if (add) add.onclick = () => {
+    if (kind === "activity" && val("f2")) L.activity.push({ date: val("f1"), minutes: val("f2"), what: val("f3") });
+    if (kind === "service" && val("f2")) L.service.push({ date: val("f1"), hours: val("f2"), what: val("f3") });
+    if (kind === "outings" && val("f3")) L.outings.push({ date: val("f1"), what: val("f3"), outdoor: document.getElementById("o1").checked, overnight: document.getElementById("o2").checked });
+    if (kind === "earn" && val("f2")) L.earn.entries.push({ date: val("f1"), amount: val("f2"), what: val("f3") });
+    save(); back();
+  };
+  const sp = document.getElementById("savePlan");
+  if (sp) sp.onclick = () => { Object.assign(L.earn, { item: val("e1"), cost: val("e2"), perWeek: val("e3"), how: val("e4") }); save(); back(); };
+  const ap = document.getElementById("addP");
+  if (ap) ap.onclick = () => { if (val("p1") && val("p2")) { L.earn.prices.push({ store: val("p1"), price: val("p2"), extra: val("p3") || 0 }); save(); back(); } };
+  const dec = document.getElementById("dec");
+  if (dec) dec.onchange = () => { L.earn.decision = dec.value; save(); };
+  app.querySelectorAll("[data-del]").forEach((b) => b.onclick = () => {
+    const [path, n] = b.dataset.del.split(":");
+    const arr = path === "earn.entries" ? L.earn.entries : path === "earn.prices" ? L.earn.prices : L[path];
+    const realIdx = path === "activity" ? arr.length - 1 - +n : +n;
+    arr.splice(realIdx, 1); save(); back();
+  });
+}
+
 // ---------- shared bits ----------
 function backBar(title, target = "home") {
   return `<div class="backbar"><button class="back" data-back="${target}" aria-label="Back">←</button><span>${esc(title)}</span></div>`;
@@ -702,5 +978,8 @@ function bindBack(target) {
   if (b) b.onclick = () => go(target || b.dataset.back);
 }
 
-home();
+// Test hook: index.html#q=<id> opens one question (used by tests/verdict.py).
+const hq = location.hash.match(/^#q=(.+)$/);
+const testQ = hq && QUESTIONS.find((x) => x.id === decodeURIComponent(hq[1]));
+if (testQ) { S.round++; runQueue([testQ], { title: "Test" }); } else home();
 checkOffline();

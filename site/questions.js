@@ -8,41 +8,26 @@
 //   wrong answers at about the same rate, so "absolutes are wrong" fails.
 // - Wrong answers are real misconceptions, not jokes.
 //
-// Setting: La Jolla and the San Diego coast. Tidepools first.
+// Settings: the campout is at Joshua Tree; wildlife is La Jolla, tidepools first.
+import { mc, tier, order, match, odd } from "./qhelpers.js";
+import { MORE, ORDER_REASONS } from "./more.js";
+import { PLEDGE } from "./pledge.js";
+import { PHOTOS } from "./photos.js";
 
-let n = 0;
-const nid = (p) => `${p}-${++n}`;
-
-function mc(req, q, correct, wrong, why, local) {
-  return { id: nid(req), req, type: "mc", q, correct, wrong, why, local };
-}
-function tier(req, q, correct, wrong, bq, bcorrect, bwrong, why, local) {
-  return { id: nid(req), req, type: "tier", q, correct, wrong, bq, bcorrect, bwrong, why, local };
-}
-function order(req, q, steps, why) {
-  return { id: nid(req), req, type: "order", q, steps, why };
-}
-function match(req, q, pairs, why) {
-  return { id: nid(req), req, type: "match", q, pairs, why };
-}
-function odd(req, q, oddOne, others, bcorrect, bwrong, why) {
-  return { id: nid(req), req, type: "odd", q, oddOne, others, bcorrect, bwrong, why };
-}
-
-export const QUESTIONS = [
+const BASE = [
   // ===================== 2C-1b LEAVE NO TRACE =====================
-  mc("2C-1b", "Which Leave No Trace principle comes first?", "Plan Ahead and Prepare",
-    [["Leave What You Find", "That is principle 4."], ["Respect Wildlife", "That is principle 6."], ["Dispose of Waste Properly", "That is principle 3."]],
-    "Planning comes first because most impacts are prevented before you leave home."),
-  mc("2C-1b", "Which Leave No Trace principle comes last?", "Be Considerate of Other Visitors",
-    [["Respect Wildlife", "That is principle 6, just before the last one."], ["Minimize Campfire Impacts", "That is principle 5."], ["Travel and Camp on Durable Surfaces", "That is principle 2."]],
-    "The list ends with people: being considerate of other visitors."),
-  mc("2C-1b", "What comes right after 'Dispose of Waste Properly'?", "Leave What You Find",
-    [["Plan Ahead and Prepare", "That one starts the list."], ["Minimize Campfire Impacts", "That comes after Leave What You Find."], ["Respect Wildlife", "That is principle 6."]],
-    "Order: Plan, Durable, Waste, Leave What You Find, Campfire, Wildlife, Visitors."),
-  mc("2C-1b", "Which principle comes right before 'Be Considerate of Other Visitors'?", "Respect Wildlife",
-    [["Leave What You Find", "That is principle 4."], ["Minimize Campfire Impacts", "That is principle 5."], ["Plan Ahead and Prepare", "That is principle 1."]],
-    "Wildlife (6), then people (7)."),
+  mc("2C-1b", "Before the trip you check the tide chart, the weather and the park rules. Which principle is that?", "Plan Ahead and Prepare",
+    [["Leave What You Find", "That's about not taking things away."], ["Respect Wildlife", "That's about animals."], ["Dispose of Waste Properly", "That's about trash and waste."]],
+    "Most damage and most emergencies are prevented before you leave home."),
+  mc("2C-1b", "You keep your patrol's voices down at a crowded campground after dark. Which principle is that?", "Be Considerate of Other Visitors",
+    [["Respect Wildlife", "Quiet helps animals too, but this is about the other campers."], ["Minimize Campfire Impacts", "That's about fires."], ["Travel and Camp on Durable Surfaces", "That's about where you walk and sleep."]],
+    "Everyone came for the same peace and quiet."),
+  mc("2C-1b", "You walk single file in the middle of the trail, even where it's muddy. Which principle is that?", "Travel and Camp on Durable Surfaces",
+    [["Plan Ahead and Prepare", "That happens before the trip."], ["Leave What You Find", "That's about not taking or moving things."], ["Respect Wildlife", "That's about animals."]],
+    "Walking around mud widens the trail and kills the plants at its edge."),
+  mc("2C-1b", "Why is feeding a coyote at Joshua Tree a big deal?", "It teaches it to approach people, which often ends badly for the coyote",
+    [["Coyotes can't digest any human food at all", "Some food they can eat. The danger is learned behavior."], ["It's only a problem if the food is junk food", "Any feeding teaches the same lesson."], ["It isn't, as long as no one else sees", "The lesson the coyote learns is the problem."]],
+    "Animals that learn to beg get bold, get hit by cars, or have to be removed. That's Respect Wildlife."),
   order("2C-1b", "Put the 7 Leave No Trace principles in order.",
     ["Plan Ahead and Prepare", "Travel and Camp on Durable Surfaces", "Dispose of Waste Properly", "Leave What You Find", "Minimize Campfire Impacts", "Respect Wildlife", "Be Considerate of Other Visitors"],
     "Memory hook: Please Don't Dump Litter, Make Rangers Beam (Plan, Durable, Dispose, Leave, Minimize, Respect, Be considerate)."),
@@ -288,7 +273,7 @@ export const QUESTIONS = [
     "An oriented map points the same way as the land around you."),
   match("2C-3a", "Match each map symbol to what it shows.",
     [["Brown contour lines", "Elevation (height of the land)"], ["Blue", "Water"], ["Green", "Vegetation"], ["Black dashed line", "A trail"], ["Crossed picks", "A mine or quarry"]],
-    "Five symbols identified = one part of requirement 3a done."),
+    "Learn to read these at a glance. They tell you about water, steep ground and trails before you get there."),
   tier("2C-3a", "On a topo map, the brown contour lines are packed close together. What does that mean?", "The ground there is steep",
     ["The land there is mostly flat", "A river or stream runs through it", "A road crosses it"],
     "How should a hiker use that information?", "Plan for a hard climb, or a cliff",
@@ -376,9 +361,9 @@ export const QUESTIONS = [
   match("2C-4", "Match each tidepool animal to the clue that identifies it.",
     [["Ochre sea star", "Five thick arms, purple or orange, bumpy on top"], ["Purple sea urchin", "Round ball of purple spines wedged in a rock hole"], ["Aggregating anemone", "Carpets of small anemones covered in sand and shell bits"], ["Owl limpet", "Big low cone shell stuck tight to the rock"], ["Mossy chiton", "Oval animal with eight plates in a row and a hairy rim"]],
     "These five are easy to find on a good low tide at Dike Rock, Bird Rock or Windansea."),
-  match("2C-4", "Match each tidepool animal to the clue that identifies it.",
+  match("2C-4", "Match these tidepool animals to the clue that identifies each.",
     [["Hermit crab", "Small crab living in a borrowed snail shell"], ["Striped shore crab", "Dark crab with green stripes that runs sideways into cracks"], ["California mussel", "Blue-black shells in thick beds on wave-hit rocks"], ["Gooseneck barnacle", "Clusters on rubbery stalks, like tiny claws"], ["Black turban snail", "Dark, rounded snail shell, very common in pools"]],
-    "Ten animals from these two sets meets requirement 4."),
+    "Look for these on your next low tide and check them off as you find them."),
   match("2C-4", "Match each La Jolla coast animal to its clue.",
     [["California sea lion", "Ear flaps, barks loudly, walks on its flippers"], ["Harbor seal", "No ear flaps, spotted coat, wiggles on its belly"], ["Brown pelican", "Huge bill with a pouch; dives headfirst for fish"], ["Garibaldi", "Bright orange fish, California's state marine fish"], ["Western gull", "Big white gull with a dark gray back"]],
     "Sea lions crowd La Jolla Cove. Harbor seals rest at the Children's Pool."),
@@ -387,7 +372,7 @@ export const QUESTIONS = [
     "What clue rules out the harbor seal?", "Harbor seals have ear holes, no flaps",
     ["Harbor seals are much bigger and louder", "Harbor seals only come out at night", "Harbor seals live only in Alaska"],
     "Ear flaps plus walking on flippers = sea lion. Belly-wiggling with no flaps = seal."),
-  match("2C-4", "Match each sign to the animal that left it. Evidence counts for requirement 4.",
+  match("2C-4", "Match each sign to the animal that left it.",
     [["Empty round shell with no spines, like a little dome", "Sea urchin (its skeleton, called a test)"], ["A whole empty crab shell with no crab inside", "Crab that molted to grow bigger"], ["Strong smell and barking from the rocks at the Cove", "California sea lions"], ["White streaks all over the cliff tops", "Pelicans and cormorants roosting"], ["Piles of kelp on the sand, hopping with tiny critters", "Beach hoppers (sand fleas)"]],
     "Evidence counts, so you can 'see' animals that are hiding or already gone."),
   tier("2C-4", "How does an ochre sea star eat a mussel?", "Pries it open with its tube feet",
@@ -422,9 +407,9 @@ export const QUESTIONS = [
     "Why?", "They bite, and crowds scare off mothers",
     ["Sea lions are shy and will swim to Mexico", "It's just a rule to keep the beach tidy", "Sea lions carry sand fleas that jump on people"],
     "50 yards is about half a football field. Sea lions and seals are protected by federal law. A pup alone is usually waiting for its mother to come back."),
-  odd("2C-4", "Which one is NOT good evidence for requirement 4?", "A photo of a garibaldi from the aquarium's website",
+  odd("2C-4", "Which one is NOT real evidence that you found an animal yourself?", "A photo of a garibaldi from the aquarium's website",
     ["An empty crab molt you found on the rocks", "A sea lion you saw at the Cove yourself", "Your own photo of an anemone in a tidepool"],
-    "You must observe it yourself", ["Website photos are too blurry to use", "Fish don't count as wild animals", "Only birds count for requirement 4"],
+    "You must observe it yourself", ["Website photos are too blurry to use", "Fish don't count as wild animals", "Only birds can be identified from evidence"],
     "Tracks, shells, molts, nests, your own photos and your own sightings all count."),
   mc("2C-4", "Why should you never feed the gulls or ground squirrels at La Jolla Cove?", "They learn to grab food from people",
     [["Human food keeps them awake and active late into the night", "The real problem is learned behavior and poor nutrition."], ["It's fine if the food is healthy", "Any feeding teaches them to rely on people."], ["It only matters on weekends when crowds are big", "It matters every day."]],
@@ -611,7 +596,7 @@ export const QUESTIONS = [
   // ===================== 2C-6c PREVENTION =====================
   match("2C-6c", "Match each injury to the habit that prevents it.",
     [["Knife cut", "Cut away from your body in a safe circle"], ["Splinter", "Wear gloves when handling firewood"], ["Burn", "Keep a safe distance from fires and stoves"], ["Animal bite", "Never touch or feed wild animals"], ["Heat exhaustion", "Drink water, wear a hat, rest in shade"]],
-    "Every injury on the 6a list has a prevention habit. Think in pairs."),
+    "Every injury has a habit that prevents it. Think in pairs."),
   tier("2C-6c", "Why does the buddy system prevent injuries?", "A buddy notices warning signs early and can go get help",
     ["Buddies carry each other's packs", "Rangers need it for your permit", "It makes the whole hike go faster"],
     "Which problem is a buddy best at catching?", "Heat illness or hypothermia",
@@ -626,7 +611,7 @@ export const QUESTIONS = [
     "Stay with your buddy and your patrol."),
   mc("2C-6c", "Which habit best prevents a stingray sting at La Jolla Shores?", "Shuffling your feet as you wade",
     [["Wearing sunglasses in the water", "Stingrays hide under sand. You can't see them."], ["Splashing loudly with your hands", "Stingrays feel the sand vibrate from your feet, not splashing."], ["Wading only in the late afternoon", "Time of day isn't what prevents it."]],
-    "Matching injuries to habits is what 6c asks for."),
+    "Prevention beats first aid every time."),
 
   // ===================== 2C-6d EMERGENCIES =====================
   order("2C-6d", "Put the backcountry emergency response in order.",
@@ -668,15 +653,15 @@ export const QUESTIONS = [
     "Safety first, then call, then help."),
 
   // ===================== 2C-7a/b PHYSICAL ACTIVITY =====================
-  mc("2C-7a", "What does requirement 7a ask you to do?", "30 minutes a day, 5 days a week, 4 weeks",
-    [["Run a mile in under 10 minutes, once", "7a is about a steady habit, not one test."], ["Exercise 2 hours every single day for a month", "The minimum is 30 minutes, 5 days a week."], ["Play on one school sports team for a season", "Any activity counts if you log it."]],
-    "Keep a simple log: date, activity, minutes. You start it after Tenderfoot 6c."),
+  mc("2C-7a", "Why does being active most days beat one huge workout a week?", "Your body adapts to what you do often; one big day can't make up for six off",
+    [["Big workouts are dangerous for anyone under 18", "They aren't. They just don't build the habit."], ["Muscles only grow on weekdays", "Muscles adapt any day you train them."], ["It doesn't. One big workout a week is just as good", "Regular activity builds fitness and habit; a weekly blast doesn't."]],
+    "That's why the Scouting challenge is 30 minutes on 5 days a week for 4 weeks: it builds a habit you keep."),
   tier("2C-7a", "Which of these counts toward your 30 minutes a day?", "Surfing, swimming laps, or basketball practice",
     ["Watching a surf contest on the beach", "Playing a video game about sports", "Reading a book about fitness"],
-    "What do you need to show at the end of 4 weeks?", "A log of your activities",
-    ["A doctor's signature for every day", "A photo of yourself each day", "A medal from a race"],
-    "Then for 7b, share what was hard, what went well, and set a goal to keep going."),
-  mc("2C-7a", "For 7b, what makes a good goal for staying active?", "A specific plan, like 'swim twice a week before school'",
+    "Why keep a written log of your activity?", "It shows your real pattern, so you can see what works",
+    ["Logs make each workout count double", "A log is the only way exercise helps", "So you can skip days and not feel bad"],
+    "Then look back at what was hard and what went well, and set a goal to keep going."),
+  mc("2C-7a", "What makes a good goal for staying active?", "A specific plan, like 'swim twice a week before school'",
     [["'Get really fit someday'", "Too vague to check."], ["'Never miss a single day for the rest of my life'", "Goals should be realistic."], ["'Whatever my friends decide to do'", "It's your goal. Make it yours."]],
     "Specific and realistic goals are the ones people keep."),
 
@@ -691,7 +676,7 @@ export const QUESTIONS = [
     "Some vapes have as much nicotine as a whole pack of cigarettes."),
   match("2C-7c", "Match each part of the Scout Oath or Law to how it connects to avoiding drugs, alcohol and tobacco.",
     [["Physically strong", "Keeping your body healthy"], ["Mentally awake", "Keeping a clear mind"], ["Morally straight", "Making choices you're proud of"], ["Clean", "Keeping body and mind fit and clean"]],
-    "For 7c you tell your Scoutmaster how the Oath and Law connect to what you learned."),
+    "The Oath and Law are about keeping your body strong and your mind clear. That's exactly what drugs, alcohol and nicotine take away."),
   order("2C-7c", "Put a good way to say no in order.",
     ["Say no clearly", "Give a short reason if you want", "Suggest something else to do", "Walk away if they keep pushing"],
     "You don't owe anyone a long explanation. Real friends accept no."),
@@ -742,17 +727,17 @@ export const QUESTIONS = [
     "Same respect as in a flag ceremony."),
 
   // ===================== 2C-8c SAVINGS PLAN =====================
-  tier("2C-8c", "You want a $60 wetsuit. You can save $5 a week. How long will it take?", "12 weeks",
+  tier("2C-8c", "You want a $60 wetsuit. You can earn $5 a week washing a neighbor's car. How long will it take?", "12 weeks",
     ["6 weeks", "10 weeks", "15 weeks"],
-    "What should your written plan include?", "Goal, cost, weekly amount, date",
+    "What should your written plan include?", "Goal, cost, how you'll earn it, date",
     ["Only the color and size of the wetsuit you want", "A promise to ask a parent for the rest later", "A list of stores, with no amounts or dates"],
     "$60 ÷ $5 = 12 weeks. Then follow the plan and track it."),
-  order("2C-8c", "Put making a savings plan in order.",
-    ["Pick an item and find what it costs", "Decide how much you can save each week", "Write down the plan and the target date", "Save and track it every week", "Talk with a parent about changes and whether you hit the goal"],
-    "For 8c you work with a parent or guardian, then discuss how it went."),
-  mc("2C-8c", "Halfway through, you spend some savings on a snack run. What does a good saver do?", "Adjust the plan and keep going",
+  order("2C-8c", "Put making an earning plan in order.",
+    ["Pick an item and find what it costs", "With a parent, set how much you need to earn", "Write how you'll earn it, how much each week, and by when", "Do the work and track what you earn", "Talk with a parent about changes and whether you hit the goal"],
+    "Planning with a parent, then talking about how it went, is how you learn from it."),
+  mc("2C-8c", "Halfway through, you spend some of what you earned on a snack run. What does a good planner do?", "Adjust the plan and keep going",
     [["Give up, since the plan is ruined", "Plans can change. Adjust and continue."], ["Hide it and pretend you're on track", "Honesty matters. Trustworthy."], ["Start a brand-new goal instead", "Adjust the plan you have."]],
-    "8c asks you to talk about any changes you made and whether you met your goal."),
+    "Good planners adjust honestly and keep going."),
 
   // ===================== 2C-8d COMPARISON SHOPPING =====================
   tier("2C-8d", "You compare a pair of fins at three stores. Store A: $40. Store B: $35 plus $8 shipping. Store C: $38 with free pickup. Which is cheapest in total?", "Store C, at $38",
@@ -760,19 +745,19 @@ export const QUESTIONS = [
     "What did that teach you?", "Add up shipping and fees, not just the price",
     ["The lowest sticker price is the best deal every time", "Online stores always cost more than shops", "Price is the only thing that matters when buying"],
     "Store B is really $43. Also compare quality, return policy and whether a used one would work."),
-  mc("2C-8d", "After you reach your goal, what are your three choices for the money in 8d?", "Use it, save it, or repurpose it",
-    [["Spend it, lend it, or lose it", "8d's choices are use, save or repurpose."], ["Give it all to the troop treasurer", "That's not one of the choices."], ["Hide it, invest it, or double it", "Use, save or repurpose."]],
+  mc("2C-8d", "You reached your earning goal. What can you do with the money?", "Use it, save it, or repurpose it",
+    [["Spend it, lend it, or lose it", "You can use it, save it, or put it toward something else."], ["Give it all to the troop treasurer", "That's not one of the choices."], ["Hide it, invest it, or double it", "Use, save or repurpose."]],
     "Repurpose means putting the money toward a different goal you decide matters more."),
 
   // ===================== 2C-8e SERVICE =====================
-  mc("2C-8e", "How much service does 8e ask for?", "2 hours, Scoutmaster approved",
-    [["10 hours, on any project you pick", "2 hours, with Scoutmaster approval."], ["One afternoon raking your own yard", "Service helps others, and needs approval."], ["Any amount, as long as a friend saw it", "2 hours, approved by your Scoutmaster."]],
-    "A beach cleanup at La Jolla Shores is a great local example."),
+  mc("2C-8e", "What makes something count as service?", "Unpaid work that helps other people or your community",
+    [["Any job where you're being helpful to someone", "If you're paid, it's a job, not service."], ["Chores you do around your own house", "Those help your family, and you'd do them anyway."], ["Anything a teacher asks you to do", "Schoolwork helps you, not others."]],
+    "A beach cleanup at La Jolla Shores is a great local example. Check with your Scoutmaster before you start."),
   tier("2C-8e", "Which part of the Scout Oath connects best to service?", "To help other people at all times",
     ["To keep myself physically strong", "To obey the Scout Law", "To do my duty to my country"],
     "What else should you be ready to tell about your service?", "Who it helped and why it mattered",
     ["How many photos you took during it", "Whether it was the easiest project", "How fast you finished it"],
-    "8e asks you to explain how your service relates to the Scout Oath."),
+    "Service is the Scout Oath in action: helping other people at all times."),
 
   // ===================== 2C-9a THREE R'S =====================
   order("2C-9a", "Put the three R's of personal safety in order.",
@@ -810,3 +795,14 @@ export const QUESTIONS = [
     "It usually makes things worse", ["Hitting back is too slow to work", "It only works if done on weekends", "It's fine if they hit you first"],
     "Stay calm, walk away, and tell."),
 ];
+
+// FAST is taught on a learn card; quizzing the letters only tested spelling.
+// Knot-tying steps are learned on a real rope; written steps are too hard to picture.
+const DROP = new Set([
+  "Put FAST (the stroke check) in order.",
+  "Put the sheet bend steps in order.",
+  "Put the bowline steps in order (rabbit and tree story).",
+]);
+
+export const QUESTIONS = [...BASE.filter((q) => !DROP.has(q.q)), ...MORE, ...PHOTOS, ...PLEDGE];
+for (const q of QUESTIONS) if (q.type === "order" && ORDER_REASONS[q.q]) q.reasons = ORDER_REASONS[q.q];

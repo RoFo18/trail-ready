@@ -16,8 +16,13 @@ async def main():
             await page.click(f"[data-go={mode}]")
             for i in range(12):
                 if await page.query_selector(".finish"): break
-                if await page.query_selector("#gotit"): await page.click("#gotit"); continue
-                if await page.query_selector("[data-a]"):
+                if await page.query_selector("[data-t]") and await page.query_selector(".tiles-w"):
+                    await page.click("[data-t='0']"); await page.click("#check")
+                elif await page.query_selector("#ans"):
+                    await page.fill("#ans", "i pledge allegiance"); await page.click("#check")
+                elif await page.query_selector("#show"):
+                    await page.click("#show"); await page.click("#all")
+                elif await page.query_selector("[data-a]"):
                     await page.click("[data-a='0']"); await page.click("[data-b='1']")
                 elif await page.query_selector("[data-o]"):
                     await page.click("[data-o='2']")

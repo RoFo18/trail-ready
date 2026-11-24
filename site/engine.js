@@ -75,6 +75,9 @@ export function freshState() {
     topicsStarted: {},
     settings: { sound: false, reduceMotion: false },
     storyDone: false,
+    doit: {}, // reqId -> [bool] hands-on checklist
+    pledge: { days: [] }, // distinct days the opening was right and sure
+    logs: { activity: [], service: [], outings: [], earn: { item: "", cost: "", perWeek: "", how: "", entries: [], prices: [], decision: "" } },
   };
 }
 

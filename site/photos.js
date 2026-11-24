@@ -1,0 +1,51 @@
+// Photo ID questions for La Jolla animals. All photos are free-licensed from
+// Wikimedia Commons, credited on screen, and were checked for a pink color cast.
+import { photo } from "./qhelpers.js";
+
+const W = "https://thumb.wikimedia.org/wikipedia/commons/thumb/";
+const img = (path, credit) => ({ src: W + path, credit: `Photo: ${credit}, via Wikimedia Commons` });
+
+export const PHOTOS = [
+  photo("2C-4", "What is this tidepool animal?", img("c/ca/Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg/960px-Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg", "Charles J. Sharp, CC BY-SA 4.0"),
+    "Ochre sea star", [["Bat star", "Bat stars have short, webbed arms. These arms are long and thick."], ["Brittle star", "Brittle stars have thin, snaky arms."], ["Sunflower star", "Sunflower stars have many more than five arms."]],
+    "Five thick, bumpy arms, orange or purple, stuck to a low rock."),
+  photo("2C-4", "What is this animal wedged among the rocks?", img("f/f4/Strongylocentrotus_purpuratus_1.jpg/960px-Strongylocentrotus_purpuratus_1.jpg", "Taollan82, CC BY 3.0"),
+    "Purple sea urchin", [["Aggregating anemone", "Anemones have soft tentacles, not hard spines."], ["Sea cucumber", "Sea cucumbers are soft tubes."], ["Red sea urchin", "Red urchins are bigger, with longer red spines."]],
+    "A round ball of purple spines. Urchins grind homes into rock over years."),
+  photo("2C-4", "What is this green animal in a low pool?", img("a/a9/Anthopleura_xanthogrammica_1.jpg/960px-Anthopleura_xanthogrammica_1.jpg", "Stan Shebs, CC BY-SA 3.0"),
+    "Giant green anemone", [["Surfgrass", "Surfgrass is a plant with long flat blades."], ["Green sea urchin", "Urchins have hard spines, not soft tentacles."], ["Sea lettuce", "Sea lettuce is a thin, flat seaweed."]],
+    "Its green color comes from tiny algae living inside it."),
+  photo("2C-4", "What is this big, low shell stuck tight to the rock?", img("8/8e/Lottia_gigantea.jpg/960px-Lottia_gigantea.jpg", "Jerry Kirkhart, CC BY 2.0"),
+    "Owl limpet", [["Abalone", "Abalone have a row of holes along the shell."], ["Acorn barnacle", "Barnacles are small volcano shapes with plates."], ["Black turban snail", "Turban snails are round and coiled."]],
+    "Owl limpets guard a patch of rock and graze algae on it."),
+  photo("2C-4", "What is this crab?", img("e/e0/Striped_shore_crab%2C_Pachygrapsus_crassipes_crop.jpg/960px-Striped_shore_crab%2C_Pachygrapsus_crassipes_crop.jpg", "Peter D. Tillman, CC BY-SA 3.0"),
+    "Striped shore crab", [["Hermit crab", "Hermit crabs live inside a borrowed shell."], ["Spiny lobster", "Lobsters are long, with long antennae and no big claws."], ["Sand crab", "Sand crabs are small, egg-shaped and burrow in sand."]],
+    "Dark with fine green stripes, and it runs sideways into cracks."),
+  photo("2C-4", "What are these shells clustered on a wave-hit rock?", img("4/44/California_Mussels_002.jpg/960px-California_Mussels_002.jpg", "Sharon Mollerus, CC BY 2.0"),
+    "California mussels", [["Black turban snails", "Turbans are round and coiled, not long and paired."], ["Owl limpets", "Limpets are single low cones."], ["Gooseneck barnacles", "Goosenecks sit on rubbery stalks."]],
+    "Mussels hold on with strong threads and form thick beds in the middle zone."),
+  photo("2C-4", "What are these animals on rubbery stalks?", img("3/3a/Pollicipes_polymerus_Gooseneck_Barnacle_6935_cr2.jpg/960px-Pollicipes_polymerus_Gooseneck_Barnacle_6935_cr2.jpg", "Paul Harrison, CC BY-SA 4.0"),
+    "Gooseneck barnacles", [["California mussels", "Mussels have two smooth shells, no stalk."], ["Acorn barnacles", "Acorn barnacles are glued flat, with no stalk."], ["Sea anemones", "Anemones are soft, with tentacles."]],
+    "They're glued headfirst to the rock and kick food in with feathery legs."),
+  photo("2C-4", "What are these dark, rounded shells?", img("5/5b/Tegula_funebralis.jpg/960px-Tegula_funebralis.jpg", "Steve Lonhart (SIMoN / MBNMS), public domain"),
+    "Black turban snails", [["Owl limpets", "Limpets are low cones, not coiled."], ["Purple sea urchins", "Urchins are covered in spines."], ["California mussels", "Mussels are long, paired shells."]],
+    "Very common in pools. Their empty shells often become hermit crab homes."),
+  photo("2C-4", "This animal is on the rocks at La Jolla Cove. What is it?", img("7/74/California_sea_lion_in_La_Jolla_%2870568%29.jpg/960px-California_sea_lion_in_La_Jolla_%2870568%29.jpg", "Rhododendrites, CC BY-SA 4.0"),
+    "California sea lion", [["Harbor seal", "Seals have no ear flaps and lie on their bellies."], ["Elephant seal", "Elephant seals are huge, and males have a big trunk-like nose."], ["Sea otter", "Otters are small and furry and float on their backs."]],
+    "Ear flaps and propped up on its front flippers: sea lion."),
+  photo("2C-4", "This animal is resting at the Children's Pool. What is it?", img("7/7b/Harbor_seal_hauled_out_on_the_rocks%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg/960px-Harbor_seal_hauled_out_on_the_rocks%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg", "Christian David, CC BY-SA 4.0"),
+    "Harbor seal", [["California sea lion", "Sea lions have ear flaps and prop up on their flippers."], ["Elephant seal", "Elephant seals are far bigger."], ["Sea otter", "Otters are small, with thick fur and a long tail."]],
+    "Spotted coat, no ear flaps, lying on its belly: harbor seal."),
+  photo("2C-4", "What is this big bird?", img("4/41/Pelecanus_occidentalis_at_Bodega_Head.jpg/960px-Pelecanus_occidentalis_at_Bodega_Head.jpg", "Frank Schulenburg, CC BY-SA 4.0"),
+    "Brown pelican", [["Western gull", "Gulls are white and gray with short yellow bills."], ["Brandt's cormorant", "Cormorants are dark with thin hooked bills."], ["Great blue heron", "Herons have long legs and a long neck."]],
+    "That huge bill with a pouch is the giveaway. They roost on the cliffs at La Jolla Cove."),
+  photo("2C-4", "What is this bright orange fish?", img("2/27/Hypsypops_rubicundus_adult.jpg/960px-Hypsypops_rubicundus_adult.jpg", "Stan Shebs, CC BY-SA 3.0"),
+    "Garibaldi", [["Goldfish", "Goldfish live in fresh water, not the ocean."], ["California sheephead", "Sheephead are black and red with a white chin."], ["Opaleye", "Opaleye are olive green with white spots."]],
+    "California's state marine fish. You can see them from the Cove."),
+  photo("2C-4", "What is this animal in the surfgrass?", img("4/46/Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg/960px-Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg", "Jerry Kirkhart, CC BY 2.0"),
+    "California two-spot octopus", [["Squid", "Squid are torpedo-shaped with fins and swim in open water."], ["Sea hare", "Sea hares are big soft slugs without arms."], ["Brittle star", "Brittle stars have five thin arms from a disk."]],
+    "Look for the blue eyespot on each side of the head."),
+  photo("2C-4", "What is this crab doing in a snail shell?", img("8/88/Hermit_Crab_%28Pagurus_samuelis%29_%283108615732%29.jpg/960px-Hermit_Crab_%28Pagurus_samuelis%29_%283108615732%29.jpg", "Jerry Kirkhart, CC BY 2.0"),
+    "Hermit crab living in a borrowed shell", [["Snail that grew crab legs", "Snails don't have legs like these."], ["Shore crab hiding for the night", "Shore crabs hide in cracks, not shells."], ["Crab eating the snail inside", "The crab lives in the empty shell."]],
+    "Hermit crabs move into empty snail shells and trade up as they grow."),
+];

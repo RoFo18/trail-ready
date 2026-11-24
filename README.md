@@ -1,7 +1,10 @@
 # Trail Ready: Second Class
 
-Offline-first study app (PWA) for Scouts BSA Second Class requirements, La Jolla edition: wildlife from the tidepools and coast, local hazards and rules.
+Offline-first study app (PWA) for Scouts BSA Second Class. The campout is set at Joshua Tree; wildlife is La Jolla, tidepools first. Includes a Pledge drill ("I pledge allegiance," never "I pledge of").
 
-- Covers every Second Class requirement that has something to know or explain (1b, 1c, 2a to 2g, 3a, 3c, 3d, 4, 5a, 5c, 5d, 6a to 6e, 7a to 7c, 8a to 8e, 9a, 9b, 10). Do-only items (1a, 3b, 5b, 11, 12) are not quizzed.
-- `site/` is the static app (no build step). Netlify publishes it.
-- `tests/slots.test.js` checks answer-position balance and the longest-answer tell. Netlify runs it on every deploy and fails the deploy if it fails.
+- Every Second Class requirement appears on the sign-off screen with up to three parts: Know it (quiz mastery), Say it (talk-through checklist), Do it (hands-on, with a leader). A requirement is ready only when all its parts are done.
+- Learn cards are predict-then-reveal: a situation, a guess, what actually happens and why, a picture to remember it, and a quick "now you try."
+- My Logs tracks the multi-week parts: activity (4 weeks), earning plan and price comparison, service hours, outings.
+- Question IDs are hashes of the question text, so editing the bank doesn't scramble saved progress. `site/migrate-map.js` carries over progress from the Nov 24 release.
+- `site/` is the static app (no build step). Netlify publishes it from `main` automatically.
+- Tests: `node tests/slots.test.js` (answer-position balance and guessing cues; Netlify runs it on every deploy) and `python3 tests/verdict.py` (answers every question correctly through the UI; needs a local server on :8765 serving `site/`).
