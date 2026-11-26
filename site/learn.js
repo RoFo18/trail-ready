@@ -17,15 +17,15 @@ export const REQS = {
   lnt: {
     name: "Leave No Trace",
     learn: [
-      { h: "The seven, in order. Yes, the order matters.", p: ["1. Plan Ahead and Prepare", "2. Travel and Camp on Durable Surfaces", "3. Dispose of Waste Properly", "4. Leave What You Find", "5. Minimize Campfire Impacts", "6. Respect Wildlife", "7. Be Considerate of Other Visitors"] },
-      { h: "Cheat code for the order", p: ["Please Don't Dump Litter, Make Rangers Beam.", "Plan, Durable, Dispose, Leave, Minimize, Respect, Be considerate."] },
+      { h: "The seven principles", p: ["Plan Ahead and Prepare", "Travel and Camp on Durable Surfaces", "Dispose of Waste Properly", "Leave What You Find", "Minimize Campfire Impacts", "Respect Wildlife", "Be Considerate of Other Visitors"] },
+      { h: "Cheat code to remember all seven", p: ["Please Don't Dump Litter, Make Rangers Beam.", "Plan, Durable, Dispose, Leave, Minimize, Respect, Be considerate."] },
       { h: "What they look like out there", p: ["Plan: check weather, tides and rules before you go.", "Durable: trails, rock, gravel, dry sand. Single file, middle of the trail, even when it's muddy.", "Waste: pack it all out. Orange peels and apple cores count.", "Leave what you find: shells, rocks, plants and old stuff stay put.", "Campfires: stove or an existing ring. Keep it small.", "Wildlife: watch from a distance. Feeding them is not a favor.", "Other visitors: keep it down after dark. Share the trail."] },
     ],
   },
   campsite: {
     name: "Choosing a campsite",
     learn: [
-      { h: "Ask these four, in this order", p: ["1. Is camping allowed here?", "2. Is it safe?", "3. Is the ground durable and level?", "4. Is it comfy?", "Comfy comes last. Every time."] },
+      { h: "Ask these four", p: ["Is camping allowed here?", "Is it safe?", "Is the ground durable and level?", "Is it comfy?", "Safety beats comfy. Every time."] },
       { h: "Safe means", p: ["Not in a dry wash or low spot. Rain miles away can send a flood through it.", "No dead limbs overhead, no loose rock above.", "Back from cliff and bluff edges.", "On a beach, above the high-tide line."] },
       { h: "Look down before you pitch", p: ["Ants, sharp rocks, roots, and low spots where water or cold air collects.", "Bare, durable ground. Don't flatten plants."] },
       { h: "Layout and weather", p: ["Tents spread out, away from cooking and the fire.", "Door away from the wind. Stake and guy out every line, even if it's calm now.", "Cold night? Skip the lowest ground. Cold air sinks there and waits for you."] },
@@ -42,7 +42,7 @@ export const REQS = {
   firewood: {
     name: "Knife, tinder, kindling and fuel",
     learn: [
-      { h: "Three sizes. Get these straight.", p: ["Tinder: thinner than a match. Dry grass, bark fluff, wood shavings.", "Kindling: pencil to thumb thick.", "Fuel wood: wrist thick and bigger."] },
+      { h: "Three sizes. Get these straight.", img: { src: "img/firewood.svg" }, p: ["Tinder: thinner than a match. Dry grass, bark fluff, wood shavings.", "Kindling: pencil to thumb thick.", "Fuel wood: wrist thick and bigger."] },
       { h: "How they hand off", p: ["Match lights tinder. Tinder lights kindling. Kindling lights fuel.", "Skip a size and the fire dies. Every time.", "All of it has to be dry. Damp wood just smokes at you."] },
       { h: "Knife rules", p: ["Check your safety circle: nobody within arm's reach.", "Cut away from your body.", "Close it before you hand it over.", "It's a knife, not a pry bar.", "Saw or axe only for wood too thick to snap, with clear space and an adult's OK."] },
     ],
@@ -51,11 +51,10 @@ export const REQS = {
     name: "Building and putting out a fire",
     before: [
       { h: "Fire materials", p: ["Tinder: thinner than a match.", "Kindling: pencil to thumb thick.", "Fuel wood: wrist thick and bigger."] },
-      { h: "The fire triangle", p: ["Heat, fuel and air. Take away one and the fire's done.", "Water takes away heat. Stirring in water and dirt cuts off air."] },
     ],
     learn: [
-      { h: "In order", p: ["1. Check the rules and use the fire ring.", "2. Set out water and a shovel.", "3. Prepare tinder, kindling and fuel.", "4. Light the tinder, add kindling, then fuel.", "5. Drown, stir, drown again until it's cold."] },
-      { h: "Three fire lays", p: ["Tepee: kindling leaned in a cone over tinder. Fast and hot.", "Log cabin: sticks stacked in a crisscross square. Steady coals for cooking.", "Lean-to: kindling leaned against one bigger stick. Good in wind.", "Leave gaps. Fire needs to breathe too."] },
+      { h: "In order. This one matters.", p: ["1. Check the rules and use the fire ring.", "2. Set out water and a shovel.", "3. Prepare tinder, kindling and fuel.", "4. Light the tinder, add kindling, then fuel.", "5. Drown, stir, drown again until it's cold.", "6. Ashes: leave them in the ring or scatter them, whatever the site rules say."] },
+      { h: "Three fire lays", img: { src: "img/firelays.svg" }, p: ["Tepee: kindling leaned in a cone over tinder. Fast and hot.", "Log cabin: sticks stacked in a crisscross square. Steady coals for cooking.", "Lean-to: kindling leaned against one bigger stick. Good in wind.", "Leave gaps. Fire needs to breathe too."] },
       { h: "Minimum impact", p: ["Small fire, existing ring, burn the wood all the way to ash.", "Cold out means you hold your hand near the ashes and feel nothing.", "Don't bury a fire in sand. The coals stay hot for hours, and somebody's bare foot finds them."] },
     ],
   },
@@ -63,33 +62,34 @@ export const REQS = {
     name: "Stoves",
     learn: [
       { h: "Which stove", p: ["Lightweight canister stove: backpacking, when you carry everything.", "Two-burner propane stove: car camping, cooking for the whole patrol."] },
-      { h: "Set up and light, in order", p: ["1. Get an adult's OK. Flat, stable ground, outdoors.", "2. Check the fittings are tight and nothing leaks.", "3. Strike the match first.", "4. Then open the valve slowly and light it.", "5. Never walk away from it. When you're done, fuel off and let it cool."] },
-      { h: "Don't be that Scout", p: ["Never use a stove in a tent. Fire, plus carbon monoxide you can't smell.", "Change a canister only when the stove is off and cool.", "Smell gas? Fuel off. Don't light it.", "A windscreen keeps the heat on your pot instead of the scenery.", "Cold weather drops canister pressure, so the flame gets wimpy."] },
+      { h: "Set up and light, in order. Order matters here.", p: ["1. Get an adult's OK. Flat, stable ground, outdoors.", "2. Check the fittings are tight and nothing leaks.", "3. Strike the match first.", "4. Then open the valve slowly and light it.", "5. Never walk away from it. When you're done, fuel off and let it cool."] },
+      { h: "Don't be that Scout", p: ["Never use a stove in a tent. Fire, plus carbon monoxide you can't smell.", "Change a canister only when the stove is off and cool.", "Smell gas? Fuel off. Don't light it."] },
     ],
   },
   knots: {
     name: "Sheet bend and bowline",
     learn: [
-      { h: "Sheet bend", p: ["Joins two ropes, even when one is thicker.", "The thick rope makes the U-shaped bend. The thin rope wraps around it.", "Check it: both short ends on the same side.", "Use it to add a thin cord to a thicker rope, or tie a rope to a tarp corner.", "Why not a square knot? It slips when the ropes are different sizes."] },
-      { h: "Bowline", p: ["A loop that won't slip or tighten.", "Use it for a rescue loop around someone's chest, or a loop around a tree.", "The rabbit comes out of the hole, runs around the tree, and goes back down the hole.", "Weak spot: it can work loose when nothing is pulling on it."] },
+      { h: "Sheet bend", img: { src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Sheet_Bend_-_ABoK_1431_-_USCG.jpg/960px-Sheet_Bend_-_ABoK_1431_-_USCG.jpg", credit: "Photo: USCG, CC0, via Wikimedia Commons", ratio: "5 / 2", pos: "50% 61%" }, p: ["Joins two ropes, even when one is thicker than the other.", "Use it to add a thin cord to a thicker rope, or tie a line to a tarp corner.", "Why not a square knot? It slips when the ropes are different sizes."] },
+      { h: "Bowline", img: { src: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Knot-bowline-ABoK_1010-USCG.jpg/960px-Knot-bowline-ABoK_1010-USCG.jpg", credit: "Photo: USCG, CC BY-SA 4.0, via Wikimedia Commons", ratio: "16 / 9", pos: "62% 53%" }, p: ["A loop at the end of a rope that won't slip or tighten.", "Use it for a rescue loop around someone's chest, or a loop around a tree or post.", "Weak spot: it can work loose when nothing is pulling on it."] },
+      { h: "Which one?", p: ["Two ropes to join: sheet bend.", "A loop that has to hold its size: bowline.", "You'll tie them for real with your patrol. This is about knowing when to grab which."] },
     ],
   },
   compass: {
     name: "Compass and map",
     learn: [
       { h: "How a compass works", p: ["The needle is a magnet. It lines up with Earth's magnetic field and points to magnetic north.", "Metal messes with it. Step away from the car. And the knife."] },
-      { h: "The parts", p: ["Magnetic needle: points to magnetic north.", "Direction-of-travel arrow: points where you want to go.", "Housing (bezel): turns to set a bearing in degrees.", "Orienting arrow: put the red needle in it. 'Red in the shed.'"] },
-      { h: "Orient a map, in order", p: ["1. Lay the map flat.", "2. Set the housing to north (0°).", "3. Compass edge along a north-south line, arrow to the top.", "4. Turn the map and compass together until red is in the shed.", "5. Adjust for declination: about 11° east in San Diego."] },
+      { h: "The parts", img: { src: "img/compass.svg" }, p: ["Magnetic needle: points to magnetic north.", "Direction-of-travel arrow: points where you want to go.", "Housing (bezel): turns to set a bearing in degrees.", "Orienting arrow: put the red needle in it. 'Red in the shed.'"] },
+      { h: "Orient a map, in order. Order matters.", p: ["1. Lay the map flat.", "2. Set the housing to north (0°).", "3. Compass edge along a north-south line, arrow to the top.", "4. Turn the map and compass together until red is in the shed.", "5. Adjust for declination: about 11° east in San Diego."] },
       { h: "Bearings", p: ["0° north, 90° east, 180° south, 270° west.", "Shoot a bearing: point the travel arrow at a landmark, turn the housing until red is in the shed, read the number.", "Follow one: set it, turn your body until red is in the shed, walk to something straight ahead."] },
-      { h: "Map symbols", p: ["Brown contour lines: elevation. Squished together means steep.", "Blue: water. Green: vegetation.", "Black dashed line: trail.", "Crossed picks: mine or quarry.", "Contour interval: how much height between one line and the next."] },
+      { h: "Map symbols", img: { src: "img/mapsymbols.svg" }, p: ["Brown contour lines: elevation. Squished together means steep.", "Blue: water. Green: vegetation.", "Black dashed line: trail.", "Crossed picks: mine or quarry.", "Contour interval: how much height between one line and the next."] },
     ],
   },
   nocompass: {
     name: "Directions without a compass",
     learn: [
-      { h: "Shadow stick, in order", p: ["1. Push a stick straight up in flat, sunny ground.", "2. Mark the tip of its shadow.", "3. Wait about 15 minutes.", "4. Mark the new tip.", "5. First mark is west, second is east."] },
+      { h: "Shadow stick, in order", img: { src: "img/shadowstick.svg" }, p: ["1. Push a stick straight up in flat, sunny ground.", "2. Mark the tip of its shadow.", "3. Wait about 15 minutes.", "4. Mark the new tip.", "5. First mark is west, second is east."] },
       { h: "Watch method", p: ["Point the hour hand at the sun.", "South is halfway between the hour hand and 12.", "Daylight saving time? Use the 1 instead of the 12."] },
-      { h: "At night", p: ["The two stars at the end of the Big Dipper's cup point to the North Star.", "Dipper too low? Find Cassiopeia, the W, on the other side of the North Star.", "Orion rises in the east. His sword points roughly south."] },
+      { h: "At night", img: { src: "img/dipper.svg" }, p: ["The two stars at the end of the Big Dipper's cup point to the North Star.", "Dipper too low? Find Cassiopeia, the W, on the other side of the North Star.", "Orion rises in the east. His sword points roughly south."] },
       { h: "The sun", p: ["Up in the east, down in the west.", "In the afternoon it hangs toward the southwest."] },
     ],
   },
@@ -113,7 +113,7 @@ export const REQS = {
   safeswim: {
     name: "Safe swim",
     learn: [
-      { h: "Safe Swim Defense, in order", p: ["1. Qualified supervision", "2. Personal health review", "3. Safe area", "4. Response personnel (lifeguards)", "5. Lookout", "6. Ability groups", "7. Buddy system", "8. Discipline"] },
+      { h: "The eight points of Safe Swim Defense", p: ["Qualified supervision", "Personal health review", "Safe area", "Response personnel (lifeguards)", "Lookout", "Ability groups", "Buddy system", "Discipline", "Know all eight. The order isn't the test."] },
       { h: "The details they'll ask about", p: ["Ability groups: nonswimmer, beginner, swimmer.", "Buddy check: buddies grab hands and raise them so the leader can count.", "The lookout watches the whole area for trouble."] },
       { h: "In the ocean", p: ["Rip current: stay calm and swim parallel to the beach. Fighting it straight in just wears you out.", "Stingrays: shuffle your feet when you wade.", "Never swim alone or out past the waves."] },
     ],
@@ -124,7 +124,7 @@ export const REQS = {
       { h: "Reach, throw, row, go", p: ["Try them in that order. Each step puts the rescuer in more danger."] },
     ],
     learn: [
-      { h: "Reaching rescue, in order", p: ["1. Shout that help is coming.", "2. Lie down or brace low on solid ground.", "3. Reach with a pole, paddle, towel, shirt or branch.", "4. Tell them to grab it.", "5. Pull them in slowly, staying low."] },
+      { h: "Reaching rescue", p: ["Get low first: lie down or brace on solid ground, so they can't pull you in.", "Reach with a pole, paddle, towel, shirt or branch.", "Tell them to grab it, then pull them in slowly, staying low.", "Shout that help is coming. It calms people down."] },
       { h: "Throwing rescue", p: ["Hold onto the end of the rope. Throw underhand.", "Aim just past the person, so the rope lands across their reach.", "Missed? Pull it back fast and throw again.", "Still can't reach them? Get help and keep trying from shore. You don't go in."] },
       { h: "Good tools", p: ["Ring buoy, throw bag, rope, pole, paddle, towel, branch.", "Not a heavy rock. They're drowning, not playing catch."] },
     ],
@@ -140,13 +140,13 @@ export const REQS = {
   firstaid: {
     name: "First aid",
     learn: [
-      { h: "Something in the eye", p: ["Don't rub. Flush it with clean water.", "Still stuck? Cover the eye loosely and get medical help."] },
+      { h: "Something in the eye", img: { src: "img/eye.svg" }, p: ["Don't rub. Flush it with clean water.", "Still stuck? Cover the eye loosely and get medical help."] },
       { h: "Animal bite", p: ["Wash with soap and water, cover it, see a doctor.", "Never suck the wound. That's a movie thing."] },
       { h: "Puncture wounds", p: ["Splinter: clean tweezers, wash, bandage.", "Nail: let it bleed a little, wash, bandage, check tetanus.", "Fishhook past the barb: leave it for a trained adult or a doctor.", "Stingray sting: soak in water as hot as the person can stand."] },
-      { h: "Serious burn, in order", p: ["1. Get away from the heat.", "2. Cool with cool water for at least 10 minutes.", "3. Cover loosely with a sterile dressing.", "4. Treat for shock and get medical help.", "Don't pop the blisters."] },
-      { h: "Heat", p: ["Heat exhaustion: pale, cool, sweaty, dizzy, but awake and talking. Shade, lie down, feet up, cool cloths, sips of water.", "Heatstroke: hot, red skin and confused. Call 911 and cool them fast. This one is serious.", "Dehydration: rest in the shade and slowly sip water or a sports drink."] },
-      { h: "Shock, in order", p: ["1. Make sure the scene is safe; call for help.", "2. Have the person lie down.", "3. Raise the feet about 12 inches if it doesn't hurt.", "4. Keep them warm.", "5. Nothing to eat or drink. Keep checking on them."] },
-      { h: "Hypothermia, in order", p: ["Wet plus wind chills you fast, even on a nice day.", "1. Get out of wind and wet.", "2. Change into dry clothes.", "3. Sleeping bag, off the cold ground.", "4. Warm, sweet drink if fully alert.", "5. Medical help if severe."] },
+      { h: "Serious burn, in order", img: { src: "img/burn.svg" }, p: ["1. Get away from the heat.", "2. Cool with cool water for at least 10 minutes.", "3. Cover loosely with a sterile dressing.", "4. Treat for shock and get medical help.", "Don't pop the blisters."] },
+      { h: "Heat", img: { src: "img/heat.svg" }, p: ["Heat exhaustion: pale, cool, sweaty, dizzy, but awake and talking. Shade, lie down, feet up, cool cloths, sips of water.", "Heatstroke: hot, red skin and confused. Call 911 and cool them fast. This one is serious.", "Dehydration: rest in the shade and slowly sip water or a sports drink."] },
+      { h: "Shock, in order", img: { src: "img/shock.svg" }, p: ["1. Make sure the scene is safe; call for help.", "2. Have the person lie down.", "3. Raise the feet about 12 inches if it doesn't hurt.", "4. Keep them warm.", "5. Nothing to eat or drink. Keep checking on them."] },
+      { h: "Hypothermia, in order", img: { src: "img/hypothermia.svg" }, p: ["Wet plus wind chills you fast, even on a nice day.", "1. Get out of wind and wet.", "2. Change into dry clothes.", "3. Sleeping bag, off the cold ground.", "4. Warm, sweet drink if fully alert.", "5. Medical help if severe."] },
       { h: "Hyperventilation", p: ["Super fast breathing and tingling hands, usually after a scare.", "Stay calm with them and coach slow breaths."] },
     ],
   },
@@ -156,9 +156,9 @@ export const REQS = {
       { h: "Before anything", p: ["Check that the scene is safe. Two patients is not an improvement."] },
     ],
     learn: [
-      { h: "The four hurry cases", p: ["Stopped breathing: call 911, send for an AED, start CPR if trained.", "Severe bleeding: press hard on the wound and keep pressing. Soaked through? Add more cloth on top. No peeking.", "Stroke: call 911 and note the time the signs started.", "Swallowed poison: call Poison Control, 1-800-222-1222, or 911. Don't make them throw up unless they tell you to."] },
-      { h: "Stroke signs", p: ["Face droops on one side.", "One arm is weak or drifts down.", "Speech is slurred or weird.", "Signs went away? Still call 911. It can be a warning stroke."] },
-      { h: "Not breathing, in order", p: ["1. Scene safe.", "2. Tap and shout.", "3. Call 911 and send someone for an AED.", "4. Push hard and fast in the center of the chest.", "5. Use the AED the second it shows up."] },
+      { h: "The four hurry cases", img: { src: "img/pressure.svg" }, p: ["Stopped breathing: call 911, send for an AED, start CPR if trained.", "Severe bleeding: press hard on the wound and keep pressing. Soaked through? Add more cloth on top. No peeking.", "Stroke: call 911 and note the time the signs started.", "Swallowed poison: call Poison Control, 1-800-222-1222, or 911. Don't make them throw up unless they tell you to."] },
+      { h: "Stroke signs", img: { src: "img/stroke.svg" }, p: ["Face droops on one side.", "One arm is weak or drifts down.", "Speech is slurred or weird.", "Signs went away? Still call 911. It can be a warning stroke."] },
+      { h: "Not breathing, in order", img: { src: "img/cpr.svg" }, p: ["1. Scene safe.", "2. Tap and shout.", "3. Call 911 and send someone for an AED.", "4. Push hard and fast in the center of the chest.", "5. Use the AED the second it shows up."] },
     ],
   },
   prevent: {

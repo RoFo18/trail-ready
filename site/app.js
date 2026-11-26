@@ -38,8 +38,13 @@ function bar(title) {
 function bindBar(back) { app.querySelector(".back").onclick = back; }
 
 // ---------- Requirement: before you start, learn, test ----------
+function figure(im) {
+  if (!im) return "";
+  const fit = im.ratio ? ` style="aspect-ratio:${esc(im.ratio)};object-fit:cover;object-position:${esc(im.pos || "50% 50%")}"` : "";
+  return `<figure class="photo"><img src="${esc(im.src)}" alt=""${fit} loading="lazy">${im.credit ? `<figcaption>${esc(im.credit)}</figcaption>` : ""}</figure>`;
+}
 function cards(list) {
-  return list.map((c) => `<article class="card"><h3>${esc(c.h)}</h3>${c.p.map((l) => `<p>${esc(l)}</p>`).join("")}</article>`).join("");
+  return list.map((c) => `<article class="card"><h3>${esc(c.h)}</h3>${figure(c.img)}${c.p.map((l) => `<p>${esc(l)}</p>`).join("")}</article>`).join("");
 }
 
 function req(k) {
@@ -99,7 +104,7 @@ function result(run, q, ok, answerText) {
 
 function showMC(run, q) {
   const opts = layoutOptions(q.a, q.w, slots.next(q.w.length + 1), rng);
-  const img = q.img ? `<figure class="photo"><img src="${esc(q.img.src)}" alt=""><figcaption>${esc(q.img.credit)}</figcaption></figure>` : "";
+  const img = figure(q.img);
   h(`${head(run)}<h2 class="q">${esc(q.q)}</h2>${img}
     <div class="opts">${opts.map((o, n) => `<button class="opt" data-o="${n}"><span class="let">${LETTERS[n]}</span><span>${esc(o)}</span></button>`).join("")}</div>
     <div id="fb"></div>`);

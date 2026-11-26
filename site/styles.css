@@ -77,4 +77,5 @@ h2.q { font-size: 1.35rem; margin: 8px 0 18px; line-height: 1.35; }
 
 .photo { margin: 0 0 16px; }
 .photo img { width: 100%; border-radius: 8px; display: block; }
+.card .photo { margin: 6px 0 10px; }
 .photo figcaption { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }

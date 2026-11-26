@@ -38,18 +38,27 @@ export const BANK = [
  },
  {
   "r": "lnt",
-  "t": "order",
-  "q": "Put the 7 Leave No Trace principles in order.",
-  "steps": [
-   "Plan Ahead and Prepare",
-   "Travel and Camp on Durable Surfaces",
+  "t": "mc",
+  "q": "Which of these is one of the seven Leave No Trace principles?",
+  "a": "Leave What You Find",
+  "w": [
+   "Take Only Pictures",
+   "Stay Together Always",
+   "Cook Only on Stoves"
+  ],
+  "id": "lnt-1dcljql"
+ },
+ {
+  "r": "lnt",
+  "t": "mc",
+  "q": "Which is NOT one of the seven Leave No Trace principles?",
+  "a": "Always Hike in Groups of Four",
+  "w": [
    "Dispose of Waste Properly",
-   "Leave What You Find",
    "Minimize Campfire Impacts",
-   "Respect Wildlife",
    "Be Considerate of Other Visitors"
   ],
-  "id": "lnt-1nzvn69"
+  "id": "lnt-1ufkhml"
  },
  {
   "r": "lnt",
@@ -129,15 +138,15 @@ export const BANK = [
  },
  {
   "r": "campsite",
-  "t": "order",
-  "q": "Put the campsite questions in the order you should ask them.",
-  "steps": [
+  "t": "mc",
+  "q": "You're sizing up a campsite. Which question matters least?",
+  "a": "Is it comfortable?",
+  "w": [
    "Is camping allowed here?",
-   "Is it safe from floods, falling limbs and cliff edges?",
-   "Is the ground durable and level?",
-   "Is it comfortable, with wind shelter and morning sun?"
+   "Is it safe from floods and falling limbs?",
+   "Is the ground durable?"
   ],
-  "id": "campsite-19qvj47"
+  "id": "campsite-ej5fuv"
  },
  {
   "r": "campsite",
@@ -418,6 +427,18 @@ export const BANK = [
    "A leader has looked at it from the table"
   ],
   "id": "buildfire-1onx3ia"
+ },
+ {
+  "r": "buildfire",
+  "t": "mc",
+  "q": "The fire is cold out. What do you do with the ashes?",
+  "a": "Leave or scatter them the way the site's rules say",
+  "w": [
+   "Dump them, still warm, in the campground trash can",
+   "Bury them under sand while they're still warm",
+   "Sweep them into the creek so they cool off faster"
+  ],
+  "id": "buildfire-1w9z95"
  },
  {
   "r": "buildfire",
@@ -1144,19 +1165,27 @@ export const BANK = [
  },
  {
   "r": "safeswim",
-  "t": "order",
-  "q": "Put the 8 points of Safe Swim Defense in order.",
-  "steps": [
-   "Qualified supervision",
-   "Personal health review",
-   "Safe area",
-   "Response personnel (lifeguards)",
-   "Lookout",
-   "Ability groups",
-   "Buddy system",
-   "Discipline"
+  "t": "mc",
+  "q": "Which is one of the eight points of Safe Swim Defense?",
+  "a": "Ability groups",
+  "w": [
+   "Water temperature",
+   "Swim fins",
+   "Snack breaks"
   ],
-  "id": "safeswim-1kgwd0a"
+  "id": "safeswim-rzo9ky"
+ },
+ {
+  "r": "safeswim",
+  "t": "mc",
+  "q": "Swimmers are split into nonswimmer, beginner and swimmer areas. Which point of Safe Swim Defense is that?",
+  "a": "Ability groups",
+  "w": [
+   "Safe area",
+   "Buddy system",
+   "Qualified supervision"
+  ],
+  "id": "safeswim-1dki2yk"
  },
  {
   "r": "safeswim",
@@ -1232,16 +1261,15 @@ export const BANK = [
  },
  {
   "r": "rescue",
-  "t": "order",
-  "q": "Put a reaching rescue in order.",
-  "steps": [
-   "Shout to the person that help is coming",
-   "Lie down or brace yourself low on solid ground",
-   "Reach out with a pole, paddle, towel or branch",
-   "Tell them to grab it",
-   "Pull them in slowly, staying low"
+  "t": "mc",
+  "q": "Before you reach out to someone in the water, what do you do?",
+  "a": "Get low: lie down or brace on solid ground",
+  "w": [
+   "Stand at the very edge so your reach is longer",
+   "Wade in to your knees to get a little closer",
+   "Take off your shoes in case you need to swim"
   ],
-  "id": "rescue-p4cd2f"
+  "id": "rescue-1u9aj7e"
  },
  {
   "r": "rescue",
@@ -1882,17 +1910,6 @@ export const BANK = [
  },
  {
   "r": "threer",
-  "t": "order",
-  "q": "Put the three R's of personal safety in order.",
-  "steps": [
-   "Recognize",
-   "Resist",
-   "Report"
-  ],
-  "id": "threer-6mnm9f"
- },
- {
-  "r": "threer",
   "t": "match",
   "q": "Match each R to what it means.",
   "pairs": [
@@ -2011,7 +2028,7 @@ export const BANK = [
   "r": "campsite",
   "t": "mc",
   "q": "Why stake and guy out a tent even on a calm afternoon?",
-  "a": "Desert wind can come up hard at night",
+  "a": "Wind can come up hard at night",
   "w": [
    "Rangers check every stake each evening",
    "The stakes keep scorpions out of the tent",
@@ -2044,38 +2061,6 @@ export const BANK = [
   "id": "campsite-1ri2t3l"
  },
  {
-  "r": "buildfire",
-  "t": "match",
-  "q": "Every fire needs three things. Match each side of the fire triangle to how you control it.",
-  "pairs": [
-   [
-    "Heat",
-    "A match lights it; water cools it"
-   ],
-   [
-    "Fuel",
-    "Tinder, kindling and wood feed it"
-   ],
-   [
-    "Oxygen (air)",
-    "Gaps let it breathe; stirring in water and dirt smothers it"
-   ]
-  ],
-  "id": "buildfire-1p1ecrf"
- },
- {
-  "r": "firewood",
-  "t": "mc",
-  "q": "Why does tinder need to be thin and fluffy?",
-  "a": "Thin bits heat up fast enough to catch from one small flame",
-  "w": [
-   "Fluffy tinder burns longer than thick logs",
-   "Thin tinder makes less smoke in camp",
-   "Thin bits are lighter and easier to carry"
-  ],
-  "id": "firewood-gtqiwe"
- },
- {
   "r": "firewood",
   "t": "mc",
   "q": "Your kindling is damp. What happens when you try to light it?",
@@ -2086,18 +2071,6 @@ export const BANK = [
    "It explodes from the steam inside"
   ],
   "id": "firewood-171t2bt"
- },
- {
-  "r": "buildfire",
-  "t": "mc",
-  "q": "Why do you leave gaps between sticks in a fire lay?",
-  "a": "Air has to flow in to feed the fire",
-  "w": [
-   "So the fire grows slower and safer",
-   "So ashes can fall out of the bottom",
-   "So smoke stays low and keeps bugs off"
-  ],
-  "id": "buildfire-1xu51pv"
  },
  {
   "r": "buildfire",
@@ -2144,30 +2117,6 @@ export const BANK = [
   "id": "firewood-jmjbmc"
  },
  {
-  "r": "stoves",
-  "t": "mc",
-  "q": "On a freezing morning, your canister stove gives only a weak flame. Why?",
-  "a": "Cold lowers the gas pressure",
-  "w": [
-   "The canister is empty after just one night",
-   "Desert dust has clogged the burner",
-   "Freezing air has less oxygen"
-  ],
-  "id": "stoves-ac1wtd"
- },
- {
-  "r": "stoves",
-  "t": "mc",
-  "q": "Why use a windscreen around a backpacking stove?",
-  "a": "Wind blows the heat away from the pot",
-  "w": [
-   "The screen keeps sand out of the food",
-   "It hides the flame so animals stay away",
-   "It keeps the canister cool"
-  ],
-  "id": "stoves-158jis7"
- },
- {
   "r": "knots",
   "t": "mc",
   "q": "Why use a sheet bend, not a square knot, to join a thin rope to a thick one?",
@@ -2178,30 +2127,6 @@ export const BANK = [
    "A sheet bend uses less rope"
   ],
   "id": "knots-1f26z1a"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "In a sheet bend, which rope makes the U-shaped bend?",
-  "a": "The thicker rope",
-  "w": [
-   "The thinner rope",
-   "Either one, it makes no difference",
-   "Whichever rope is longer"
-  ],
-  "id": "knots-1sxgnfa"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "How do you check a finished sheet bend?",
-  "a": "Both short ends are on the same side",
-  "w": [
-   "It is round and smooth, with no ends showing",
-   "The thin rope is pulled through twice",
-   "It slides easily along the thick rope"
-  ],
-  "id": "knots-1o61zy0"
  },
  {
   "r": "knots",
@@ -2238,6 +2163,42 @@ export const BANK = [
    ]
   ],
   "id": "knots-1vfafk2"
+ },
+ {
+  "r": "knots",
+  "t": "mc",
+  "q": "Which knot is this?",
+  "img": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Sheet_Bend_-_ABoK_1431_-_USCG.jpg/960px-Sheet_Bend_-_ABoK_1431_-_USCG.jpg",
+   "credit": "Photo: USCG, CC0, via Wikimedia Commons",
+   "ratio": "5 / 2",
+   "pos": "50% 61%"
+  },
+  "a": "Sheet bend",
+  "w": [
+   "Bowline",
+   "Square knot",
+   "Clove hitch"
+  ],
+  "id": "knots-14fbipg"
+ },
+ {
+  "r": "knots",
+  "t": "mc",
+  "q": "Which knot is this?",
+  "img": {
+   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Knot-bowline-ABoK_1010-USCG.jpg/960px-Knot-bowline-ABoK_1010-USCG.jpg",
+   "credit": "Photo: USCG, CC BY-SA 4.0, via Wikimedia Commons",
+   "ratio": "16 / 9",
+   "pos": "62% 53%"
+  },
+  "a": "Bowline",
+  "w": [
+   "Sheet bend",
+   "Taut-line hitch",
+   "Two half hitches"
+  ],
+  "id": "knots-1ga3hfw"
  },
  {
   "r": "compass",
@@ -2289,18 +2250,6 @@ export const BANK = [
  },
  {
   "r": "compass",
-  "t": "order",
-  "q": "Put following a bearing in order.",
-  "steps": [
-   "Set your bearing on the housing",
-   "Turn your body until the red needle is in the shed",
-   "Pick a landmark straight ahead on the direction arrow",
-   "Walk to it, then sight the next one"
-  ],
-  "id": "compass-17wlycf"
- },
- {
-  "r": "compass",
   "t": "mc",
   "q": "You shoot a bearing to a peak and get 45 degrees. Which way is the peak?",
   "a": "Northeast",
@@ -2346,19 +2295,6 @@ export const BANK = [
    "Hurry deeper into the canyon"
   ],
   "id": "hazards-ievip"
- },
- {
-  "r": "animals",
-  "t": "order",
-  "q": "Put the questions for identifying an animal in a good order.",
-  "steps": [
-   "How big is it?",
-   "What shape is it?",
-   "What color or pattern?",
-   "What is it doing?",
-   "Where exactly is it living?"
-  ],
-  "id": "animals-11l843s"
  },
  {
   "r": "animals",

@@ -2,7 +2,7 @@ import { makeRng, SlotPicker, layoutOptions } from "../site/engine.js";
 import { BANK } from "../site/bank.js";
 import { REQS, SECTIONS } from "../site/learn.js";
 import { report } from "./cues.mjs";
-import { readFileSync, readdirSync } from "fs";
+import { readFileSync, readdirSync, existsSync } from "fs";
 let fail = false;
 const bad = (m) => { console.log("FAIL:", m); fail = true; };
 
@@ -31,8 +31,17 @@ for (const q of BANK) {
 }
 for (const s of SECTIONS) for (const k of s.items) { if (!REQS[k]) bad("missing req " + k); if (!BANK.some((q) => q.r === k)) bad("no questions for " + k); }
 
+// 3b. Ordering only where order is the knowledge.
+const ORDER_OK = new Set(["firewood", "buildfire", "stoves", "noswim", "compass", "nocompass", "firstaid", "hurry", "emergency", "vehicle", "ceremony", "flag"]);
+for (const q of BANK) if (q.t === "order" && !ORDER_OK.has(q.r)) bad("ordering not allowed for " + q.r + " " + q.id);
+
+// 3c. Every local image exists; every image has a source.
+for (const q of BANK) if (q.img && !q.img.src) bad("image without src " + q.id);
+for (const k of Object.keys(REQS)) for (const c of [...(REQS[k].before || []), ...REQS[k].learn])
+  if (c.img && !/^https:/.test(c.img.src) && !existsSync("site/" + c.img.src)) bad("missing image " + c.img.src);
+
 // 4. Banned content anywhere in the site's text.
-const BANNED = [/joshua/i, /\bXP\b/, /\bstreak\b/i, /I.m sure/i, /guess/i, /pledge drill/i, /my logs|service hours|activity log/i, /2C-\d/, /type="text"/, /trail ready/i, /\$\d/];
+const BANNED = [/joshua/i, /\bXP\b/, /\bstreak\b/i, /I.m sure/i, /guess/i, /pledge drill/i, /my logs|service hours|activity log/i, /2C-\d/, /type="text"/, /trail ready/i, /\$\d/, /U-shaped bend/i, /rabbit/i, /both short ends/i, /fire triangle/i];
 for (const f of readdirSync("site").filter((f) => /\.(js|html|json|css)$/.test(f))) {
   const t = readFileSync("site/" + f, "utf8");
   for (const re of BANNED) if (re.test(t)) bad(`${f} contains ${re}`);
