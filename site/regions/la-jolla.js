@@ -62,36 +62,43 @@ export const REGION = {
   ],
   "animals": [
    {
-    "h": "Tidepool animals",
+    "h": "Getting your ten",
     "p": [
-     "Ochre sea star: five thick, bumpy arms, purple or orange.",
-     "Purple sea urchin: a ball of purple spines in a rock hole.",
-     "Aggregating anemone: carpets of small anemones covered in sand.",
-     "Giant green anemone: big, green, soft tentacles.",
-     "Hermit crab: lives in a borrowed snail shell.",
-     "Striped shore crab: dark with green stripes, runs sideways into cracks.",
-     "California mussel: blue-black paired shells in beds.",
-     "Gooseneck barnacle: on rubbery stalks.",
-     "Owl limpet: big low cone stuck to rock.",
-     "Black turban snail: dark, rounded, coiled.",
-     "California sea hare: big soft slug that squirts purple ink. Rude, but harmless.",
-     "Two-spot octopus: a blue ring on each side of its head."
+     "Go at low tide. A minus tide is best. Check the tide chart first.",
+     "The Cove walk gets you six without trying. The tidepools get you the rest.",
+     "Take your own photo of each one. That's your evidence."
     ]
    },
    {
-    "h": "Along the coast",
+    "h": "On the Cove walk, any tide",
     "p": [
      "California sea lion: ear flaps, barks, walks on its flippers.",
-     "Harbor seal: no ear flaps, spotted, scoots on its belly.",
+     "Harbor seal: no ear flaps, spotted, scoots on its belly. Look at the Children's Pool.",
      "Brown pelican: huge bill with a pouch.",
-     "Garibaldi: bright orange fish.",
+     "Brandt's cormorant: black seabird with a long neck, packed onto the cliffs.",
+     "Western gull: big white gull with a dark gray back and a yellow bill.",
+     "California ground squirrel: speckled gray-brown, popping out of the ice plant by the walkway.",
      "Give sea lions and seals lots of room. Never approach. They bite, and they win."
+    ]
+   },
+   {
+    "h": "In the tidepools, at low tide",
+    "p": [
+     "Aggregating anemone: carpets of small anemones covered in sand and bits of shell.",
+     "Giant green anemone: big, green, soft tentacles in the low pools.",
+     "Striped shore crab: dark with green stripes, runs sideways into cracks.",
+     "Hermit crab: small crab living in a borrowed snail shell.",
+     "Owl limpet: big, low cone stuck tight to the rock.",
+     "Black turban snail: dark, rounded, coiled. Usually lots of them.",
+     "California mussel: blue-black paired shells packed in beds.",
+     "Gooseneck barnacle: on rubbery stalks, in clumps.",
+     "Acorn barnacle: tiny white volcano-shaped shells crusting the rocks.",
+     "California sea hare: big, soft, brown slug that squirts purple ink. Spring and summer."
     ]
    },
    {
     "h": "Signs they leave",
     "p": [
-     "Urchin test: a round shell with no spines, left after an urchin dies.",
      "A whole empty crab shell: the crab molted to grow.",
      "Strong smell and barking on the rocks: sea lions.",
      "White streaks on cliff rocks: pelicans and cormorants roosting.",
@@ -251,10 +258,6 @@ export const REGION = {
    "q": "Match each sign to the animal that left it.",
    "pairs": [
     [
-     "Empty round shell with no spines, like a little dome",
-     "Sea urchin (its skeleton, called a test)"
-    ],
-    [
      "A whole empty crab shell with no crab inside",
      "Crab that molted to grow bigger"
     ],
@@ -276,18 +279,6 @@ export const REGION = {
   {
    "r": "animals",
    "t": "mc",
-   "q": "A big soft slug in the pool squirts out purple ink when bothered. What is it?",
-   "a": "A California sea hare",
-   "w": [
-    "A two-spot octopus",
-    "A Spanish shawl nudibranch",
-    "A sea cucumber"
-   ],
-   "id": "animals-1otelg"
-  },
-  {
-   "r": "animals",
-   "t": "mc",
    "q": "How close should you get to the sea lions at La Jolla Cove?",
    "a": "Stay well back; never approach them",
    "w": [
@@ -296,38 +287,6 @@ export const REGION = {
     "As close as you want if a pup is alone"
    ],
    "id": "animals-aezygj"
-  },
-  {
-   "r": "animals",
-   "t": "mc",
-   "q": "What is this tidepool animal?",
-   "a": "Ochre sea star",
-   "w": [
-    "Bat star",
-    "Brittle star",
-    "Sunflower star"
-   ],
-   "img": {
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg/960px-Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg",
-    "credit": "Photo: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
-   },
-   "id": "animals-1lo4glf"
-  },
-  {
-   "r": "animals",
-   "t": "mc",
-   "q": "What is this animal wedged among the rocks?",
-   "a": "Purple sea urchin",
-   "w": [
-    "Aggregating anemone",
-    "Sea cucumber",
-    "Red sea urchin"
-   ],
-   "img": {
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Strongylocentrotus_purpuratus_1.jpg/960px-Strongylocentrotus_purpuratus_1.jpg",
-    "credit": "Photo: Taollan82, CC BY 3.0, via Wikimedia Commons"
-   },
-   "id": "animals-1hh2316"
   },
   {
    "r": "animals",
@@ -476,38 +435,6 @@ export const REGION = {
   {
    "r": "animals",
    "t": "mc",
-   "q": "What is this bright orange fish?",
-   "a": "Garibaldi",
-   "w": [
-    "Goldfish",
-    "California sheephead",
-    "Opaleye"
-   ],
-   "img": {
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hypsypops_rubicundus_adult.jpg/960px-Hypsypops_rubicundus_adult.jpg",
-    "credit": "Photo: Stan Shebs, CC BY-SA 3.0, via Wikimedia Commons"
-   },
-   "id": "animals-163v8pp"
-  },
-  {
-   "r": "animals",
-   "t": "mc",
-   "q": "What is this animal in the surfgrass?",
-   "a": "California two-spot octopus",
-   "w": [
-    "Squid",
-    "Sea hare",
-    "Brittle star"
-   ],
-   "img": {
-    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg/960px-Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg",
-    "credit": "Photo: Jerry Kirkhart, CC BY 2.0, via Wikimedia Commons"
-   },
-   "id": "animals-1yaaevn"
-  },
-  {
-   "r": "animals",
-   "t": "mc",
    "q": "What is this crab doing in a snail shell?",
    "a": "Hermit crab living in a borrowed shell",
    "w": [
@@ -520,6 +447,94 @@ export const REGION = {
     "credit": "Photo: Jerry Kirkhart, CC BY 2.0, via Wikimedia Commons"
    },
    "id": "animals-1qtfbol"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "When is the best time to find tidepool animals?",
+   "a": "At low tide, ideally a minus tide",
+   "w": [
+    "At high tide, when the pools are full",
+    "Right after a big storm rolls through",
+    "Any time; the tide doesn't matter"
+   ],
+   "id": "animals-1kd5ma8"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "What are these black birds packed onto the cliffs at the Cove?",
+   "img": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cormorants_in_La_Jolla_%2870622%29.jpg/960px-Cormorants_in_La_Jolla_%2870622%29.jpg",
+    "credit": "Photo: Rhododendrites, CC BY-SA 4.0, via Wikimedia Commons"
+   },
+   "a": "Brandt's cormorants",
+   "w": [
+    "Brown pelicans",
+    "Western gulls",
+    "Great blue herons"
+   ],
+   "id": "animals-iasda5"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "What is this big gull?",
+   "img": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Larus_occidentalis_-_pair_bonding_behaviour.jpg/960px-Larus_occidentalis_-_pair_bonding_behaviour.jpg",
+    "credit": "Photo: Alan Vernon, CC BY 2.0, via Wikimedia Commons"
+   },
+   "a": "Western gull",
+   "w": [
+    "Brandt's cormorant",
+    "Brown pelican",
+    "Snowy egret"
+   ],
+   "id": "animals-1xo7eul"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "What is this animal by the walkway at the Cove?",
+   "img": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/California_ground_squirrel_at_La_Jolla_standing_2.JPG/960px-California_ground_squirrel_at_La_Jolla_standing_2.JPG",
+    "credit": "Photo: MSK, CC BY 4.0, via Wikimedia Commons"
+   },
+   "a": "California ground squirrel",
+   "w": [
+    "Gray tree squirrel",
+    "Desert cottontail",
+    "Brown rat"
+   ],
+   "id": "animals-1tcigv8"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "What are these tiny white shells crusting the rock?",
+   "img": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Chthamalus_stellatus.jpg/960px-Chthamalus_stellatus.jpg",
+    "credit": "Photo: MichaelMaggs, CC BY-SA 3.0, via Wikimedia Commons"
+   },
+   "a": "Acorn barnacles",
+   "w": [
+    "Gooseneck barnacles",
+    "Owl limpets",
+    "Black turban snails"
+   ],
+   "id": "animals-da12xj"
+  },
+  {
+   "r": "animals",
+   "t": "mc",
+   "q": "A big soft slug in the pool squirts out purple ink when bothered. What is it?",
+   "a": "A California sea hare",
+   "w": [
+    "A two-spot octopus",
+    "A Spanish shawl nudibranch",
+    "A sea cucumber"
+   ],
+   "id": "animals-1otelg"
   }
  ]
 };

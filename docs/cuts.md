@@ -113,6 +113,11 @@
 - Preventing injuries. What should you wear on your feet in the tidepools?: Cuts and falls aren't among the 6a and 6b injuries.
 - Leave No Trace. Match each tidepool action to the Leave No Trace principle it follows.: Repeats the core Leave No Trace match.
 
+## Animals: easy La Jolla finds only
+- Ochre sea star: rare in La Jolla since sea star wasting disease.
+- Purple sea urchin, two-spot octopus, garibaldi: not easy to find on a walk.
+- Added: Brandt's cormorant, western gull, California ground squirrel, acorn barnacle (all easy on the Cove walk or at low tide).
+
 # Safety facts corrected
 
 - Nail puncture care. Was: Let it bleed a little, wash, bandage. Now: Stop any bleeding with gentle pressure, rinse it clean, cover it, see a doctor about tetanus. Source: Mayo Clinic, Puncture wounds: First aid (mayoclinic.org/first-aid/first-aid-puncture-wounds/basics/art-20056665).

@@ -63,10 +63,7 @@ hazards-5ja8s0,question match,region:la-jolla,3c,Match each coastal hazard to ho
 animals-uh7q3m,question mc,core,4,Which one is NOT real evidence that you found an animal yourself?,A photo of the animal from a website,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-k5g9gg,question mc,core,4,What counts as a different kind of animal?,"A different type, like a crow versus a hawk",keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-1nlz2k0,question match,region:la-jolla,4,Match each sign to the animal that left it.,pairs,keep,Tests knowledge listed for 4 in docs/requirements.md
-animals-1otelg,question mc,region:la-jolla,4,A big soft slug in the pool squirts out purple ink when bothered. What is it?,A California sea hare,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-aezygj,question mc,region:la-jolla,4,How close should you get to the sea lions at La Jolla Cove?,Stay well back; never approach them,keep,Tests knowledge listed for 4 in docs/requirements.md
-animals-1lo4glf,question mc,region:la-jolla,4,What is this tidepool animal?,Ochre sea star,keep,Tests knowledge listed for 4 in docs/requirements.md
-animals-1hh2316,question mc,region:la-jolla,4,What is this animal wedged among the rocks?,Purple sea urchin,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-wstvoi,question mc,region:la-jolla,4,What is this green animal in a low pool?,Giant green anemone,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-1wech4m,question mc,region:la-jolla,4,"What is this big, low shell stuck tight to the rock?",Owl limpet,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-1ruducn,question mc,region:la-jolla,4,What is this crab?,Striped shore crab,keep,Tests knowledge listed for 4 in docs/requirements.md
@@ -76,9 +73,13 @@ animals-vu9k3o,question mc,region:la-jolla,4,"What are these dark, rounded shell
 animals-1dd8edb,question mc,region:la-jolla,4,This animal is on the rocks at La Jolla Cove. What is it?,California sea lion,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-xoh86n,question mc,region:la-jolla,4,This animal is resting at the Children's Pool. What is it?,Harbor seal,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-njjsmy,question mc,region:la-jolla,4,What is this big bird?,Brown pelican,keep,Tests knowledge listed for 4 in docs/requirements.md
-animals-163v8pp,question mc,region:la-jolla,4,What is this bright orange fish?,Garibaldi,keep,Tests knowledge listed for 4 in docs/requirements.md
-animals-1yaaevn,question mc,region:la-jolla,4,What is this animal in the surfgrass?,California two-spot octopus,keep,Tests knowledge listed for 4 in docs/requirements.md
 animals-1qtfbol,question mc,region:la-jolla,4,What is this crab doing in a snail shell?,Hermit crab living in a borrowed shell,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1kd5ma8,question mc,region:la-jolla,4,When is the best time to find tidepool animals?,"At low tide, ideally a minus tide",keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-iasda5,question mc,region:la-jolla,4,What are these black birds packed onto the cliffs at the Cove?,Brandt's cormorants,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1xo7eul,question mc,region:la-jolla,4,What is this big gull?,Western gull,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1tcigv8,question mc,region:la-jolla,4,What is this animal by the walkway at the Cove?,California ground squirrel,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-da12xj,question mc,region:la-jolla,4,What are these tiny white shells crusting the rock?,Acorn barnacles,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1otelg,question mc,region:la-jolla,4,A big soft slug in the pool squirts out purple ink when bothered. What is it?,A California sea hare,keep,Tests knowledge listed for 4 in docs/requirements.md
 safeswim-rzo9ky,question mc,core,5a,Which is one of the eight points of Safe Swim Defense?,Ability groups,keep,Tests knowledge listed for 5a in docs/requirements.md
 safeswim-qi0zoy,question match,core,5a,Match each point of Safe Swim Defense to what it means.,pairs,keep,Tests knowledge listed for 5a in docs/requirements.md
 safeswim-1sn1mn9,question mc,core,5a,"In the buddy system, what happens at a buddy check?",Buddies join and raise hands so the leader can count,keep,Tests knowledge listed for 5a in docs/requirements.md
@@ -287,28 +288,30 @@ hazards/Coast/4,learn line,,3c,Sneaker waves: never turn your back on the ocean.
 animals/How to ID an animal/1,learn line,,4,"Size, shape, color or pattern, what it's doing, where it lives.",,keep,Supports a question or the expected answer for 4
 animals/How to ID an animal/2,learn line,,4,"A different kind means a different type, like a crow versus a hawk.",,keep,Supports a question or the expected answer for 4
 animals/How to ID an animal/3,learn line,,4,"Evidence counts: shells, molts, tracks, your own photos. Not a photo you found online.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/1,learn line,,4,"Ochre sea star: five thick, bumpy arms, purple or orange.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/2,learn line,,4,Purple sea urchin: a ball of purple spines in a rock hole.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/3,learn line,,4,Aggregating anemone: carpets of small anemones covered in sand.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/4,learn line,,4,"Giant green anemone: big, green, soft tentacles.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/5,learn line,,4,Hermit crab: lives in a borrowed snail shell.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/6,learn line,,4,"Striped shore crab: dark with green stripes, runs sideways into cracks.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/7,learn line,,4,California mussel: blue-black paired shells in beds.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/8,learn line,,4,Gooseneck barnacle: on rubbery stalks.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/9,learn line,,4,Owl limpet: big low cone stuck to rock.,,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/10,learn line,,4,"Black turban snail: dark, rounded, coiled.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/11,learn line,,4,"California sea hare: big soft slug that squirts purple ink. Rude, but harmless.",,keep,Supports a question or the expected answer for 4
-animals/Tidepool animals/12,learn line,,4,Two-spot octopus: a blue ring on each side of its head.,,keep,Supports a question or the expected answer for 4
-animals/Along the coast/1,learn line,,4,"California sea lion: ear flaps, barks, walks on its flippers.",,keep,Supports a question or the expected answer for 4
-animals/Along the coast/2,learn line,,4,"Harbor seal: no ear flaps, spotted, scoots on its belly.",,keep,Supports a question or the expected answer for 4
-animals/Along the coast/3,learn line,,4,Brown pelican: huge bill with a pouch.,,keep,Supports a question or the expected answer for 4
-animals/Along the coast/4,learn line,,4,Garibaldi: bright orange fish.,,keep,Supports a question or the expected answer for 4
-animals/Along the coast/5,learn line,,4,"Give sea lions and seals lots of room. Never approach. They bite, and they win.",,keep,Supports a question or the expected answer for 4
-animals/Signs they leave/1,learn line,,4,"Urchin test: a round shell with no spines, left after an urchin dies.",,keep,Supports a question or the expected answer for 4
-animals/Signs they leave/2,learn line,,4,A whole empty crab shell: the crab molted to grow.,,keep,Supports a question or the expected answer for 4
-animals/Signs they leave/3,learn line,,4,Strong smell and barking on the rocks: sea lions.,,keep,Supports a question or the expected answer for 4
-animals/Signs they leave/4,learn line,,4,White streaks on cliff rocks: pelicans and cormorants roosting.,,keep,Supports a question or the expected answer for 4
-animals/Signs they leave/5,learn line,,4,Tiny jumping bugs under washed-up kelp: beach hoppers.,,keep,Supports a question or the expected answer for 4
+animals/Getting your ten/1,learn line,,4,Go at low tide. A minus tide is best. Check the tide chart first.,,keep,Supports a question or the expected answer for 4
+animals/Getting your ten/2,learn line,,4,The Cove walk gets you six without trying. The tidepools get you the rest.,,keep,Supports a question or the expected answer for 4
+animals/Getting your ten/3,learn line,,4,Take your own photo of each one. That's your evidence.,,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/1",learn line,,4,"California sea lion: ear flaps, barks, walks on its flippers.",,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/2",learn line,,4,"Harbor seal: no ear flaps, spotted, scoots on its belly. Look at the Children's Pool.",,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/3",learn line,,4,Brown pelican: huge bill with a pouch.,,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/4",learn line,,4,"Brandt's cormorant: black seabird with a long neck, packed onto the cliffs.",,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/5",learn line,,4,Western gull: big white gull with a dark gray back and a yellow bill.,,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/6",learn line,,4,"California ground squirrel: speckled gray-brown, popping out of the ice plant by the walkway.",,keep,Supports a question or the expected answer for 4
+"animals/On the Cove walk, any tide/7",learn line,,4,"Give sea lions and seals lots of room. Never approach. They bite, and they win.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/1",learn line,,4,Aggregating anemone: carpets of small anemones covered in sand and bits of shell.,,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/2",learn line,,4,"Giant green anemone: big, green, soft tentacles in the low pools.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/3",learn line,,4,"Striped shore crab: dark with green stripes, runs sideways into cracks.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/4",learn line,,4,Hermit crab: small crab living in a borrowed snail shell.,,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/5",learn line,,4,"Owl limpet: big, low cone stuck tight to the rock.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/6",learn line,,4,"Black turban snail: dark, rounded, coiled. Usually lots of them.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/7",learn line,,4,California mussel: blue-black paired shells packed in beds.,,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/8",learn line,,4,"Gooseneck barnacle: on rubbery stalks, in clumps.",,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/9",learn line,,4,Acorn barnacle: tiny white volcano-shaped shells crusting the rocks.,,keep,Supports a question or the expected answer for 4
+"animals/In the tidepools, at low tide/10",learn line,,4,"California sea hare: big, soft, brown slug that squirts purple ink. Spring and summer.",,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/1,learn line,,4,A whole empty crab shell: the crab molted to grow.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/2,learn line,,4,Strong smell and barking on the rocks: sea lions.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/3,learn line,,4,White streaks on cliff rocks: pelicans and cormorants roosting.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/4,learn line,,4,Tiny jumping bugs under washed-up kelp: beach hoppers.,,keep,Supports a question or the expected answer for 4
 safeswim/The eight points of Safe Swim Defense/1,learn line,,5a,Qualified supervision: a trained adult is in charge.,,keep,Supports a question or the expected answer for 5a
 safeswim/The eight points of Safe Swim Defense/2,learn line,,5a,Personal health review: everyone's health form is checked.,,keep,Supports a question or the expected answer for 5a
 safeswim/The eight points of Safe Swim Defense/3,learn line,,5a,"Safe area: depth and hazards checked, areas marked.",,keep,Supports a question or the expected answer for 5a
@@ -530,3 +533,6 @@ bullying/What to do/3,learn line,,9b,"If it's someone else: be an upstander. Spe
 ,cut,,,Preventing injuries. Which habit best prevents a stingray sting at La Jolla Shores?,,cut,6c covers only the 6a and 6b injuries; stingray stings aren't one.
 ,cut,,,Preventing injuries. What should you wear on your feet in the tidepools?,,cut,Cuts and falls aren't among the 6a and 6b injuries.
 ,cut,,,Leave No Trace. Match each tidepool action to the Leave No Trace principle it follows.,,cut,Repeats the core Leave No Trace match.
+,cut,,,Ochre sea star,,cut,rare in La Jolla since sea star wasting disease.
+,cut,,,"Purple sea urchin, two-spot octopus, garibaldi",,cut,not easy to find on a walk.
+,cut,,,Added,,cut,"Brandt's cormorant, western gull, California ground squirrel, acorn barnacle (all easy on the Cove walk or at low tide)."
