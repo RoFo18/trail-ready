@@ -1,5 +1,5 @@
 // Offline-first service worker: precache everything on install.
-const CACHE = "secondclass-v2";
+const CACHE = "secondclass-v3";
 const FILES = [
   "./", "./index.html", "./styles.css", "./app.js", "./learn.js", "./bank.js", "./engine.js",
   "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-180.png",

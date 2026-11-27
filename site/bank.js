@@ -1576,18 +1576,6 @@ export const BANK = [
  {
   "r": "hurry",
   "t": "mc",
-  "q": "What is the Poison Control phone number?",
-  "a": "1-800-222-1222",
-  "w": [
-   "1-800-911-0000",
-   "1-888-767-6461",
-   "1-800-555-1234"
-  ],
-  "id": "hurry-11dheaj"
- },
- {
-  "r": "hurry",
-  "t": "mc",
   "q": "Someone swallowed a cleaning chemical. Should you make them vomit?",
   "a": "No, unless Poison Control says so",
   "w": [

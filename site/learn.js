@@ -156,7 +156,7 @@ export const REQS = {
       { h: "Before anything", p: ["Check that the scene is safe. Two patients is not an improvement."] },
     ],
     learn: [
-      { h: "The four hurry cases", img: { src: "img/pressure.svg" }, p: ["Stopped breathing: call 911, send for an AED, start CPR if trained.", "Severe bleeding: press hard on the wound and keep pressing. Soaked through? Add more cloth on top. No peeking.", "Stroke: call 911 and note the time the signs started.", "Swallowed poison: call Poison Control, 1-800-222-1222, or 911. Don't make them throw up unless they tell you to."] },
+      { h: "The four hurry cases", img: { src: "img/pressure.svg" }, p: ["Stopped breathing: call 911, send for an AED, start CPR if trained.", "Severe bleeding: press hard on the wound and keep pressing. Soaked through? Add more cloth on top. No peeking.", "Stroke: call 911 and note the time the signs started.", "Swallowed poison: call Poison Control or 911. Don't make them throw up unless they tell you to."] },
       { h: "Stroke signs", img: { src: "img/stroke.svg" }, p: ["Face droops on one side.", "One arm is weak or drifts down.", "Speech is slurred or weird.", "Signs went away? Still call 911. It can be a warning stroke."] },
       { h: "Not breathing, in order", img: { src: "img/cpr.svg" }, p: ["1. Scene safe.", "2. Tap and shout.", "3. Call 911 and send someone for an AED.", "4. Push hard and fast in the center of the chest.", "5. Use the AED the second it shows up."] },
     ],
