@@ -1,7 +1,7 @@
 // Offline-first service worker: precache everything on install.
-const CACHE = "secondclass-v3";
+const CACHE = "secondclass-v4";
 const FILES = [
-  "./", "./index.html", "./styles.css", "./app.js", "./learn.js", "./bank.js", "./engine.js",
+  "./", "./index.html", "./styles.css", "./app.js", "./learn.js", "./bank.js", "./content.js", "./regions/la-jolla.js", "./engine.js",
   "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-180.png",
   "./fonts/atkinson-hyperlegible-latin-400-normal.woff2", "./fonts/atkinson-hyperlegible-latin-700-normal.woff2", "./fonts/marcellus-latin-400-normal.woff2",
   "./img/burn.svg", "./img/compass.svg", "./img/cpr.svg", "./img/dipper.svg", "./img/eye.svg", "./img/firelays.svg", "./img/firewood.svg", "./img/heat.svg", "./img/hypothermia.svg", "./img/mapsymbols.svg", "./img/pressure.svg", "./img/shadowstick.svg", "./img/shock.svg", "./img/stroke.svg",

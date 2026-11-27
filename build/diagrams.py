@@ -51,7 +51,7 @@ D["pressure.svg"] = svg(600, 280, b)
 b = R(300, 20, 130, 30, MU, 8) + R(400, 40, 26, 40, MU, 6)
 for x in [402, 413, 424]: b += L(x, 92, x, 168, BLUE, 4)
 b += R(80, 170, 440, 56, GR, 28, INK, 4)
-b += t(160, 80, "Cool water", 30, BLUE, bold=True) + t(160, 118, "10+ minutes", 28, BLUE)
+b += t(160, 80, "Cool water", 30, BLUE, bold=True) + t(160, 118, "15-20 minutes", 28, BLUE)
 b += t(300, 266, "Then cover loosely", 26)
 D["burn.svg"] = svg(600, 280, b)
 

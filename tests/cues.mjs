@@ -1,6 +1,6 @@
 // Simulates test-wise guessing strategies against the multiple-choice bank.
 // A fair bank keeps each strategy near chance (25% with 4 options).
-import { BANK } from "../site/bank.js";
+import { BANK } from "../site/content.js";
 const ABS = /\b(always|never|only|every|all|none|completely|exactly|must)\b/i;
 export function report() {
   const S = BANK.filter((q) => q.t === "mc").map((q) => [q.a, ...q.w]);

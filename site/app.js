@@ -1,5 +1,4 @@
-import { SECTIONS, REQS } from "./learn.js";
-import { BANK } from "./bank.js";
+import { SECTIONS, REQS, BANK } from "./content.js";
 import { makeRng, shuffle, SlotPicker, layoutOptions, buildTest } from "./engine.js";
 
 // Saved state: which requirements are marked done, and which questions were answered right.

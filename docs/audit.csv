@@ -1,0 +1,532 @@
+item,kind,where,requirement,text,supports expected answer,verdict,reason
+lnt-15jra6t,question mc,core,1b,Before the trip you check the weather forecast and the park rules. Which principle is that?,Plan Ahead and Prepare,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-fvv3a8,question mc,core,1b,You keep your patrol's voices down at a crowded campground after dark. Which principle is that?,Be Considerate of Other Visitors,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-1ogz1h2,question mc,core,1b,"You walk single file in the middle of the trail, even where it's muddy. Which principle is that?",Travel and Camp on Durable Surfaces,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-1dcljql,question mc,core,1b,Which of these is one of the seven Leave No Trace principles?,Leave What You Find,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-1llkqua,question match,core,1b,Match each action to the Leave No Trace principle it follows.,pairs,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-17qgie6,question mc,region:la-jolla,1b,"In the tidepools, why step on bare rock instead of on seaweed or surfgrass?",Living things are hiding under and inside the seaweed,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-s7g5gl,question mc,region:la-jolla,1b,You turn over a rock and find crabs underneath. What do you do next?,"Put the rock back gently, the same way up",keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-7eoact,question mc,region:la-jolla,1b,You find a beautiful empty shell in a La Jolla marine reserve. What do you do?,Leave it there,keep,Tests knowledge listed for 1b in docs/requirements.md
+lnt-1w2ifgj,question mc,region:la-jolla,1b,Which action does NOT follow Leave No Trace?,Stacking rocks into a tower on the beach,keep,Tests knowledge listed for 1b in docs/requirements.md
+campsite-ej5fuv,question mc,core,1c,You're sizing up a campsite. Which question matters least?,Is it comfortable?,keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-1o723gx,question mc,core,1c,What should you check above your tent spot?,No dead limbs hanging overhead,keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-cpuljk,question mc,core,1c,What should you check on the ground before pitching?,"Ants, sharp rocks and low spots",keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-1wnou6,question mc,core,1c,Where should tents go compared to the cooking area?,"Spread out, away from cooking and the fire",keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-17nxghd,question mc,core,1c,"The flattest, softest tent spot is in a dry sandy wash. Is it a good spot?",No. A storm miles away can send a flash flood down it,keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-c6tlil,question mc,region:la-jolla,1c,Your patrol is camping at a beach campground on the bluffs. Which tent spot is best?,A level site set well back from the bluff edge,keep,Tests knowledge listed for 1c in docs/requirements.md
+campsite-tykb6s,question mc,region:la-jolla,1c,Why not pitch your tent on the beach sand near the water?,The tide can reach it at night,keep,Tests knowledge listed for 1c in docs/requirements.md
+whenfire-cislt1,question mc,core,2a,"Hot, dry, gusty winds are blowing and the patrol wants a campfire. What is the right call?",Skip the fire and cook dinner on the stove,keep,Tests knowledge listed for 2a in docs/requirements.md
+whenfire-zz56oq,question mc,core,2a,What does a Red Flag Warning from the weather service mean?,"Fire danger is extreme, so skip any open fire",keep,Tests knowledge listed for 2a in docs/requirements.md
+whenfire-l9r4i,question mc,region:la-jolla,2a,"At a San Diego campground or beach, where are fires allowed?",Only in the fire rings or grills the site provides,keep,Tests knowledge listed for 2a in docs/requirements.md
+firewood-1d9ey1n,question match,core,2b,Match each fire material to its size.,pairs,keep,Tests knowledge listed for 2b in docs/requirements.md
+firewood-16n493d,question mc,core,2b,"Before you open a pocketknife, what do you check?",Your safety circle: no one within arm's reach,keep,Tests knowledge listed for 2b in docs/requirements.md
+firewood-1ba8bgz,question mc,core,2b,Which way should you cut with a pocketknife?,Away from your body,keep,Tests knowledge listed for 2b in docs/requirements.md
+firewood-1hya6jv,question mc,core,2b,How do you pass an open knife to someone?,"Don't. Close it first, then hand it over",keep,Tests knowledge listed for 2b in docs/requirements.md
+firewood-31t6rz,question mc,core,2b,When is a saw or axe needed to prepare fuel?,When it's too thick to snap by hand,keep,Tests knowledge listed for 2b in docs/requirements.md
+firewood-171t2bt,question mc,core,2b,Your kindling is damp. What happens when you try to light it?,It smokes and fizzles,keep,Tests knowledge listed for 2b in docs/requirements.md
+buildfire-rreqm0,question order,core,2c,Put building and putting out a fire in order.,steps in order,keep,Tests knowledge listed for 2c in docs/requirements.md
+buildfire-1onx3ia,question mc,core,2c,How do you know a fire is 'cold out'?,You feel no heat with your hand near the ashes,keep,Tests knowledge listed for 2c in docs/requirements.md
+buildfire-1w9z95,question mc,core,2c,The fire is cold out. What do you do with the ashes?,Leave or scatter them the way the site's rules say,keep,Tests knowledge listed for 2c in docs/requirements.md
+buildfire-1bx0rl6,question mc,core,2c,Why not just bury a fire in sand or dirt to put it out?,Hidden coals stay hot for hours,keep,Tests knowledge listed for 2c in docs/requirements.md
+buildfire-1f8fvgi,question mc,core,2c,Why use an existing fire ring instead of making a new one?,It keeps the burn scar in one spot,keep,Tests knowledge listed for 2c in docs/requirements.md
+buildfire-15eza0e,question mc,core,2c,What is a minimum-impact fire?,"Small, in an existing ring, and put out cold",keep,Tests knowledge listed for 2c in docs/requirements.md
+stoves-bon79,question mc,core,2d,Which stove fits a 2-night backpacking trip?,A lightweight canister stove,keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-f0uvjr,question mc,core,2d,Which stove fits a patrol cooking breakfast for 8 at a drive-in campsite?,A two-burner propane stove,keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-udbm2b,question mc,core,2d,Where is it safe to use a stove?,"Outdoors, on flat ground",keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-1xmmmcv,question order,core,2d,Put lighting a stove in order.,steps in order,keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-4rzxwa,question mc,core,2d,When can you change a stove's fuel canister?,Once the stove is off and has cooled down,keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-gjn6s2,question mc,core,2d,Which is NOT a stove safety step?,Turning the valve up high to light it fast,keep,Tests knowledge listed for 2d in docs/requirements.md
+stoves-1k15ipn,question mc,core,2d,You smell gas around the propane stove's hose connection. What do you do?,Shut off the fuel; don't light it,keep,Tests knowledge listed for 2d in docs/requirements.md
+knots-1f26z1a,question mc,core,2f/2g,"Why use a sheet bend, not a square knot, to join a thin rope to a thick one?",A square knot slips on unequal ropes,keep,Tests knowledge listed for 2f/2g in docs/requirements.md
+knots-1vfafk2,question match,core,2f/2g,Which knot? Match each situation.,pairs,keep,Tests knowledge listed for 2f/2g in docs/requirements.md
+knots-14fbipg,question mc,core,2f/2g,Which knot is this?,Sheet bend,keep,Tests knowledge listed for 2f/2g in docs/requirements.md
+knots-1ga3hfw,question mc,core,2f/2g,Which knot is this?,Bowline,keep,Tests knowledge listed for 2f/2g in docs/requirements.md
+compass-lcoxeu,question mc,core,3a/3b,Why does a compass needle point north?,The needle is a magnet lining up with Earth's magnetism,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-63clse,question match,core,3a/3b,Match each compass part to its job.,pairs,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-eue6ib,question order,core,3a/3b,Put orienting a map in order.,steps in order,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-g48jsh,question match,core,3a/3b,Match each map symbol to what it shows.,pairs,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-jk07rr,question mc,core,3a/3b,What does an oriented map let you do?,Match the map to the land,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-vfd2vk,question mc,core,3a/3b,Why keep a compass away from a car or a metal knife when using it?,Metal pulls the needle off,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-is4iq2,question mc,core,3a/3b,What is declination?,The gap between true north and magnetic north,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-gmhlnl,question match,core,3a/3b,Match each bearing to its direction.,pairs,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+compass-q81741,question order,core,3a/3b,Put shooting a bearing in order.,steps in order,keep,Tests knowledge listed for 3a/3b in docs/requirements.md
+nocompass-fp2rw5,question order,core,3d,Put the shadow-stick method in order.,steps in order,keep,Tests knowledge listed for 3d in docs/requirements.md
+nocompass-2ms8t1,question mc,core,3d,How do the Big Dipper's pointer stars help at night?,They point to the North Star,keep,Tests knowledge listed for 3d in docs/requirements.md
+nocompass-1mn7vc2,question match,core,3d,Match each clue to the direction it gives you.,pairs,keep,Tests knowledge listed for 3d in docs/requirements.md
+hazards-15sq51s,question mc,core,3c,When is the best time to drink water on a hike?,"Often, before you feel thirsty",keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-k0fdgk,question mc,core,3c,You feel a hot spot on your heel a mile into the hike. What do you do?,Stop and cover it before it becomes a blister,keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-b8okxs,question mc,core,3c,Which is NOT a smart hiking habit?,Shortcutting off the trail to a cliff edge,keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-1sy3iba,question match,core,3c,Match each trail hazard to the habit that prevents it.,pairs,keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-1cj3zm8,question mc,core,3c,Your patrol isn't sure which way the trail goes. What should you do?,"Stop, regroup and check the map together",keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-ievip,question mc,core,3c,"Dark storm clouds are over the mountains, but it's sunny where you're hiking in a canyon. What do you do?",Climb out to higher ground,keep,Tests knowledge listed for 3c in docs/requirements.md
+hazards-5ja8s0,question match,region:la-jolla,3c,Match each coastal hazard to how you prevent it.,pairs,keep,Tests knowledge listed for 3c in docs/requirements.md
+animals-uh7q3m,question mc,core,4,Which one is NOT real evidence that you found an animal yourself?,A photo of the animal from a website,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-k5g9gg,question mc,core,4,What counts as a different kind of animal?,"A different type, like a crow versus a hawk",keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1nlz2k0,question match,region:la-jolla,4,Match each sign to the animal that left it.,pairs,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1otelg,question mc,region:la-jolla,4,A big soft slug in the pool squirts out purple ink when bothered. What is it?,A California sea hare,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-aezygj,question mc,region:la-jolla,4,How close should you get to the sea lions at La Jolla Cove?,Stay well back; never approach them,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1lo4glf,question mc,region:la-jolla,4,What is this tidepool animal?,Ochre sea star,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1hh2316,question mc,region:la-jolla,4,What is this animal wedged among the rocks?,Purple sea urchin,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-wstvoi,question mc,region:la-jolla,4,What is this green animal in a low pool?,Giant green anemone,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1wech4m,question mc,region:la-jolla,4,"What is this big, low shell stuck tight to the rock?",Owl limpet,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1ruducn,question mc,region:la-jolla,4,What is this crab?,Striped shore crab,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-yanh7y,question mc,region:la-jolla,4,What are these shells clustered on a wave-hit rock?,California mussels,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1aem5ed,question mc,region:la-jolla,4,What are these animals on rubbery stalks?,Gooseneck barnacles,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-vu9k3o,question mc,region:la-jolla,4,"What are these dark, rounded shells?",Black turban snails,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1dd8edb,question mc,region:la-jolla,4,This animal is on the rocks at La Jolla Cove. What is it?,California sea lion,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-xoh86n,question mc,region:la-jolla,4,This animal is resting at the Children's Pool. What is it?,Harbor seal,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-njjsmy,question mc,region:la-jolla,4,What is this big bird?,Brown pelican,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-163v8pp,question mc,region:la-jolla,4,What is this bright orange fish?,Garibaldi,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1yaaevn,question mc,region:la-jolla,4,What is this animal in the surfgrass?,California two-spot octopus,keep,Tests knowledge listed for 4 in docs/requirements.md
+animals-1qtfbol,question mc,region:la-jolla,4,What is this crab doing in a snail shell?,Hermit crab living in a borrowed shell,keep,Tests knowledge listed for 4 in docs/requirements.md
+safeswim-rzo9ky,question mc,core,5a,Which is one of the eight points of Safe Swim Defense?,Ability groups,keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-qi0zoy,question match,core,5a,Match each point of Safe Swim Defense to what it means.,pairs,keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-1sn1mn9,question mc,core,5a,"In the buddy system, what happens at a buddy check?",Buddies join and raise hands so the leader can count,keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-x07sfw,question mc,core,5a,What are the three ability groups?,"Nonswimmer, beginner, swimmer",keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-vh7it7,question mc,core,5a,Why does Safe Swim Defense include a lookout?,To keep eyes on the whole area and spot trouble fast,keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-1qopb7p,question mc,region:la-jolla,5a,You get caught in a rip current at La Jolla Shores. What do you do?,Stay calm and swim parallel to the beach,keep,Tests knowledge listed for 5a in docs/requirements.md
+safeswim-1r3c0pr,question mc,region:la-jolla,5a,Which is NOT part of a safe ocean swim for your patrol?,Swimming out past the waves alone to go faster,keep,Tests knowledge listed for 5a in docs/requirements.md
+rescue-1u9aj7e,question mc,core,5c,"Before you reach out to someone in the water, what do you do?",Get low: lie down or brace on solid ground,keep,Tests knowledge listed for 5c in docs/requirements.md
+rescue-b2b4e3,question mc,core,5c,Your throw misses. What do you do?,Pull it back fast and throw again,keep,Tests knowledge listed for 5c in docs/requirements.md
+rescue-1lnrj6v,question mc,core,5c,How do you throw a rescue throw bag?,Hold the end; toss it underhand past them,keep,Tests knowledge listed for 5c in docs/requirements.md
+rescue-1elggfn,question mc,core,5c,Which is NOT a good reaching or throwing tool?,A heavy rock,keep,Tests knowledge listed for 5c in docs/requirements.md
+rescue-dcjbga,question mc,core,5c,The current is pulling your throws away and you can't reach the person. What now?,"Get help, keep trying, stay out",keep,Tests knowledge listed for 5c in docs/requirements.md
+noswim-10ngtlc,question order,core,5d,Put the rescue methods in the order you should try them.,steps in order,keep,Tests knowledge listed for 5d in docs/requirements.md
+noswim-ym2kw6,question mc,core,5d,A Scout is struggling 10 feet from the dock. What should you do first?,Lie down and reach with a pole,keep,Tests knowledge listed for 5d in docs/requirements.md
+noswim-joozmu,question mc,core,5d,How does a trained rescue swimmer avoid being grabbed?,Extends a rescue tube and stays out of reach,keep,Tests knowledge listed for 5d in docs/requirements.md
+firstaid-7h9f21,question mc,core,6a,Dust blows into a Scout's eye. What do you do first?,Don't rub; flush it with clean water,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-150dxbq,question mc,core,6a,A Scout is bitten by a squirrel he tried to feed. What is the right care?,"Wash with soap, cover, see a doctor",keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-1aty0pr,question match,core,6a,Match each puncture wound to the right care.,pairs,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-gtuce9,question order,core,6a,Put the care for a serious burn (with blisters) in order.,steps in order,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-1h37kpz,question mc,core,6a,"A Scout is pale, sweaty, dizzy and nauseated after a hot hike. What is it?",Heat exhaustion,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-1vv9pbn,question mc,core,6a,"A Scout's skin is hot and red, and he is confused. What is it?",Heatstroke,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-6rn1xj,question mc,core,6a,"A Scout has heatstroke: hot, red skin and confused. What do you do?",Call 911 and cool him fast with water,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-10zzx9t,question mc,core,6a,A Scout has heat exhaustion. What do you do?,"Shade, lie down with feet up, cool cloths, sips of water",keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-ciisvy,question order,core,6a,Put the care for hypothermia in order.,steps in order,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-11acx90,question mc,core,6a,What is the best care for dehydration?,Rest in the shade and slowly sip water or a sports drink,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-1oeeuvx,question mc,core,6a,A Scout panics after a fall: very fast breathing and tingling hands. What is it?,Hyperventilation,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-19vemtt,question mc,core,6a,How do you help someone who is hyperventilating?,Stay calm and coach slow breaths,keep,Tests knowledge listed for 6a in docs/requirements.md
+firstaid-111u1tj,question mc,core,6a,When should you NOT raise the feet of someone in shock?,"When you suspect a head, neck, back or leg injury",keep,Tests knowledge listed for 6a in docs/requirements.md
+hurry-17kgg27,question match,core,6b,Match each hurry case to the first action.,pairs,keep,Tests knowledge listed for 6b in docs/requirements.md
+hurry-1xmf7zt,question mc,core,6b,Someone swallowed a cleaning chemical. Should you make them vomit?,"No, unless Poison Control says so",keep,Tests knowledge listed for 6b in docs/requirements.md
+hurry-u0xz5c,question order,core,6b,Someone collapses and isn't breathing. Put the steps in order.,steps in order,keep,Tests knowledge listed for 6b in docs/requirements.md
+hurry-1kbxl9a,question mc,core,6b,A grandparent's face droops on one side and his speech is slurred. What is it?,A stroke,keep,Tests knowledge listed for 6b in docs/requirements.md
+prevent-ki1lul,question match,core,6c,Match each injury to the habit that prevents it.,pairs,keep,Tests knowledge listed for 6c in docs/requirements.md
+prevent-1w49mrg,question mc,core,6c,Which habit does NOT prevent injuries?,Hiking off alone to save time,keep,Tests knowledge listed for 6c in docs/requirements.md
+prevent-1257acm,question mc,core,6c,Which habit best prevents hypothermia on a campout?,Stay dry and carry a warm layer,keep,Tests knowledge listed for 6c in docs/requirements.md
+emergency-156xwsq,question order,core,6d,Put the backcountry emergency response in order.,steps in order,keep,Tests knowledge listed for 6d in docs/requirements.md
+emergency-19xvhc0,question mc,core,6d,Which is NOT information responders need?,What the patrol ate for lunch,keep,Tests knowledge listed for 6d in docs/requirements.md
+emergency-vtr4jl,question mc,core,6d,"There's no cell signal and a Scout is hurt. Why send two people for help, not one?","If one gets hurt, the other still gets help",keep,Tests knowledge listed for 6d in docs/requirements.md
+emergency-m3qgtk,question mc,core,6d,Which of these counts as an emergency?,A Scout who won't wake up after hitting his head,keep,Tests knowledge listed for 6d in docs/requirements.md
+emergency-1a12l39,question mc,core,6d,"At home, what is the first thing you do in an emergency?","Make sure it's safe for you, then call 911",keep,Tests knowledge listed for 6d in docs/requirements.md
+emergency-sgong1,question mc,region:la-jolla,6d,Someone is hurt on the rocks at the beach. Who is the fastest help?,"The nearest lifeguard tower, or 911",keep,Tests knowledge listed for 6d in docs/requirements.md
+vehicle-wrbr5n,question mc,core,6e,You come upon a car crash. What is the most important first rule?,Don't become a victim: stay off the road,keep,Tests knowledge listed for 6e in docs/requirements.md
+vehicle-q9p27,question mc,core,6e,When should an injured person be moved from a crashed car?,"Only if there's danger, like fire",keep,Tests knowledge listed for 6e in docs/requirements.md
+vehicle-18pm85n,question mc,core,6e,"At a crash, you smell gasoline. What does that change?",Stay farther back; there's a fire risk,keep,Tests knowledge listed for 6e in docs/requirements.md
+vehicle-yvplwt,question mc,core,6e,An injured driver asks for water. What do you do?,Nothing by mouth; keep them calm,keep,Tests knowledge listed for 6e in docs/requirements.md
+ceremony-flbb9a,question order,core,8a,Put an opening flag ceremony in order.,steps in order,keep,Tests knowledge listed for 8a in docs/requirements.md
+ceremony-1lc5mtf,question mc,core,8a,"In a flag ceremony, what does the color guard do?",Carries and posts the flag,keep,Tests knowledge listed for 8a in docs/requirements.md
+ceremony-1s9i9va,question mc,core,8a,Should the color guard carrying the flags salute during the Pledge?,No. Their hands hold the flags being honored,keep,Tests knowledge listed for 8a in docs/requirements.md
+ceremony-1phlqvj,question mc,core,8a,"You're in uniform, wearing your troop cap, during the Pledge outdoors. What do you do?",Keep the cap on and give the Scout salute,keep,Tests knowledge listed for 8a in docs/requirements.md
+ceremony-2he9bs,question mc,core,8a,How does the Pledge of Allegiance start?,I pledge allegiance,keep,The one Pledge exception
+ceremony-mf9bn6,question order,core,8a,Put a closing (retiring) flag ceremony in order.,steps in order,keep,Tests knowledge listed for 8a in docs/requirements.md
+ceremony-1rz706p,question mc,core,8b,"When the US flag is carried with other flags, where does it go?","On its own right, or in front",keep,Tests knowledge listed for 8b in docs/requirements.md
+flag-1n92xi,question mc,core,8b,The flag is carried past you in a parade. What do you do?,Stand at attention and salute until it passes,keep,Tests knowledge listed for 8b in docs/requirements.md
+flag-ph7d3q,question order,core,8b,Put flying a flag at half-staff in order.,steps in order,keep,Tests knowledge listed for 8b in docs/requirements.md
+flag-1wwjvlt,question mc,core,8b,How should a worn-out flag be retired?,By burning it respectfully in a dignified retirement ceremony,keep,Tests knowledge listed for 8b in docs/requirements.md
+flag-65aog4,question mc,core,8b,When is the flag flown at night?,Only when it is lit,keep,Tests knowledge listed for 8b in docs/requirements.md
+ceremony-13dgwz,question mc,core,8b,"On a stage, which side does the US flag stand on?",The speaker's right,keep,Tests knowledge listed for 8b in docs/requirements.md
+ceremony-41rllf,question mc,core,8b,"During a ceremony, the flag slips and touches the ground. What do you do?",Pick it up with care and continue,keep,Tests knowledge listed for 8b in docs/requirements.md
+ceremony-1w5s1ph,question mc,core,8b,How is the US flag folded for storage?,"A triangle, blue field showing",keep,Tests knowledge listed for 8b in docs/requirements.md
+threer-n99l6j,question match,core,9a,Match each R to what it means.,pairs,keep,Tests knowledge listed for 9a in docs/requirements.md
+threer-1hm979l,question mc,core,9a,Someone tells you to keep something that made you uncomfortable a secret. What do you do?,Tell a parent or another trusted adult anyway,keep,Tests knowledge listed for 9a in docs/requirements.md
+threer-1naqsir,question mc,core,9a,"An adult you met online offers you a gift and says, 'Don't tell your parents.' What is that?",A warning sign to tell a trusted adult about,keep,Tests knowledge listed for 9a in docs/requirements.md
+bullying-jschpo,question match,core,9b,Match each example to the type of bullying.,pairs,keep,Tests knowledge listed for 9b in docs/requirements.md
+bullying-ksg18h,question mc,core,9b,Which is bullying?,Daily teasing to make a Scout feel small,keep,Tests knowledge listed for 9b in docs/requirements.md
+bullying-a4fapl,question mc,core,9b,Someone is cyberbullying you. What should you do?,"Save it, block them, tell an adult",keep,Tests knowledge listed for 9b in docs/requirements.md
+bullying-rc14wy,question mc,core,9b,What does being an upstander mean?,Speaking up if safe and telling an adult,keep,Tests knowledge listed for 9b in docs/requirements.md
+lnt/The seven principles/1,learn line,,1b,Plan Ahead and Prepare,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/2,learn line,,1b,Travel and Camp on Durable Surfaces,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/3,learn line,,1b,Dispose of Waste Properly,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/4,learn line,,1b,Leave What You Find,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/5,learn line,,1b,Minimize Campfire Impacts,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/6,learn line,,1b,Respect Wildlife,,keep,Supports a question or the expected answer for 1b
+lnt/The seven principles/7,learn line,,1b,Be Considerate of Other Visitors,,keep,Supports a question or the expected answer for 1b
+lnt/Cheat code to remember all seven/1,learn line,,1b,"Please Don't Dump Litter, Make Rangers Beam.",,keep,Supports a question or the expected answer for 1b
+lnt/Cheat code to remember all seven/2,learn line,,1b,"Plan, Durable, Dispose, Leave, Minimize, Respect, Be considerate.",,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/1,learn line,,1b,Plan: check the weather and the rules before you go.,,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/2,learn line,,1b,"Durable: trails, rock, gravel, dry sand. Single file, middle of the trail, even when it's muddy.",,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/3,learn line,,1b,Waste: pack it all out. Orange peels and apple cores count.,,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/4,learn line,,1b,"Leave what you find: shells, rocks, plants and old stuff stay put.",,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/5,learn line,,1b,Campfires: stove or an existing ring. Keep it small.,,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/6,learn line,,1b,Wildlife: watch from a distance. Feeding them is not a favor.,,keep,Supports a question or the expected answer for 1b
+lnt/What they look like out there/7,learn line,,1b,Other visitors: keep it down after dark. Share the trail.,,keep,Supports a question or the expected answer for 1b
+lnt/In the tidepools/1,learn line,,1b,"Step on bare rock, not seaweed or surfgrass. Things live under it.",,keep,Supports a question or the expected answer for 1b
+lnt/In the tidepools/2,learn line,,1b,"Flip a rock? Put it back gently, the same way up.",,keep,Supports a question or the expected answer for 1b
+lnt/In the tidepools/3,learn line,,1b,"Shells and animals stay. In a marine reserve, that's the law.",,keep,Supports a question or the expected answer for 1b
+lnt/In the tidepools/4,learn line,,1b,No rock towers. Leave the beach the way you found it.,,keep,Supports a question or the expected answer for 1b
+campsite/Ask these four/1,learn line,,1c,Is camping allowed here?,,keep,Supports a question or the expected answer for 1c
+campsite/Ask these four/2,learn line,,1c,Is it safe?,,keep,Supports a question or the expected answer for 1c
+campsite/Ask these four/3,learn line,,1c,Is the ground durable and level?,,keep,Supports a question or the expected answer for 1c
+campsite/Ask these four/4,learn line,,1c,Is it comfy?,,keep,Supports a question or the expected answer for 1c
+campsite/Ask these four/5,learn line,,1c,Safety beats comfy. Every time.,,keep,Supports a question or the expected answer for 1c
+campsite/Safe means/1,learn line,,1c,Not in a dry wash or low spot. Rain miles away can send a flood through it.,,keep,Supports a question or the expected answer for 1c
+campsite/Safe means/2,learn line,,1c,"No dead limbs overhead, no loose rock above.",,keep,Supports a question or the expected answer for 1c
+campsite/Safe means/3,learn line,,1c,Back from cliff edges.,,keep,Supports a question or the expected answer for 1c
+campsite/Safe means/4,learn line,,1c,"Use an established site when you can, about 200 feet from lakes and streams.",,keep,Supports a question or the expected answer for 1c
+campsite/Safe means/5,learn line,,1c,"Water nearby to use, and ground that drains so rain doesn't pool under the tent.",,keep,Supports a question or the expected answer for 1c
+campsite/Look down before you pitch/1,learn line,,1c,"Ants, sharp rocks, roots, and low spots where water or cold air collects.",,keep,Supports a question or the expected answer for 1c
+campsite/Look down before you pitch/2,learn line,,1c,"Bare, durable ground. Don't flatten plants.",,keep,Supports a question or the expected answer for 1c
+campsite/Layout and weather/1,learn line,,1c,"Tents spread out, away from cooking and the fire.",,keep,Supports a question or the expected answer for 1c
+campsite/Layout and weather/2,learn line,,1c,Door away from the wind.,,keep,Supports a question or the expected answer for 1c
+campsite/On the coast/1,learn line,,1c,Pitch above the high-tide line.,,keep,Supports a question or the expected answer for 1c
+campsite/On the coast/2,learn line,,1c,Stay well back from bluff edges.,,keep,Supports a question or the expected answer for 1c
+whenfire/Yes to a fire when/1,learn line,,2a,The rules allow it and there's no fire ban.,,keep,Supports a question or the expected answer for 2a
+whenfire/Yes to a fire when/2,learn line,,2a,There's an existing ring or grill.,,keep,Supports a question or the expected answer for 2a
+whenfire/Yes to a fire when/3,learn line,,2a,The wind is calm.,,keep,Supports a question or the expected answer for 2a
+whenfire/Yes to a fire when/4,learn line,,2a,"You actually need it: cooking, warmth, or a campfire program.",,keep,Supports a question or the expected answer for 2a
+whenfire/No fire when/1,learn line,,2a,There's a ban or a Red Flag Warning.,,keep,Supports a question or the expected answer for 2a
+whenfire/No fire when/2,learn line,,2a,It's windy or very dry.,,keep,Supports a question or the expected answer for 2a
+whenfire/No fire when/3,learn line,,2a,"There's no ring, or no wood you're allowed to burn.",,keep,Supports a question or the expected answer for 2a
+whenfire/No fire when/4,learn line,,2a,A stove would do the job. (It usually would.),,keep,Supports a question or the expected answer for 2a
+whenfire/In San Diego/1,learn line,,2a,Fires only in the rings or grills the site provides.,,keep,Supports a question or the expected answer for 2a
+whenfire/In San Diego/2,learn line,,2a,Santa Ana winds blowing? No fire. Use the stove.,,keep,Supports a question or the expected answer for 2a
+firewood/Three sizes. Get these straight./1,learn line,,2b,"Tinder: thinner than a match. Dry grass, bark fluff, wood shavings.",,keep,Supports a question or the expected answer for 2b
+firewood/Three sizes. Get these straight./2,learn line,,2b,Kindling: pencil to thumb thick.,,keep,Supports a question or the expected answer for 2b
+firewood/Three sizes. Get these straight./3,learn line,,2b,Fuel wood: wrist thick and bigger.,,keep,Supports a question or the expected answer for 2b
+firewood/Three sizes. Get these straight./img,image,,2b,img/firewood.svg,,keep,Shows what the card teaches
+firewood/How they hand off/1,learn line,,2b,Match lights tinder. Tinder lights kindling. Kindling lights fuel.,,keep,Supports a question or the expected answer for 2b
+firewood/How they hand off/2,learn line,,2b,Skip a size and the fire dies. Every time.,,keep,Supports a question or the expected answer for 2b
+firewood/How they hand off/3,learn line,,2b,All of it has to be dry. Damp wood just smokes at you.,,keep,Supports a question or the expected answer for 2b
+firewood/Knife rules/1,learn line,,2b,Check your safety circle: nobody within arm's reach.,,keep,Supports a question or the expected answer for 2b
+firewood/Knife rules/2,learn line,,2b,Cut away from your body.,,keep,Supports a question or the expected answer for 2b
+firewood/Knife rules/3,learn line,,2b,Close it before you hand it over.,,keep,Supports a question or the expected answer for 2b
+firewood/Knife rules/4,learn line,,2b,"Saw or axe only for wood too thick to snap, with clear space and an adult's OK.",,keep,Supports a question or the expected answer for 2b
+firewood/Knife rules/5,learn line,,2b,Only dead and down wood. Never cut live trees.,,keep,Supports a question or the expected answer for 2b
+buildfire/Fire materials/1,learn line,,2c,Tinder: thinner than a match.,,keep,Supports a question or the expected answer for 2c
+buildfire/Fire materials/2,learn line,,2c,Kindling: pencil to thumb thick.,,keep,Supports a question or the expected answer for 2c
+buildfire/Fire materials/3,learn line,,2c,Fuel wood: wrist thick and bigger.,,keep,Supports a question or the expected answer for 2c
+buildfire/In order. This one matters./1,learn line,,2c,1. Check the rules and use the fire ring.,,keep,Supports a question or the expected answer for 2c
+buildfire/In order. This one matters./2,learn line,,2c,"2. Have water, a shovel, tinder, kindling and fuel all ready.",,keep,Supports a question or the expected answer for 2c
+buildfire/In order. This one matters./3,learn line,,2c,"3. Light the tinder, add kindling, then fuel.",,keep,Supports a question or the expected answer for 2c
+buildfire/In order. This one matters./4,learn line,,2c,"4. Drown, stir, drown again until it's cold.",,keep,Supports a question or the expected answer for 2c
+buildfire/In order. This one matters./5,learn line,,2c,"5. Ashes: leave them in the ring or scatter them, whatever the site rules say.",,keep,Supports a question or the expected answer for 2c
+buildfire/Three fire lays/1,learn line,,2c,Tepee: kindling leaned in a cone over tinder. Fast and hot.,,keep,Supports a question or the expected answer for 2c
+buildfire/Three fire lays/2,learn line,,2c,Log cabin: sticks stacked in a crisscross square. Steady coals for cooking.,,keep,Supports a question or the expected answer for 2c
+buildfire/Three fire lays/3,learn line,,2c,Lean-to: kindling leaned against one bigger stick. Good in wind.,,keep,Supports a question or the expected answer for 2c
+buildfire/Three fire lays/4,learn line,,2c,Leave gaps. Fire needs to breathe too.,,keep,Supports a question or the expected answer for 2c
+buildfire/Three fire lays/img,image,,2c,img/firelays.svg,,keep,Shows what the card teaches
+buildfire/Minimum impact/1,learn line,,2c,No ring? Use a fire pan where allowed. Clear anything that can burn away from the fire.,,keep,Supports a question or the expected answer for 2c
+buildfire/Minimum impact/2,learn line,,2c,"Small fire, existing ring, burn the wood all the way to ash.",,keep,Supports a question or the expected answer for 2c
+buildfire/Minimum impact/3,learn line,,2c,Cold out means you hold your hand near the ashes and feel nothing.,,keep,Supports a question or the expected answer for 2c
+buildfire/Minimum impact/4,learn line,,2c,"Don't bury a fire in sand. The coals stay hot for hours, and somebody's bare foot finds them.",,keep,Supports a question or the expected answer for 2c
+stoves/Which stove/1,learn line,,2d,"Use a stove instead of a fire when fires aren't allowed, wood is scarce, or you want less impact. It's faster, too.",,keep,Supports a question or the expected answer for 2d
+stoves/Which stove/2,learn line,,2d,"Lightweight canister stove: backpacking, when you carry everything.",,keep,Supports a question or the expected answer for 2d
+stoves/Which stove/3,learn line,,2d,"Two-burner propane stove: car camping, cooking for the whole patrol.",,keep,Supports a question or the expected answer for 2d
+"stoves/Set up and light, in order. Order matters here./1",learn line,,2d,"1. Outdoors, flat ground, fittings tight, an adult's OK.",,keep,Supports a question or the expected answer for 2d
+"stoves/Set up and light, in order. Order matters here./2",learn line,,2d,2. Strike the match first.,,keep,Supports a question or the expected answer for 2d
+"stoves/Set up and light, in order. Order matters here./3",learn line,,2d,3. Then open the valve slowly and light it.,,keep,Supports a question or the expected answer for 2d
+"stoves/Set up and light, in order. Order matters here./4",learn line,,2d,"4. Never walk away from it. When you're done, fuel off and let it cool.",,keep,Supports a question or the expected answer for 2d
+stoves/Don't be that Scout/1,learn line,,2d,"Never use a stove in a tent. Fire, plus carbon monoxide you can't smell.",,keep,Supports a question or the expected answer for 2d
+stoves/Don't be that Scout/2,learn line,,2d,Change a canister only when the stove is off and cool.,,keep,Supports a question or the expected answer for 2d
+stoves/Don't be that Scout/3,learn line,,2d,Smell gas? Fuel off. Don't light it.,,keep,Supports a question or the expected answer for 2d
+stoves/Don't be that Scout/4,learn line,,2d,"Keep it away from tents, and keep spare fuel away from the flame.",,keep,Supports a question or the expected answer for 2d
+knots/Sheet bend/1,learn line,,2f/2g,"Joins two ropes, even when one is thicker than the other.",,keep,Supports a question or the expected answer for 2f/2g
+knots/Sheet bend/2,learn line,,2f/2g,Use it to add a thin cord to a thicker rope to make a longer line.,,keep,Supports a question or the expected answer for 2f/2g
+knots/Sheet bend/3,learn line,,2f/2g,Why not a square knot? It slips when the ropes are different sizes.,,keep,Supports a question or the expected answer for 2f/2g
+knots/Sheet bend/img,image,,2f/2g,https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Sheet_Bend_-_ABoK_1431_-_USCG.jpg/960px-Sheet_Bend_-_ABoK_1431_-_USCG.jpg,,keep,Shows what the card teaches
+knots/Bowline/1,learn line,,2f/2g,A loop at the end of a rope that won't slip or tighten.,,keep,Supports a question or the expected answer for 2f/2g
+knots/Bowline/2,learn line,,2f/2g,"Use it for a rescue loop around someone's chest, or a loop around a tree or post.",,keep,Supports a question or the expected answer for 2f/2g
+knots/Bowline/img,image,,2f/2g,https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Knot-bowline-ABoK_1010-USCG.jpg/960px-Knot-bowline-ABoK_1010-USCG.jpg,,keep,Shows what the card teaches
+knots/Which one?/1,learn line,,2f/2g,Two ropes to join: sheet bend.,,keep,Supports a question or the expected answer for 2f/2g
+knots/Which one?/2,learn line,,2f/2g,A loop that has to hold its size: bowline.,,keep,Supports a question or the expected answer for 2f/2g
+knots/Which one?/3,learn line,,2f/2g,You'll tie them for real with your patrol. This is about knowing when to grab which.,,keep,Supports a question or the expected answer for 2f/2g
+compass/How a compass works/1,learn line,,3a/3b,The needle is a magnet. It lines up with Earth's magnetic field and points to magnetic north.,,keep,Supports a question or the expected answer for 3a/3b
+compass/How a compass works/2,learn line,,3a/3b,Metal messes with it. Step away from the car. And the knife.,,keep,Supports a question or the expected answer for 3a/3b
+compass/The parts/1,learn line,,3a/3b,Magnetic needle: points to magnetic north.,,keep,Supports a question or the expected answer for 3a/3b
+compass/The parts/2,learn line,,3a/3b,Direction-of-travel arrow: points where you want to go.,,keep,Supports a question or the expected answer for 3a/3b
+compass/The parts/3,learn line,,3a/3b,Housing (bezel): turns to set a bearing in degrees.,,keep,Supports a question or the expected answer for 3a/3b
+compass/The parts/4,learn line,,3a/3b,Orienting arrow: put the red needle in it. 'Red in the shed.',,keep,Supports a question or the expected answer for 3a/3b
+compass/The parts/img,image,,3a/3b,img/compass.svg,,keep,Shows what the card teaches
+"compass/Orient a map, in order. Order matters./1",learn line,,3a/3b,"1. Set the compass to north, adjusted for the declination your map shows.",,keep,Supports a question or the expected answer for 3a/3b
+"compass/Orient a map, in order. Order matters./2",learn line,,3a/3b,2. Lay its edge along a north-south line on the flat map.,,keep,Supports a question or the expected answer for 3a/3b
+"compass/Orient a map, in order. Order matters./3",learn line,,3a/3b,3. Turn map and compass together until red is in the shed.,,keep,Supports a question or the expected answer for 3a/3b
+"compass/Orient a map, in order. Order matters./4",learn line,,3a/3b,No compass? Turn the map until landmarks line up with what you see.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Bearings/1,learn line,,3a/3b,Declination: the gap between true north and magnetic north.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Bearings/2,learn line,,3a/3b,"0° north, 90° east, 180° south, 270° west.",,keep,Supports a question or the expected answer for 3a/3b
+compass/Bearings/3,learn line,,3a/3b,"Shoot a bearing: hold the compass flat at your waist, point the travel arrow at a landmark, turn the housing until red is in the shed, then read the number at the index line.",,keep,Supports a question or the expected answer for 3a/3b
+compass/Bearings/4,learn line,,3a/3b,"Follow one: set it, turn your body until red is in the shed, walk to something straight ahead.",,keep,Supports a question or the expected answer for 3a/3b
+compass/Map symbols/1,learn line,,3a/3b,Brown contour lines: elevation.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Map symbols/2,learn line,,3a/3b,Blue: water. Green: vegetation.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Map symbols/3,learn line,,3a/3b,Black dashed line: trail.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Map symbols/4,learn line,,3a/3b,Crossed picks: mine or quarry.,,keep,Supports a question or the expected answer for 3a/3b
+compass/Map symbols/img,image,,3a/3b,img/mapsymbols.svg,,keep,Shows what the card teaches
+"nocompass/Shadow stick, in order/1",learn line,,3d,"1. Push a stick straight up in flat, sunny ground.",,keep,Supports a question or the expected answer for 3d
+"nocompass/Shadow stick, in order/2",learn line,,3d,2. Mark the tip of its shadow.,,keep,Supports a question or the expected answer for 3d
+"nocompass/Shadow stick, in order/3",learn line,,3d,3. Wait about 15 minutes.,,keep,Supports a question or the expected answer for 3d
+"nocompass/Shadow stick, in order/4",learn line,,3d,4. Mark the new tip.,,keep,Supports a question or the expected answer for 3d
+"nocompass/Shadow stick, in order/5",learn line,,3d,"5. First mark is west, second is east.",,keep,Supports a question or the expected answer for 3d
+"nocompass/Shadow stick, in order/img",image,,3d,img/shadowstick.svg,,keep,Shows what the card teaches
+nocompass/At night/1,learn line,,3d,The two stars at the end of the Big Dipper's cup point to the North Star.,,keep,Supports a question or the expected answer for 3d
+nocompass/At night/img,image,,3d,img/dipper.svg,,keep,Shows what the card teaches
+nocompass/The sun/1,learn line,,3d,"Up in the east, down in the west.",,keep,Supports a question or the expected answer for 3d
+hazards/Trail/1,learn line,,3c,Rattlesnakes: stay on trail and watch where hands and feet go.,,keep,Supports a question or the expected answer for 3c
+hazards/Trail/2,learn line,,3c,"Poison oak: leaves of three, let it be.",,keep,Supports a question or the expected answer for 3c
+hazards/Trail/3,learn line,,3c,Twisted ankles: watch your footing.,,keep,Supports a question or the expected answer for 3c
+hazards/Trail/4,learn line,,3c,"Lost? Stop, regroup, check the map. Wandering makes it worse.",,keep,Supports a question or the expected answer for 3c
+hazards/Trail/5,learn line,,3c,"Water crossings: find a shallow, slow spot. Fast water above your knees? Don't cross.",,keep,Supports a question or the expected answer for 3c
+hazards/Trail/6,learn line,,3c,Darkness: carry a headlamp and plan to be back before dark.,,keep,Supports a question or the expected answer for 3c
+hazards/Your body/1,learn line,,3c,Drink before you're thirsty. Thirst means you're already behind.,,keep,Supports a question or the expected answer for 3c
+hazards/Your body/2,learn line,,3c,Storm over the mountains while you're in a canyon: climb to higher ground. Flash floods don't text first.,,keep,Supports a question or the expected answer for 3c
+hazards/Your body/3,learn line,,3c,"Sun: hat, sunscreen, long sleeves.",,keep,Supports a question or the expected answer for 3c
+hazards/Your body/4,learn line,,3c,"Blisters: broken-in boots, dry socks. Stop at the first hot spot.",,keep,Supports a question or the expected answer for 3c
+hazards/Coast/1,learn line,,3c,"Crumbling bluff edges: stay on trail, back from the edge. The edge doesn't care how close you thought you were.",,keep,Supports a question or the expected answer for 3c
+hazards/Coast/2,learn line,,3c,"Slippery algae: step on bare, dry rock.",,keep,Supports a question or the expected answer for 3c
+hazards/Coast/3,learn line,,3c,Rising tide: check the tide chart and watch the time.,,keep,Supports a question or the expected answer for 3c
+hazards/Coast/4,learn line,,3c,Sneaker waves: never turn your back on the ocean.,,keep,Supports a question or the expected answer for 3c
+animals/How to ID an animal/1,learn line,,4,"Size, shape, color or pattern, what it's doing, where it lives.",,keep,Supports a question or the expected answer for 4
+animals/How to ID an animal/2,learn line,,4,"A different kind means a different type, like a crow versus a hawk.",,keep,Supports a question or the expected answer for 4
+animals/How to ID an animal/3,learn line,,4,"Evidence counts: shells, molts, tracks, your own photos. Not a photo you found online.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/1,learn line,,4,"Ochre sea star: five thick, bumpy arms, purple or orange.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/2,learn line,,4,Purple sea urchin: a ball of purple spines in a rock hole.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/3,learn line,,4,Aggregating anemone: carpets of small anemones covered in sand.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/4,learn line,,4,"Giant green anemone: big, green, soft tentacles.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/5,learn line,,4,Hermit crab: lives in a borrowed snail shell.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/6,learn line,,4,"Striped shore crab: dark with green stripes, runs sideways into cracks.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/7,learn line,,4,California mussel: blue-black paired shells in beds.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/8,learn line,,4,Gooseneck barnacle: on rubbery stalks.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/9,learn line,,4,Owl limpet: big low cone stuck to rock.,,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/10,learn line,,4,"Black turban snail: dark, rounded, coiled.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/11,learn line,,4,"California sea hare: big soft slug that squirts purple ink. Rude, but harmless.",,keep,Supports a question or the expected answer for 4
+animals/Tidepool animals/12,learn line,,4,Two-spot octopus: a blue ring on each side of its head.,,keep,Supports a question or the expected answer for 4
+animals/Along the coast/1,learn line,,4,"California sea lion: ear flaps, barks, walks on its flippers.",,keep,Supports a question or the expected answer for 4
+animals/Along the coast/2,learn line,,4,"Harbor seal: no ear flaps, spotted, scoots on its belly.",,keep,Supports a question or the expected answer for 4
+animals/Along the coast/3,learn line,,4,Brown pelican: huge bill with a pouch.,,keep,Supports a question or the expected answer for 4
+animals/Along the coast/4,learn line,,4,Garibaldi: bright orange fish.,,keep,Supports a question or the expected answer for 4
+animals/Along the coast/5,learn line,,4,"Give sea lions and seals lots of room. Never approach. They bite, and they win.",,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/1,learn line,,4,"Urchin test: a round shell with no spines, left after an urchin dies.",,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/2,learn line,,4,A whole empty crab shell: the crab molted to grow.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/3,learn line,,4,Strong smell and barking on the rocks: sea lions.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/4,learn line,,4,White streaks on cliff rocks: pelicans and cormorants roosting.,,keep,Supports a question or the expected answer for 4
+animals/Signs they leave/5,learn line,,4,Tiny jumping bugs under washed-up kelp: beach hoppers.,,keep,Supports a question or the expected answer for 4
+safeswim/The eight points of Safe Swim Defense/1,learn line,,5a,Qualified supervision: a trained adult is in charge.,,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/2,learn line,,5a,Personal health review: everyone's health form is checked.,,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/3,learn line,,5a,"Safe area: depth and hazards checked, areas marked.",,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/4,learn line,,5a,Response personnel: trained rescuers ready to act.,,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/5,learn line,,5a,Lookout: one person watches the whole area.,,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/6,learn line,,5a,"Ability groups: nonswimmer, beginner, swimmer.",,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/7,learn line,,5a,"Buddy system: everyone has a buddy. At a buddy check, buddies grab hands and raise them so the leader can count.",,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/8,learn line,,5a,Discipline: everyone knows the rules and follows them.,,keep,Supports a question or the expected answer for 5a
+safeswim/The eight points of Safe Swim Defense/9,learn line,,5a,Know all eight. The order isn't the test.,,keep,Supports a question or the expected answer for 5a
+safeswim/In the ocean/1,learn line,,5a,Rip current: stay calm and swim parallel to the beach. Fighting it straight in just wears you out.,,keep,Supports a question or the expected answer for 5a
+safeswim/In the ocean/2,learn line,,5a,Never swim alone or out past the waves.,,keep,Supports a question or the expected answer for 5a
+"rescue/Reach, throw, row, go/1",learn line,,5c,Try them in that order. Each step puts the rescuer in more danger.,,keep,Supports a question or the expected answer for 5c
+rescue/Reaching rescue/1,learn line,,5c,"Get low first: lie down or brace on solid ground, so they can't pull you in.",,keep,Supports a question or the expected answer for 5c
+rescue/Reaching rescue/2,learn line,,5c,"Reach with a pole, paddle, towel, shirt or branch.",,keep,Supports a question or the expected answer for 5c
+rescue/Reaching rescue/3,learn line,,5c,"Tell them to grab it, then pull them in slowly, staying low.",,keep,Supports a question or the expected answer for 5c
+rescue/Reaching rescue/4,learn line,,5c,Shout that help is coming. It calms people down.,,keep,Supports a question or the expected answer for 5c
+rescue/Throwing rescue/1,learn line,,5c,Hold onto the end of the rope. Throw underhand.,,keep,Supports a question or the expected answer for 5c
+rescue/Throwing rescue/2,learn line,,5c,"Aim just past the person, so the rope lands across their reach.",,keep,Supports a question or the expected answer for 5c
+rescue/Throwing rescue/3,learn line,,5c,Missed? Pull it back fast and throw again.,,keep,Supports a question or the expected answer for 5c
+rescue/Throwing rescue/4,learn line,,5c,Still can't reach them? Get help and keep trying from shore. You don't go in.,,keep,Supports a question or the expected answer for 5c
+rescue/Good tools/1,learn line,,5c,"Ring buoy, throw bag, rope, pole, paddle, towel, branch.",,keep,Supports a question or the expected answer for 5c
+rescue/Good tools/2,learn line,,5c,"Not a heavy rock. They're drowning, not playing catch.",,keep,Supports a question or the expected answer for 5c
+"noswim/Reach, throw, row, go/1",learn line,,5d,"Swimming out is last, and only for trained rescuers.",,keep,Supports a question or the expected answer for 5d
+noswim/Why not swim/1,learn line,,5d,"A panicking swimmer grabs anything nearby, including you, and can pull you both under.",,keep,Supports a question or the expected answer for 5d
+noswim/Why not swim/2,learn line,,5d,Reaching and throwing keep you on dry land.,,keep,Supports a question or the expected answer for 5d
+noswim/How a rescue swimmer stays safe/1,learn line,,5d,Pushes a rescue tube or float to the victim.,,keep,Supports a question or the expected answer for 5d
+noswim/How a rescue swimmer stays safe/2,learn line,,5d,Stays out of grabbing range until the victim holds the float.,,keep,Supports a question or the expected answer for 5d
+firstaid/Something in the eye/1,learn line,,6a,Don't rub. Flush it with clean water.,,keep,Supports a question or the expected answer for 6a
+firstaid/Something in the eye/2,learn line,,6a,Still stuck? Cover the eye loosely and get medical help.,,keep,Supports a question or the expected answer for 6a
+firstaid/Something in the eye/img,image,,6a,img/eye.svg,,keep,Shows what the card teaches
+firstaid/Warm-blooded animal bite/1,learn line,,6a,"Wash with soap and water, cover it, see a doctor.",,keep,Supports a question or the expected answer for 6a
+firstaid/Warm-blooded animal bite/2,learn line,,6a,Never suck the wound. That's a movie thing.,,keep,Supports a question or the expected answer for 6a
+firstaid/Puncture wounds/1,learn line,,6a,"Splinter: clean tweezers, wash, bandage.",,keep,Supports a question or the expected answer for 6a
+firstaid/Puncture wounds/2,learn line,,6a,"Nail or other deep puncture: stop any bleeding with gentle pressure, rinse it clean, cover it, and see a doctor about a tetanus shot.",,keep,Supports a question or the expected answer for 6a
+firstaid/Puncture wounds/3,learn line,,6a,Fishhook past the barb: leave it for a trained adult or a doctor.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/1",learn line,,6a,1. Get away from the heat.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/2",learn line,,6a,2. Cool it under cool running water for 15 to 20 minutes. No ice.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/3",learn line,,6a,"3. Cover loosely with a clean, dry dressing.",,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/4",learn line,,6a,4. Treat for shock and get medical help.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/5",learn line,,6a,Don't pop the blisters. No butter or creams.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Second-degree burn (blisters), in order/img",image,,6a,img/burn.svg,,keep,Shows what the card teaches
+firstaid/Heat/1,learn line,,6a,"Heat exhaustion: pale, cool, sweaty, dizzy, but awake and talking. Shade, lie down, feet up, cool cloths, sips of water.",,keep,Supports a question or the expected answer for 6a
+firstaid/Heat/2,learn line,,6a,"Heatstroke: hot, red skin and confused. Call 911 and cool them fast. This one is serious.",,keep,Supports a question or the expected answer for 6a
+firstaid/Heat/3,learn line,,6a,Dehydration: rest in the shade and slowly sip water or a sports drink.,,keep,Supports a question or the expected answer for 6a
+firstaid/Heat/img,image,,6a,img/heat.svg,,keep,Shows what the card teaches
+firstaid/Shock/1,learn line,,6a,Make sure the scene is safe; call for help.,,keep,Supports a question or the expected answer for 6a
+firstaid/Shock/2,learn line,,6a,Have the person lie down.,,keep,Supports a question or the expected answer for 6a
+firstaid/Shock/3,learn line,,6a,"Raise the feet about 12 inches, unless you suspect a head, neck, back or leg injury.",,keep,Supports a question or the expected answer for 6a
+firstaid/Shock/4,learn line,,6a,Keep them warm. Nothing to eat or drink. Keep checking on them.,,keep,Supports a question or the expected answer for 6a
+firstaid/Shock/img,image,,6a,img/shock.svg,,keep,Shows what the card teaches
+"firstaid/Hypothermia, in order/1",learn line,,6a,"Wet plus wind chills you fast, even on a nice day.",,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/2",learn line,,6a,"Confused, stumbling or stopped shivering? Call 911 first.",,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/3",learn line,,6a,1. Get out of wind and wet.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/4",learn line,,6a,2. Change into dry clothes.,,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/5",learn line,,6a,"3. Sleeping bag, off the cold ground.",,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/6",learn line,,6a,"4. Warm, sweet drink if fully alert.",,keep,Supports a question or the expected answer for 6a
+"firstaid/Hypothermia, in order/img",image,,6a,img/hypothermia.svg,,keep,Shows what the card teaches
+firstaid/Hyperventilation/1,learn line,,6a,"Super fast breathing and tingling hands, usually after a scare.",,keep,Supports a question or the expected answer for 6a
+firstaid/Hyperventilation/2,learn line,,6a,Stay calm with them and coach slow breaths.,,keep,Supports a question or the expected answer for 6a
+hurry/Before anything/1,learn line,,6b,Check that the scene is safe. Two patients is not an improvement.,,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/1,learn line,,6b,"Stopped breathing: call 911, send for an AED, start CPR. Not trained? Hands-only CPR: push hard and fast in the center of the chest.",,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/2,learn line,,6b,Severe bleeding: press hard on the wound and keep pressing. Soaked through? Add more cloth on top. No peeking.,,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/3,learn line,,6b,Bleeding still life-threatening on an arm or leg? A trained person uses a tourniquet.,,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/4,learn line,,6b,Stroke: call 911 and note the time the signs started.,,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/5,learn line,,6b,Swallowed poison: call Poison Control or 911. Don't make them throw up unless they tell you to. Keep the container.,,keep,Supports a question or the expected answer for 6b
+hurry/The four hurry cases/img,image,,6b,img/pressure.svg,,keep,Shows what the card teaches
+hurry/Stroke signs/1,learn line,,6b,Face droops on one side.,,keep,Supports a question or the expected answer for 6b
+hurry/Stroke signs/2,learn line,,6b,One arm is weak or drifts down.,,keep,Supports a question or the expected answer for 6b
+hurry/Stroke signs/3,learn line,,6b,Speech is slurred or weird.,,keep,Supports a question or the expected answer for 6b
+hurry/Stroke signs/img,image,,6b,img/stroke.svg,,keep,Shows what the card teaches
+"hurry/Not breathing, in order/1",learn line,,6b,1. Scene safe.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/2",learn line,,6b,2. Tap and shout.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/3",learn line,,6b,3. Call 911 and send someone for an AED.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/4",learn line,,6b,4. Push hard and fast in the center of the chest.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/5",learn line,,6b,5. Use the AED the second it shows up.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/6",learn line,,6b,Pulled from the water? Trained rescuers give rescue breaths with the compressions.,,keep,Supports a question or the expected answer for 6b
+"hurry/Not breathing, in order/img",image,,6b,img/cpr.svg,,keep,Shows what the card teaches
+prevent/Match the habit to the injury/1,learn line,,6c,"Knife cuts: safety circle, cut away from you.",,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/2,learn line,,6c,Splinters: gloves for firewood.,,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/3,learn line,,6c,Burns: distance from fires and stoves.,,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/4,learn line,,6c,Animal bites: don't touch or feed wildlife.,,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/5,learn line,,6c,"Heat illness: water, hat, shade.",,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/6,learn line,,6c,"Hypothermia: stay dry, carry a warm layer.",,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/7,learn line,,6c,Eye injuries: stand back from chopping and campfire sparks.,,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/8,learn line,,6c,"Dehydration: drink often, before you're thirsty.",,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/9,learn line,,6c,"Poisoning: fuel and chemicals stay in labeled containers, away from food.",,keep,Supports a question or the expected answer for 6c
+prevent/Match the habit to the injury/10,learn line,,6c,"Drowning: Safe Swim Defense and a buddy, every time.",,keep,Supports a question or the expected answer for 6c
+prevent/Buddy system/1,learn line,,6c,Stick with your buddy. People who are overheating or freezing are the last to notice. Your buddy notices first.,,keep,Supports a question or the expected answer for 6c
+emergency/What counts/1,learn line,,6d,"Anything that threatens life or could do lasting harm: not breathing, severe bleeding, won't wake up, serious burn, stroke signs.",,keep,Supports a question or the expected answer for 6d
+emergency/At home/1,learn line,,6d,"Make sure it's safe for you, then call 911.",,keep,Supports a question or the expected answer for 6d
+emergency/At home/2,learn line,,6d,Give the first aid you're trained for and stay with them.,,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/1",learn line,,6d,1. Scene safe.,,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/2",learn line,,6d,2. First aid for hurry cases.,,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/3",learn line,,6d,3. Keep them warm and treat for shock.,,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/4",learn line,,6d,"4. Write a note: where, what happened, how they're doing.",,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/5",learn line,,6d,5. Send two people for help. Everyone else stays.,,keep,Supports a question or the expected answer for 6d
+"emergency/In the backcountry, in order/6",learn line,,6d,"Why two? If one gets hurt, the other still gets help.",,keep,Supports a question or the expected answer for 6d
+emergency/What to tell responders/1,learn line,,6d,Exact location.,,keep,Supports a question or the expected answer for 6d
+emergency/What to tell responders/2,learn line,,6d,What happened.,,keep,Supports a question or the expected answer for 6d
+emergency/What to tell responders/3,learn line,,6d,How many people are hurt.,,keep,Supports a question or the expected answer for 6d
+emergency/What to tell responders/4,learn line,,6d,How they're doing and what first aid you gave.,,keep,Supports a question or the expected answer for 6d
+emergency/What to tell responders/5,learn line,,6d,A number to call you back.,,keep,Supports a question or the expected answer for 6d
+emergency/At the beach/1,learn line,,6d,The nearest lifeguard tower is often the fastest help. Or call 911.,,keep,Supports a question or the expected answer for 6d
+vehicle/What to do/1,learn line,,6e,"Stay well off the road, away from traffic. That comes first.",,keep,Supports a question or the expected answer for 6e
+vehicle/What to do/2,learn line,,6e,Call 911 with the location and what you see.,,keep,Supports a question or the expected answer for 6e
+vehicle/What to do/3,learn line,,6e,Warn other drivers only if it's safe.,,keep,Supports a question or the expected answer for 6e
+vehicle/What to do/4,learn line,,6e,Let adults lead. First aid only if you're trained.,,keep,Supports a question or the expected answer for 6e
+vehicle/What to do/5,learn line,,6e,Stay and tell responders what you saw.,,keep,Supports a question or the expected answer for 6e
+vehicle/Ground rules/1,learn line,,6e,Don't become the next victim.,,keep,Supports a question or the expected answer for 6e
+vehicle/Ground rules/2,learn line,,6e,"Don't move injured people unless there's danger, like fire.",,keep,Supports a question or the expected answer for 6e
+vehicle/Ground rules/3,learn line,,6e,Smell gasoline? Back up more.,,keep,Supports a question or the expected answer for 6e
+vehicle/Ground rules/4,learn line,,6e,"Nothing to eat or drink, even if they ask.",,keep,Supports a question or the expected answer for 6e
+"ceremony/Opening, in order/1",learn line,,8a,"1. ""Troop, attention!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/2",learn line,,8a,"2. ""Color guard, advance!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/3",learn line,,8a,"3. ""Color guard, post the colors!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/4",learn line,,8a,"4. ""Scout salute!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/5",learn line,,8a,5. Pledge of Allegiance,,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/6",learn line,,8a,"6. ""Two!"" (drop the salute)",,keep,Supports a question or the expected answer for 8a
+"ceremony/Opening, in order/7",learn line,,8a,"7. ""Color guard, retire!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Closing, in order/1",learn line,,8a,"1. ""Troop, attention!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Closing, in order/2",learn line,,8a,"2. ""Scout salute!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Closing, in order/3",learn line,,8a,"3. ""Color guard, retire the colors!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Closing, in order/4",learn line,,8a,"4. ""Two!""",,keep,Supports a question or the expected answer for 8a
+"ceremony/Closing, in order/5",learn line,,8a,"5. ""Color guard, dismissed!""",,keep,Supports a question or the expected answer for 8a
+ceremony/On a flagpole/1,learn line,,8a,Two Scouts attach the flag to the rope. Others keep it off the ground.,,keep,Supports a question or the expected answer for 8a
+ceremony/On a flagpole/2,learn line,,8a,Raise it briskly. Lower it slowly into waiting hands.,,keep,Supports a question or the expected answer for 8a
+ceremony/On a flagpole/3,learn line,,8a,Fold it before it's carried away.,,keep,Supports a question or the expected answer for 8a
+ceremony/The details/1,learn line,,8a,The color guard carries and posts the flags. They don't salute. Their hands are a little busy.,,keep,Supports a question or the expected answer for 8a
+ceremony/The details/2,learn line,,8a,"In uniform outdoors, the cap stays on and you give the Scout salute.",,keep,Supports a question or the expected answer for 8a
+ceremony/The details/3,learn line,,8a,"The Pledge starts ""I pledge allegiance."" There is no ""of."" Not even a little one.",,keep,Supports a question or the expected answer for 8a
+flag/The stuff people get wrong/1,learn line,,8b,"Flag raised, lowered or carried past you: stand at attention and salute.",,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/2,learn line,,8b,"Up briskly, down slowly.",,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/3,learn line,,8b,"Half-staff: all the way to the top first, then down to half. At day's end, back to the top, then down.",,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/4,learn line,,8b,At night it flies only if it's lit.,,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/5,learn line,,8b,Folded into a triangle with the blue field showing.,,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/6,learn line,,8b,"A worn-out flag gets retired by burning, in a respectful ceremony.",,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/7,learn line,,8b,It touches the ground? Pick it up with care and keep going.,,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/8,learn line,,8b,"With other flags, the US flag goes on its own right, or in front.",,keep,Supports a question or the expected answer for 8b
+flag/The stuff people get wrong/9,learn line,,8b,"On a stage, it stands on the speaker's right.",,keep,Supports a question or the expected answer for 8b
+threer/The three R's/1,learn line,,9a,Recognize: notice situations and people that could put you at risk.,,keep,Supports a question or the expected answer for 9a
+threer/The three R's/2,learn line,,9a,"Resist: say no like you mean it, and get away.",,keep,Supports a question or the expected answer for 9a
+threer/The three R's/3,learn line,,9a,"Report: tell a parent or trusted adult right away, even if someone said to keep it secret.",,keep,Supports a question or the expected answer for 9a
+threer/Red flags/1,learn line,,9a,An adult who wants you to keep secrets from your parents.,,keep,Supports a question or the expected answer for 9a
+threer/Red flags/2,learn line,,9a,Gifts or attention that come with 'don't tell.',,keep,Supports a question or the expected answer for 9a
+bullying/What it is/1,learn line,,9b,"Hurting someone on purpose, again and again, when one side has more power.",,keep,Supports a question or the expected answer for 9b
+bullying/What it is/2,learn line,,9b,"Physical, verbal, social (leaving someone out), or online.",,keep,Supports a question or the expected answer for 9b
+bullying/What to do/1,learn line,,9b,"If it's you: stay calm, walk away, tell an adult.",,keep,Supports a question or the expected answer for 9b
+bullying/What to do/2,learn line,,9b,"Online: save it, block them, tell an adult. Don't fire back.",,keep,Supports a question or the expected answer for 9b
+bullying/What to do/3,learn line,,9b,"If it's someone else: be an upstander. Speak up if it's safe, and tell an adult.",,keep,Supports a question or the expected answer for 9b
+,cut,,,Why stake and guy out a tent even on a calm afternoon?,,cut,Same idea as the wind question: stake and guy out every line.
+,cut,,,Your tent spot is right under a big rock overhang. What's the concern?,,cut,Same idea as checking overhead for dead limbs; the rattlesnake detail isn't part of choosing a site.
+,cut,,,Where should your patrol's firewood come from?,,cut,Where firewood is bought isn't part of deciding when a fire is appropriate.
+,cut,,,What should be ready before you light any fire?,,cut,Water and shovel ready is taught and tested under building a fire (2c).
+,cut,,,"Learn card ""Firewood""",,cut,Buying firewood locally isn't needed for 2a; the trash point is kept below.
+,cut,,,"Put fire materials in order, from smallest to biggest.",,cut,"The size match already tests tinder, kindling and fuel; ordering them added nothing."
+,cut,,,When is it safe to use a saw or axe?,,cut,"Repeats the saw-or-axe question, and its Totin' Chip option was misleading."
+,cut,,,Match each fire lay to the job it's best at.,,cut,Knowing one fire lay is enough to build the fire; the shape match covers it.
+,cut,,,Match each job to the right knot.,,cut,"Taught the taut-line hitch and two half hitches, which aren't Second Class knots."
+,cut,,,What's a weakness of the bowline?,,cut,The bowline's weak spot isn't part of describing when to use it.
+,cut,,,"Learn line ""Weak spot",,cut,"it can work loose when nothing is pulling on it."": Not needed to describe when to use a bowline."
+,cut,,,Which is a good use for a sheet bend?,,cut,Same situation test as the knot match.
+,cut,,,Which is a good use for a bowline?,,cut,Same situation test as the knot match.
+,cut,,,"In San Diego, the declination is about 11 degrees east. What does that mean?",,cut,San Diego's declination number is local trivia; replaced with what declination means.
+,cut,,,What does 'shoot a bearing' mean?,,cut,The shoot-a-bearing steps already test this.
+,cut,,,You shoot a bearing to a peak and get 45 degrees. Which way is the peak?,,cut,The bearing-to-direction match already tests this.
+,cut,,,What does the contour interval on a map tell you?,,cut,Contour interval isn't one of the map basics the requirement asks for.
+,cut,,,"Learn line ""Contour interval",,cut,"how much height between one line and the next."": Not needed for the requirement."
+,cut,,,"In the shadow-stick method, which mark is west?",,cut,The shadow-stick steps already end with which mark is west.
+,cut,,,"Learn card ""Watch method""",,cut,The shadow stick covers finding direction by day.
+,cut,,,You point an analog watch's hour hand at the sun (standard time). Where is south?,,cut,Watch method dropped: the shadow stick covers daytime.
+,cut,,,The Big Dipper is low near the horizon on a fall night. What else helps you find the North Star?,,cut,The Big Dipper is enough to find the North Star.
+,cut,,,Where does Orion's belt rise?,,cut,Orion isn't needed; the North Star covers night.
+,cut,,,"It's 3 pm and sunny. Without a compass, roughly where is the sun?",,cut,Where the sun sits mid-afternoon is beyond the requirement.
+,cut,,,"Learn line ""Dipper too low? Find Cassiopeia, the W, on the other side of the North Star.""",,cut,Cassiopeia isn't needed.
+,cut,,,"Learn line ""Orion rises in the east. His sword points roughly south.""",,cut,Orion isn't needed.
+,cut,,,"Learn line ""In the afternoon it hangs toward the southwest.""",,cut,Beyond the requirement.
+,cut,,,"Learn card ""Tidepool zones, top to bottom""",,cut,Tidepool zones aren't needed to identify ten animals.
+,cut,,,Match each tidepool zone to an animal that lives there.,,cut,Tidepool zones aren't needed to identify ten animals.
+,cut,,,Where does a hermit crab get its shell?,,cut,Hermit crab biology; the photo question already covers identifying it.
+,cut,,,You spot a tiny octopus tucked in a crevice with a blue ring on each side of its head. What is it?,,cut,The two-spot octopus photo question already covers it.
+,cut,,,"You see an animal on the rocks with small ear flaps, barking loudly, and walking on its front flippers. What is it?",,cut,The sea lion photo and the coast match already cover it.
+,cut,,,You find a purple spiny ball in a rock pocket in the low zone. What helps confirm it's a purple sea urchin?,,cut,The urchin photo and match already cover it.
+,cut,,,"Swimmers are split into nonswimmer, beginner and swimmer areas. Which point of Safe Swim Defense is that?",,cut,Ability groups were already tested twice.
+,cut,,,Which is NOT a reaching or throwing rescue?,,cut,"Reach, throw, row, go already tests this."
+,cut,,,No pole or rope is nearby. What can you reach with?,,cut,Reaching tools are already tested under reaching rescues.
+,cut,,,Which is NOT part of first aid for an animal bite?,,cut,The bite question already tests this.
+,cut,,,Heat exhaustion or heatstroke? Match each sign.,,cut,Recognizing heat exhaustion and heatstroke was already tested twice; replaced with how to treat each.
+,cut,,,Which is NOT a warning sign of a stroke?,,cut,Stroke signs were already tested twice.
+,cut,,,Match each person's signs to what's most likely going on.,,cut,Telling the conditions apart is already tested in First aid.
+,cut,,,Match each piece of information to why responders need it.,,cut,Why responders need each detail goes beyond what to tell them.
+,cut,,,Spot the error,,cut,"'Color guard, advance.' Pledge of Allegiance. 'Color guard, post the colors.' 'Scout salute.': The ceremony order already tests this."
+,cut,,,Match each command to why it's given.,,cut,The ceremony order already tests this.
+,cut,,,"On Memorial Day, how is the flag flown?",,cut,"The Memorial Day rule is a detail, not the core respect due the flag."
+,cut,,,Choosing a campsite. The wind is strong tonight. How should you set up your tent?,,cut,"Staking and guying is pitching technique, not choosing the site."
+,cut,,,Choosing a campsite. The night will drop below freezing. How does that change your tent spot?,,cut,Cold-air pooling isn't part of what the requirement asks.
+,cut,,,When to use a fire. Which is NOT a good reason to have a fire?,,cut,Burning trash isn't one of the when-to-have-a-fire conditions.
+,cut,,,"Knife, tinder, kindling and fuel. Which is NOT safe knife handling?",,cut,Prying isn't one of the core knife safety rules.
+,cut,,,Building and putting out a fire. Match each fire lay to its shape.,,cut,Knowing one fire lay is enough to build the fire; the card stays as a how-to.
+,cut,,,"Compass and map. On a topo map, the brown contour lines are packed close together. What does that mean?",,cut,Reading contour spacing goes beyond identifying map symbols.
+,cut,,,Hurry cases. Grandpa's slurred speech goes away after 5 minutes and he says he's fine. What do you do?,,cut,"The warning-stroke detail goes beyond recognize, note the time, call 911."
+,cut,,,Safe swim. Why shuffle your feet when wading at La Jolla Shores?,,cut,Shuffling for stingrays is injury prevention; it's already under Preventing injuries.
+,cut,,,Leave No Trace. Which is NOT one of the seven Leave No Trace principles?,,cut,Same idea as 'Which is one of the seven principles?'.
+,cut,,,"When to use a fire. Hot, dry Santa Ana winds are blowing and the patrol wants a campfire. What is the right call?",,cut,"Same as the core hot, dry wind question."
+,cut,,,Sheet bend and bowline. You need to tie a thin cord to a thick rope to make one long line. Which knot?,,cut,The knot match already covers joining a thin cord to a thick rope.
+,cut,,,Sheet bend and bowline. You need a loop around a person's chest that will not tighten and squeeze them. Which knot?,,cut,The knot match already covers a rescue loop around a chest.
+,cut,,,Hike hazards. You're exploring tidepools at Dike Rock. Why keep facing the ocean?,,cut,Same idea as 'Sneaker wave' in the coastal hazard match.
+,cut,,,Hike hazards. Your patrol is hiking below the cliffs on a long beach. What should you check before you go?,,cut,Same idea as 'Rising tide' in the coastal hazard match.
+,cut,,,Wild animals. Match each tidepool animal to the clue that identifies it.,,cut,The same animals are identified from photos.
+,cut,,,Wild animals. Match these tidepool animals to the clue that identifies each.,,cut,The same animals are identified from photos.
+,cut,,,Wild animals. Match each La Jolla coast animal to its clue.,,cut,The same animals are identified from photos.
+,cut,,,Reaching and throwing rescues. Where do you aim a throw rope or ring buoy?,,cut,The throw-bag question already tests aiming past the person.
+,cut,,,Hurry cases. A hiker's leg is bleeding heavily. What do you do first?,,cut,The hurry-case match already tests direct pressure.
+,cut,,,"Flag ceremony. During the opening ceremony, when do you start and stop the Scout salute?",,cut,The opening ceremony order already tests when the salute starts and stops.
+,cut,,,Flag respect. How is the flag raised and lowered?,,cut,"The half-staff steps already test up briskly, down slowly."
+,cut,,,Three R's. What does 'Resist' mean in the three R's?,,cut,The three R's match already tests Resist.
+,cut,,,Vehicle accident. Put the response to a vehicle accident in order.,,cut,Only staying off the road has to come first; the rest depends on the scene.
+,cut,,,First aid. Put the care for shock in order.,,cut,"Past having them lie down, the shock steps can happen in any order."
+,cut,,,First aid. A Scout gets stung by a stingray while wading. What helps the pain most?,,cut,A stingray sting isn't one of the conditions in 6a.
+,cut,,,Preventing injuries. Which habit best prevents a stingray sting at La Jolla Shores?,,cut,6c covers only the 6a and 6b injuries; stingray stings aren't one.
+,cut,,,Preventing injuries. What should you wear on your feet in the tidepools?,,cut,Cuts and falls aren't among the 6a and 6b injuries.
+,cut,,,Leave No Trace. Match each tidepool action to the Leave No Trace principle it follows.,,cut,Repeats the core Leave No Trace match.

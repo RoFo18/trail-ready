@@ -1,6 +1,8 @@
 import { makeRng, SlotPicker, layoutOptions } from "../site/engine.js";
-import { BANK } from "../site/bank.js";
-import { REQS, SECTIONS } from "../site/learn.js";
+import { BANK, REQS, SECTIONS } from "../site/content.js";
+import { BANK as CORE_BANK } from "../site/bank.js";
+import { REQS as CORE_REQS } from "../site/learn.js";
+
 import { report } from "./cues.mjs";
 import { readFileSync, readdirSync, existsSync } from "fs";
 let fail = false;
@@ -39,6 +41,23 @@ for (const q of BANK) if (q.t === "order" && !ORDER_OK.has(q.r)) bad("ordering n
 for (const q of BANK) if (q.img && !q.img.src) bad("image without src " + q.id);
 for (const k of Object.keys(REQS)) for (const c of [...(REQS[k].before || []), ...REQS[k].learn])
   if (c.img && !/^https:/.test(c.img.src) && !existsSync("site/" + c.img.src)) bad("missing image " + c.img.src);
+
+// 3d. Core content works anywhere: no local places, species or coast-only content outside site/regions.
+const LOCAL = /la jolla|san diego|ocean|\btides?\b|sea lion|beach|torrey|\bcove\b|stingray|santa ana|bluff|\bsurf\b|surfgrass|\bseals?\b|tidepool/i;
+for (const f of ["site/learn.js", "site/bank.js"]) {
+  const m = readFileSync(f, "utf8").match(LOCAL); if (m) bad(`local content "${m[0]}" in ${f}`);
+}
+
+// 3e. Every question belongs to a requirement and has a row in docs/audit.csv.
+const audit = readFileSync("docs/audit.csv", "utf8");
+for (const q of BANK) {
+  if (!REQS[q.r]) bad("question with no requirement " + q.id);
+  if (!audit.includes(q.id + ",")) bad("question missing from audit " + q.id);
+}
+
+// 3f. Exactly one Pledge question.
+const pledge = BANK.filter((q) => /Pledge of Allegiance start/.test(q.q || "")).length;
+if (pledge !== 1) bad("expected one Pledge question, found " + pledge);
 
 // 4. Banned content anywhere in the site's text.
 const BANNED = [/joshua/i, /\bXP\b/, /\bstreak\b/i, /I.m sure/i, /guess/i, /pledge drill/i, /my logs|service hours|activity log/i, /2C-\d/, /type="text"/, /trail ready/i, /\$\d/, /U-shaped bend/i, /rabbit/i, /both short ends/i, /fire triangle/i];

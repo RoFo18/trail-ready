@@ -1,9 +1,9 @@
-// Question bank: one question per item. Types: mc (a = answer, w = wrong), order (steps in order), match (pairs).
+// Core question bank. Types: mc (a = answer, w = wrong), order (steps in order), match (pairs).
 export const BANK = [
  {
   "r": "lnt",
   "t": "mc",
-  "q": "Before the trip you check the tide chart, the weather and the park rules. Which principle is that?",
+  "q": "Before the trip you check the weather forecast and the park rules. Which principle is that?",
   "a": "Plan Ahead and Prepare",
   "w": [
    "Leave What You Find",
@@ -50,91 +50,27 @@ export const BANK = [
  },
  {
   "r": "lnt",
-  "t": "mc",
-  "q": "Which is NOT one of the seven Leave No Trace principles?",
-  "a": "Always Hike in Groups of Four",
-  "w": [
-   "Dispose of Waste Properly",
-   "Minimize Campfire Impacts",
-   "Be Considerate of Other Visitors"
-  ],
-  "id": "lnt-1ufkhml"
- },
- {
-  "r": "lnt",
   "t": "match",
-  "q": "Match each tidepool action to the Leave No Trace principle it follows.",
+  "q": "Match each action to the Leave No Trace principle it follows.",
   "pairs": [
    [
-    "Checking the tide chart before you go",
-    "Plan Ahead and Prepare"
-   ],
-   [
-    "Stepping only on bare rock and sand",
-    "Travel and Camp on Durable Surfaces"
-   ],
-   [
-    "Packing out your snack wrappers",
+    "Packing out your orange peels",
     "Dispose of Waste Properly"
    ],
    [
-    "Leaving shells and animals where they are",
+    "Leaving pretty rocks where they are",
     "Leave What You Find"
    ],
    [
-    "Staying back from the sea lions",
+    "Cooking on a stove instead of a fire",
+    "Minimize Campfire Impacts"
+   ],
+   [
+    "Watching deer from a distance",
     "Respect Wildlife"
    ]
   ],
-  "id": "lnt-cdcvk7"
- },
- {
-  "r": "lnt",
-  "t": "mc",
-  "q": "In the tidepools, why step on bare rock instead of on seaweed or surfgrass?",
-  "a": "Living things are hiding under and inside the seaweed",
-  "w": [
-   "Seaweed is so slippery that it is always dangerous",
-   "Bare rock keeps your shoes dry and your feet warm",
-   "Rangers fine anyone who steps on green things"
-  ],
-  "id": "lnt-17qgie6"
- },
- {
-  "r": "lnt",
-  "t": "mc",
-  "q": "You turn over a rock and find crabs underneath. What do you do next?",
-  "a": "Put the rock back gently, the same way up",
-  "w": [
-   "Leave it flipped so others can see the crabs",
-   "Carry the crabs to a bigger pool",
-   "Toss the rock aside into deeper water"
-  ],
-  "id": "lnt-s7g5gl"
- },
- {
-  "r": "lnt",
-  "t": "mc",
-  "q": "You find a beautiful empty shell in a La Jolla marine reserve. What do you do?",
-  "a": "Leave it there",
-  "w": [
-   "Take it, since nothing is living in it anymore",
-   "Keep one shell per Scout as a souvenir",
-   "Bury it in the sand so no one else takes it"
-  ],
-  "id": "lnt-7eoact"
- },
- {
-  "r": "lnt",
-  "t": "mc",
-  "q": "Which action does NOT follow Leave No Trace?",
-  "a": "Stacking rocks into a tower on the beach",
-  "w": [
-   "Walking on bare rock between the pools",
-   "Packing out every bit of your trash, including food scraps",
-   "Watching the seals from a distance"
-  ],
-  "id": "lnt-1w2ifgj"
+  "id": "lnt-1llkqua"
  },
  {
   "r": "campsite",
@@ -147,30 +83,6 @@ export const BANK = [
    "Is the ground durable?"
   ],
   "id": "campsite-ej5fuv"
- },
- {
-  "r": "campsite",
-  "t": "mc",
-  "q": "Your patrol is camping at a beach campground on the bluffs. Which tent spot is best?",
-  "a": "A level site set well back from the bluff edge",
-  "w": [
-   "Right at the bluff edge for the best ocean view",
-   "Down on the sand below the bluffs, by the water",
-   "Under a big eucalyptus with a dead branch overhead"
-  ],
-  "id": "campsite-c6tlil"
- },
- {
-  "r": "campsite",
-  "t": "mc",
-  "q": "Why not pitch your tent on the beach sand near the water?",
-  "a": "The tide can reach it at night",
-  "w": [
-   "Sand is too soft to hold tent stakes at all",
-   "Beach sand is too cold to sleep on",
-   "Sea lions sleep there and will move into it"
-  ],
-  "id": "campsite-tykb6s"
  },
  {
   "r": "campsite",
@@ -209,76 +121,16 @@ export const BANK = [
   "id": "campsite-1wnou6"
  },
  {
-  "r": "campsite",
-  "t": "mc",
-  "q": "The ocean wind is strong tonight. How should you set up your tent?",
-  "a": "Door away from the wind, every stake and guy line used",
-  "w": [
-   "Door facing into the wind so the tent airs out and stays cool",
-   "Corner stakes only, to save setup time",
-   "Loose, so it can shift with the gusts"
-  ],
-  "id": "campsite-1fbu7rw"
- },
- {
   "r": "whenfire",
   "t": "mc",
-  "q": "Hot, dry Santa Ana winds are blowing and the patrol wants a campfire. What is the right call?",
+  "q": "Hot, dry, gusty winds are blowing and the patrol wants a campfire. What is the right call?",
   "a": "Skip the fire and cook dinner on the stove",
   "w": [
    "Build a bigger fire so wind can't blow it out",
    "Build it outside the ring where there's room",
    "Light it, but keep a bucket of sand nearby"
   ],
-  "id": "whenfire-1inh73k"
- },
- {
-  "r": "whenfire",
-  "t": "mc",
-  "q": "At a San Diego campground or beach, where are fires allowed?",
-  "a": "Only in the fire rings or grills the site provides",
-  "w": [
-   "Anywhere that is at least 50 feet from the water",
-   "In a ring of stones you build yourself away from brush",
-   "On the sand, as long as you bury it when done"
-  ],
-  "id": "whenfire-l9r4i"
- },
- {
-  "r": "whenfire",
-  "t": "mc",
-  "q": "Where should your patrol's firewood come from?",
-  "a": "Bought near where you'll burn it",
-  "w": [
-   "Dead branches you gather around the campsite",
-   "Driftwood you collect along the beach",
-   "Logs you bring from home in another county"
-  ],
-  "id": "whenfire-e6wkla"
- },
- {
-  "r": "whenfire",
-  "t": "mc",
-  "q": "Which is NOT a good reason to have a fire?",
-  "a": "To burn trash and food scraps",
-  "w": [
-   "To cook dinner when rules allow",
-   "To stay warm on a cold night",
-   "For a troop campfire program"
-  ],
-  "id": "whenfire-y4uz2q"
- },
- {
-  "r": "whenfire",
-  "t": "mc",
-  "q": "What should be ready before you light any fire?",
-  "a": "Water and a shovel, so you can put it out completely",
-  "w": [
-   "Extra lighter fluid in case it goes out",
-   "A roll of foil for wrapping food",
-   "A long stick to spread the coals"
-  ],
-  "id": "whenfire-1a9izd5"
+  "id": "whenfire-cislt1"
  },
  {
   "r": "whenfire",
@@ -287,21 +139,10 @@ export const BANK = [
   "a": "Fire danger is extreme, so skip any open fire",
   "w": [
    "A storm is coming, so fires are safer than usual",
-   "Beaches are closed because of sharks",
+   "Campgrounds are closed for the season",
    "Smoke is in the air from a fire far away"
   ],
   "id": "whenfire-zz56oq"
- },
- {
-  "r": "firewood",
-  "t": "order",
-  "q": "Put fire materials in order, from smallest to biggest.",
-  "steps": [
-   "Tinder",
-   "Kindling",
-   "Fuel wood"
-  ],
-  "id": "firewood-75ohpv"
  },
  {
   "r": "firewood",
@@ -362,18 +203,6 @@ export const BANK = [
  {
   "r": "firewood",
   "t": "mc",
-  "q": "Which is NOT safe knife handling?",
-  "a": "Using the knife to pry a lid open",
-  "w": [
-   "Closing it before you walk anywhere",
-   "Keeping it clean, dry and sharp",
-   "Closing it with your palm, fingers clear"
-  ],
-  "id": "firewood-f4xgmg"
- },
- {
-  "r": "firewood",
-  "t": "mc",
   "q": "When is a saw or axe needed to prepare fuel?",
   "a": "When it's too thick to snap by hand",
   "w": [
@@ -385,32 +214,11 @@ export const BANK = [
  },
  {
   "r": "buildfire",
-  "t": "match",
-  "q": "Match each fire lay to its shape.",
-  "pairs": [
-   [
-    "Tepee",
-    "Kindling leaned together in a cone over tinder"
-   ],
-   [
-    "Lean-to",
-    "Kindling leaned against one larger stick"
-   ],
-   [
-    "Log cabin",
-    "Sticks stacked in a square, crisscrossed"
-   ]
-  ],
-  "id": "buildfire-nmy147"
- },
- {
-  "r": "buildfire",
   "t": "order",
   "q": "Put building and putting out a fire in order.",
   "steps": [
    "Check the rules and use the fire ring",
-   "Set out water and a shovel",
-   "Prepare tinder, kindling and fuel",
+   "Water, shovel, tinder, kindling and fuel all ready",
    "Light the tinder, add kindling, then fuel",
    "Drown, stir and drown again until cold"
   ],
@@ -443,7 +251,7 @@ export const BANK = [
  {
   "r": "buildfire",
   "t": "mc",
-  "q": "Why not bury a fire in the sand at the beach to put it out?",
+  "q": "Why not just bury a fire in sand or dirt to put it out?",
   "a": "Hidden coals stay hot for hours",
   "w": [
    "Sand makes the fire flare up again",
@@ -505,8 +313,7 @@ export const BANK = [
   "t": "order",
   "q": "Put lighting a stove in order.",
   "steps": [
-   "Get an adult's OK; set it on a flat surface outdoors",
-   "Check that fittings are tight with no leaks",
+   "Outdoors on flat ground, fittings checked, adult's OK",
    "Strike the match first",
    "Open the valve slowly and light the burner",
    "Never leave it; shut off fuel and let it cool"
@@ -550,78 +357,6 @@ export const BANK = [
   "id": "stoves-1k15ipn"
  },
  {
-  "r": "knots",
-  "t": "mc",
-  "q": "You need to tie a thin cord to a thick rope to make one long line. Which knot?",
-  "a": "Sheet bend",
-  "w": [
-   "Bowline",
-   "Clove hitch",
-   "Taut-line hitch"
-  ],
-  "id": "knots-hnhihm"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "You need a loop around a person's chest that will not tighten and squeeze them. Which knot?",
-  "a": "Bowline",
-  "w": [
-   "Sheet bend",
-   "Square knot",
-   "Clove hitch"
-  ],
-  "id": "knots-1cwdjda"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "Which is a good use for a sheet bend?",
-  "a": "Tying a rope to the corner of a tarp",
-  "w": [
-   "A fixed loop around a tree for a bear bag",
-   "Tightening a tent guy line",
-   "Tying your shoelaces"
-  ],
-  "id": "knots-cxds7x"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "Which is a good use for a bowline?",
-  "a": "A loop around a tree that won't slip",
-  "w": [
-   "Joining a short rope to a thicker one",
-   "Tightening a guy line on a windy night",
-   "Tying the ends of a bandage flat"
-  ],
-  "id": "knots-1135xr9"
- },
- {
-  "r": "knots",
-  "t": "match",
-  "q": "Match each job to the right knot.",
-  "pairs": [
-   [
-    "Joining two ropes of different sizes",
-    "Sheet bend"
-   ],
-   [
-    "A rescue loop that won't tighten",
-    "Bowline"
-   ],
-   [
-    "Tightening a tent guy line",
-    "Taut-line hitch"
-   ],
-   [
-    "Tying a rope around a post",
-    "Two half hitches"
-   ]
-  ],
-  "id": "knots-d0eebf"
- },
- {
   "r": "compass",
   "t": "mc",
   "q": "Why does a compass needle point north?",
@@ -662,11 +397,9 @@ export const BANK = [
   "t": "order",
   "q": "Put orienting a map in order.",
   "steps": [
-   "Lay the map flat",
-   "Set the compass housing to north (0 degrees)",
-   "Lay the compass edge on a north-south line, arrow to the top",
-   "Turn map and compass together until the needle is in the orienting arrow",
-   "Adjust about 11 degrees for declination"
+   "Set the compass to north, adjusted for your map's declination",
+   "Lay the compass edge along a north-south line on the flat map",
+   "Turn map and compass together until the red needle is in the orienting arrow"
   ],
   "id": "compass-eue6ib"
  },
@@ -701,18 +434,6 @@ export const BANK = [
  {
   "r": "compass",
   "t": "mc",
-  "q": "On a topo map, the brown contour lines are packed close together. What does that mean?",
-  "a": "The ground there is steep",
-  "w": [
-   "The land there is mostly flat",
-   "A river or stream runs through it",
-   "A road crosses it"
-  ],
-  "id": "compass-608u6v"
- },
- {
-  "r": "compass",
-  "t": "mc",
   "q": "What does an oriented map let you do?",
   "a": "Match the map to the land",
   "w": [
@@ -735,56 +456,16 @@ export const BANK = [
   "id": "compass-vfd2vk"
  },
  {
-  "r": "hazards",
-  "t": "match",
-  "q": "Match each coastal hazard to how you prevent it.",
-  "pairs": [
-   [
-    "Crumbling bluff edge",
-    "Stay on trail and back from the edge"
-   ],
-   [
-    "Slippery algae on rocks",
-    "Step on bare, dry rock and go slow"
-   ],
-   [
-    "Rising tide",
-    "Check the tide chart and watch the time"
-   ],
-   [
-    "Sneaker wave",
-    "Never turn your back on the ocean"
-   ],
-   [
-    "Sunburn",
-    "Hat, sunscreen and a long-sleeve shirt"
-   ]
-  ],
-  "id": "hazards-5ja8s0"
- },
- {
-  "r": "hazards",
+  "r": "compass",
   "t": "mc",
-  "q": "You're exploring tidepools at Dike Rock. Why keep facing the ocean?",
-  "a": "A surprise big wave can knock you off the rocks",
+  "q": "What is declination?",
+  "a": "The gap between true north and magnetic north",
   "w": [
-   "The best animals hide on the ocean side of the rocks",
-   "So you can watch for dolphins and whales",
-   "Lifeguards want to see your face"
+   "How steep the land is between contour lines",
+   "The angle of the sun at noon",
+   "The error from holding a compass near metal"
   ],
-  "id": "hazards-18gplh8"
- },
- {
-  "r": "hazards",
-  "t": "mc",
-  "q": "Your patrol is hiking below the cliffs on a long beach. What should you check before you go?",
-  "a": "When the tide comes back in",
-  "w": [
-   "Which stairways the lifeguards use for practice",
-   "Whether the sand is cool enough to walk on barefoot",
-   "How many surfers are out in the water today"
-  ],
-  "id": "hazards-12om95e"
+  "id": "compass-is4iq2"
  },
  {
   "r": "hazards",
@@ -801,8 +482,20 @@ export const BANK = [
  {
   "r": "hazards",
   "t": "mc",
-  "q": "Which is NOT a smart hiking habit at Torrey Pines?",
-  "a": "Shortcutting to the bluff edge",
+  "q": "You feel a hot spot on your heel a mile into the hike. What do you do?",
+  "a": "Stop and cover it before it becomes a blister",
+  "w": [
+   "Keep going; it will go numb soon",
+   "Loosen the boot all the way and keep hiking",
+   "Wait until the end of the hike to check it"
+  ],
+  "id": "hazards-k0fdgk"
+ },
+ {
+  "r": "hazards",
+  "t": "mc",
+  "q": "Which is NOT a smart hiking habit?",
+  "a": "Shortcutting off the trail to a cliff edge",
   "w": [
    "Hiking with a buddy the whole way",
    "Staying on the marked trail",
@@ -813,7 +506,7 @@ export const BANK = [
  {
   "r": "hazards",
   "t": "match",
-  "q": "Match each Torrey Pines trail hazard to the prevention habit.",
+  "q": "Match each trail hazard to the habit that prevents it.",
   "pairs": [
    [
     "Rattlesnake",
@@ -825,7 +518,7 @@ export const BANK = [
    ],
    [
     "Twisted ankle",
-    "Watch your footing on sandstone and gravel"
+    "Watch your footing on rocks and gravel"
    ],
    [
     "Getting separated",
@@ -862,30 +555,6 @@ export const BANK = [
  {
   "r": "nocompass",
   "t": "mc",
-  "q": "In the shadow-stick method, which mark is west?",
-  "a": "The first mark",
-  "w": [
-   "The second mark",
-   "The stick itself",
-   "Neither mark"
-  ],
-  "id": "nocompass-pcmpwe"
- },
- {
-  "r": "nocompass",
-  "t": "mc",
-  "q": "You point an analog watch's hour hand at the sun (standard time). Where is south?",
-  "a": "Halfway between the hour hand and 12",
-  "w": [
-   "Exactly where the hour hand points",
-   "Wherever the minute hand points",
-   "Straight out from the 6 on the face of the watch"
-  ],
-  "id": "nocompass-1bvfk7o"
- },
- {
-  "r": "nocompass",
-  "t": "mc",
   "q": "How do the Big Dipper's pointer stars help at night?",
   "a": "They point to the North Star",
   "w": [
@@ -894,30 +563,6 @@ export const BANK = [
    "The dipper sits in the east"
   ],
   "id": "nocompass-2ms8t1"
- },
- {
-  "r": "nocompass",
-  "t": "mc",
-  "q": "The Big Dipper is low near the horizon on a fall night. What else helps you find the North Star?",
-  "a": "Cassiopeia, the W-shaped group",
-  "w": [
-   "Orion's sword, below his belt",
-   "The Moon, which rises in the north",
-   "The Milky Way, pointing north"
-  ],
-  "id": "nocompass-1eyqn54"
- },
- {
-  "r": "nocompass",
-  "t": "mc",
-  "q": "Where does Orion's belt rise?",
-  "a": "In the east",
-  "w": [
-   "In the north, near Polaris",
-   "In the west, at sunset",
-   "Straight overhead"
-  ],
-  "id": "nocompass-1mm4flg"
  },
  {
   "r": "nocompass",
@@ -935,233 +580,21 @@ export const BANK = [
    [
     "North Star",
     "North"
-   ],
-   [
-    "Orion's sword",
-    "Roughly south"
    ]
   ],
   "id": "nocompass-1mn7vc2"
  },
  {
-  "r": "nocompass",
-  "t": "mc",
-  "q": "It's 3 pm and sunny. Without a compass, roughly where is the sun?",
-  "a": "Toward the southwest",
-  "w": [
-   "Low in the northeast",
-   "High in the northern sky",
-   "Straight overhead"
-  ],
-  "id": "nocompass-4pspeh"
- },
- {
-  "r": "animals",
-  "t": "match",
-  "q": "Match each tidepool animal to the clue that identifies it.",
-  "pairs": [
-   [
-    "Ochre sea star",
-    "Five thick arms, purple or orange, bumpy on top"
-   ],
-   [
-    "Purple sea urchin",
-    "Round ball of purple spines wedged in a rock hole"
-   ],
-   [
-    "Aggregating anemone",
-    "Carpets of small anemones covered in sand and shell bits"
-   ],
-   [
-    "Owl limpet",
-    "Big low cone shell stuck tight to the rock"
-   ],
-   [
-    "Mossy chiton",
-    "Oval animal with eight plates in a row and a hairy rim"
-   ]
-  ],
-  "id": "animals-34xr9v"
- },
- {
-  "r": "animals",
-  "t": "match",
-  "q": "Match these tidepool animals to the clue that identifies each.",
-  "pairs": [
-   [
-    "Hermit crab",
-    "Small crab living in a borrowed snail shell"
-   ],
-   [
-    "Striped shore crab",
-    "Dark crab with green stripes that runs sideways into cracks"
-   ],
-   [
-    "California mussel",
-    "Blue-black shells in thick beds on wave-hit rocks"
-   ],
-   [
-    "Gooseneck barnacle",
-    "Clusters on rubbery stalks, like tiny claws"
-   ],
-   [
-    "Black turban snail",
-    "Dark, rounded snail shell, very common in pools"
-   ]
-  ],
-  "id": "animals-1g60yeu"
- },
- {
-  "r": "animals",
-  "t": "match",
-  "q": "Match each La Jolla coast animal to its clue.",
-  "pairs": [
-   [
-    "California sea lion",
-    "Ear flaps, barks loudly, walks on its flippers"
-   ],
-   [
-    "Harbor seal",
-    "No ear flaps, spotted coat, wiggles on its belly"
-   ],
-   [
-    "Brown pelican",
-    "Huge bill with a pouch; dives headfirst for fish"
-   ],
-   [
-    "Garibaldi",
-    "Bright orange fish, California's state marine fish"
-   ],
-   [
-    "Western gull",
-    "Big white gull with a dark gray back"
-   ]
-  ],
-  "id": "animals-u3nrvt"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "You see an animal on the rocks with small ear flaps, barking loudly, and walking on its front flippers. What is it?",
-  "a": "California sea lion",
-  "w": [
-   "Harbor seal",
-   "Elephant seal",
-   "Sea otter"
-  ],
-  "id": "animals-q1khvs"
- },
- {
-  "r": "animals",
-  "t": "match",
-  "q": "Match each sign to the animal that left it.",
-  "pairs": [
-   [
-    "Empty round shell with no spines, like a little dome",
-    "Sea urchin (its skeleton, called a test)"
-   ],
-   [
-    "A whole empty crab shell with no crab inside",
-    "Crab that molted to grow bigger"
-   ],
-   [
-    "Strong smell and barking from the rocks at the Cove",
-    "California sea lions"
-   ],
-   [
-    "White streaks all over the cliff tops",
-    "Pelicans and cormorants roosting"
-   ],
-   [
-    "Piles of kelp on the sand, hopping with tiny critters",
-    "Beach hoppers (sand fleas)"
-   ]
-  ],
-  "id": "animals-1nlz2k0"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "Where does a hermit crab get its shell?",
-  "a": "It moves into an empty snail shell",
-  "w": [
-   "It grows the shell itself, like a snail does",
-   "It is born inside the shell and never leaves it",
-   "It steals shells off the backs of living snails"
-  ],
-  "id": "animals-79wd8b"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "A big soft slug in the pool squirts out purple ink when bothered. What is it?",
-  "a": "A California sea hare",
-  "w": [
-   "A two-spot octopus",
-   "A Spanish shawl nudibranch",
-   "A sea cucumber"
-  ],
-  "id": "animals-1otelg"
- },
- {
-  "r": "animals",
-  "t": "match",
-  "q": "Match each tidepool zone to an animal that lives there.",
-  "pairs": [
-   [
-    "Splash zone (wet only from spray)",
-    "Periwinkle snails"
-   ],
-   [
-    "High zone",
-    "Acorn barnacles"
-   ],
-   [
-    "Middle zone",
-    "Mussels and gooseneck barnacles"
-   ],
-   [
-    "Low zone (dry only at the lowest tides)",
-    "Sea stars and sea urchins"
-   ]
-  ],
-  "id": "animals-1axdq22"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "How close can you get to the sea lions at La Jolla Cove?",
-  "a": "At least 50 yards, half a football field",
-  "w": [
-   "Close enough to pet them, if they are sleeping",
-   "About 5 feet, as long as you move slowly",
-   "As close as you want if a pup is alone"
-  ],
-  "id": "animals-aezygj"
- },
- {
   "r": "animals",
   "t": "mc",
   "q": "Which one is NOT real evidence that you found an animal yourself?",
-  "a": "A photo of a garibaldi from the aquarium's website",
+  "a": "A photo of the animal from a website",
   "w": [
-   "An empty crab molt you found on the rocks",
-   "A sea lion you saw at the Cove yourself",
-   "Your own photo of an anemone in a tidepool"
+   "Tracks you found and photographed",
+   "An empty shell or molt you found",
+   "Your own photo of the animal"
   ],
   "id": "animals-uh7q3m"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "You spot a tiny octopus tucked in a crevice with a blue ring on each side of its head. What is it?",
-  "a": "California two-spot octopus",
-  "w": [
-   "Giant Pacific octopus",
-   "Blue-ringed octopus",
-   "Squid"
-  ],
-  "id": "animals-ejgbjn"
  },
  {
   "r": "safeswim",
@@ -1177,15 +610,31 @@ export const BANK = [
  },
  {
   "r": "safeswim",
-  "t": "mc",
-  "q": "Swimmers are split into nonswimmer, beginner and swimmer areas. Which point of Safe Swim Defense is that?",
-  "a": "Ability groups",
-  "w": [
-   "Safe area",
-   "Buddy system",
-   "Qualified supervision"
+  "t": "match",
+  "q": "Match each point of Safe Swim Defense to what it means.",
+  "pairs": [
+   [
+    "Qualified supervision",
+    "A trained adult is in charge"
+   ],
+   [
+    "Personal health review",
+    "Everyone's health form is checked"
+   ],
+   [
+    "Safe area",
+    "Depth and hazards checked, areas marked"
+   ],
+   [
+    "Response personnel",
+    "Trained rescuers ready to act"
+   ],
+   [
+    "Discipline",
+    "Everyone knows and follows the rules"
+   ]
   ],
-  "id": "safeswim-1dki2yk"
+  "id": "safeswim-qi0zoy"
  },
  {
   "r": "safeswim",
@@ -1224,42 +673,6 @@ export const BANK = [
   "id": "safeswim-vh7it7"
  },
  {
-  "r": "safeswim",
-  "t": "mc",
-  "q": "You get caught in a rip current at La Jolla Shores. What do you do?",
-  "a": "Stay calm and swim parallel to the beach",
-  "w": [
-   "Swim straight back to shore as hard as you can",
-   "Dive under and swim along the bottom",
-   "Let it pull you far out, then swim right back"
-  ],
-  "id": "safeswim-1qopb7p"
- },
- {
-  "r": "safeswim",
-  "t": "mc",
-  "q": "Why shuffle your feet when wading at La Jolla Shores?",
-  "a": "So stingrays feel you coming and swim away",
-  "w": [
-   "To keep sand out of your swim trunks",
-   "To find shells to take home",
-   "To keep your balance in the cold water"
-  ],
-  "id": "safeswim-1byzyif"
- },
- {
-  "r": "safeswim",
-  "t": "mc",
-  "q": "Which is NOT part of a safe ocean swim for your patrol?",
-  "a": "Swimming out past the waves alone to go faster",
-  "w": [
-   "Swimming in front of a staffed lifeguard tower",
-   "Using the buddy system the whole time",
-   "Checking the surf report first"
-  ],
-  "id": "safeswim-1r3c0pr"
- },
- {
   "r": "rescue",
   "t": "mc",
   "q": "Before you reach out to someone in the water, what do you do?",
@@ -1270,18 +683,6 @@ export const BANK = [
    "Take off your shoes in case you need to swim"
   ],
   "id": "rescue-1u9aj7e"
- },
- {
-  "r": "rescue",
-  "t": "mc",
-  "q": "Where do you aim a throw rope or ring buoy?",
-  "a": "Just past the person, across their reach",
-  "w": [
-   "Straight at their head, so they can't miss it",
-   "Well short of them, so they swim to it",
-   "Anywhere in the water near them"
-  ],
-  "id": "rescue-13b7r28"
  },
  {
   "r": "rescue",
@@ -1332,45 +733,21 @@ export const BANK = [
   "id": "noswim-joozmu"
  },
  {
-  "r": "noswim",
-  "t": "mc",
-  "q": "Which is NOT a reaching or throwing rescue?",
-  "a": "Swimming out to the victim",
-  "w": [
-   "Holding out a canoe paddle from the dock",
-   "Throwing a ring buoy",
-   "Throwing a rope bag"
-  ],
-  "id": "noswim-14v69x5"
- },
- {
-  "r": "noswim",
-  "t": "mc",
-  "q": "No pole or rope is nearby. What can you reach with?",
-  "a": "A towel, shirt or long branch",
-  "w": [
-   "Nothing, so you swim out to him instead",
-   "Only your bare hand",
-   "Your phone, so you can film it for help"
-  ],
-  "id": "noswim-wpg7yy"
- },
- {
   "r": "firstaid",
   "t": "mc",
-  "q": "Sand blows into a Scout's eye on the beach. What do you do first?",
+  "q": "Dust blows into a Scout's eye. What do you do first?",
   "a": "Don't rub; flush it with clean water",
   "w": [
    "Rub gently to work the sand out",
    "Use a cotton swab to gently dig the sand out",
-   "Rinse it with ocean water and keep going"
+   "Rinse it with a sports drink and keep going"
   ],
   "id": "firstaid-7h9f21"
  },
  {
   "r": "firstaid",
   "t": "mc",
-  "q": "A Scout is bitten by a ground squirrel he tried to feed at the Cove. What is the right care?",
+  "q": "A Scout is bitten by a squirrel he tried to feed. What is the right care?",
   "a": "Wash with soap, cover, see a doctor",
   "w": [
    "Just a bandage; squirrels are harmless",
@@ -1390,30 +767,14 @@ export const BANK = [
    ],
    [
     "Stepped on a nail",
-    "Let it bleed a little, wash, bandage, check tetanus"
+    "Stop bleeding, rinse, cover, see a doctor about tetanus"
    ],
    [
     "Fishhook past the barb",
     "Leave it for a trained adult or doctor"
-   ],
-   [
-    "Sea urchin spine",
-    "Pull out visible spines, soak in hot water, see a doctor if deep"
    ]
   ],
   "id": "firstaid-1aty0pr"
- },
- {
-  "r": "firstaid",
-  "t": "mc",
-  "q": "A Scout gets stung by a stingray while wading. What helps the pain most?",
-  "a": "Soak it in hot water he can stand",
-  "w": [
-   "Pack the foot in ice for an hour",
-   "Pour vinegar on it and keep swimming",
-   "Wrap it tightly to stop the poison"
-  ],
-  "id": "firstaid-8o861h"
  },
  {
   "r": "firstaid",
@@ -1421,8 +782,8 @@ export const BANK = [
   "q": "Put the care for a serious burn (with blisters) in order.",
   "steps": [
    "Stop the burning: get away from the heat",
-   "Cool with cool water for at least 10 minutes",
-   "Cover loosely with a sterile dressing",
+   "Cool under cool running water for 15 to 20 minutes",
+   "Cover loosely with a clean, dry dressing",
    "Treat for shock and get medical help"
   ],
   "id": "firstaid-gtuce9"
@@ -1453,40 +814,27 @@ export const BANK = [
  },
  {
   "r": "firstaid",
-  "t": "match",
-  "q": "Heat exhaustion or heatstroke? Match each sign.",
-  "pairs": [
-   [
-    "Pale, cool, sweaty skin",
-    "Heat exhaustion"
-   ],
-   [
-    "Hot, red skin",
-    "Heatstroke"
-   ],
-   [
-    "Confusion or passing out",
-    "Heatstroke"
-   ],
-   [
-    "Dizzy and sick but alert",
-    "Heat exhaustion"
-   ]
+  "t": "mc",
+  "q": "A Scout has heatstroke: hot, red skin and confused. What do you do?",
+  "a": "Call 911 and cool him fast with water",
+  "w": [
+   "Let him sleep it off in the tent",
+   "Give him salt tablets and keep going",
+   "Wait an hour to see if it passes"
   ],
-  "id": "firstaid-1qatbby"
+  "id": "firstaid-6rn1xj"
  },
  {
   "r": "firstaid",
-  "t": "order",
-  "q": "Put the care for shock in order.",
-  "steps": [
-   "Make sure the scene is safe; call for help",
-   "Have the person lie down",
-   "Raise the feet about 12 inches if it doesn't hurt",
-   "Keep them warm with a jacket or blanket",
-   "Give nothing to eat or drink; keep checking"
+  "t": "mc",
+  "q": "A Scout has heat exhaustion. What do you do?",
+  "a": "Shade, lie down with feet up, cool cloths, sips of water",
+  "w": [
+   "Keep hiking slowly so he can cool off in the breeze",
+   "Give him a hot drink and wrap him in a blanket",
+   "Have him do jumping jacks to get the blood moving"
   ],
-  "id": "firstaid-1aqntuy"
+  "id": "firstaid-10zzx9t"
  },
  {
   "r": "firstaid",
@@ -1496,8 +844,7 @@ export const BANK = [
    "Get the person out of wind and wet",
    "Replace wet clothes with dry ones",
    "Into a sleeping bag, off the cold ground",
-   "A warm, sweet drink if fully alert",
-   "Get medical help if it is severe"
+   "A warm, sweet drink if fully alert"
   ],
   "id": "firstaid-ciisvy"
  },
@@ -1528,14 +875,14 @@ export const BANK = [
  {
   "r": "firstaid",
   "t": "mc",
-  "q": "Which is NOT part of first aid for an animal bite?",
-  "a": "Sucking the wound clean",
+  "q": "How do you help someone who is hyperventilating?",
+  "a": "Stay calm and coach slow breaths",
   "w": [
-   "Washing it with soap and water",
-   "Covering it with a clean bandage",
-   "Getting medical care"
+   "Have them breathe into a plastic bag",
+   "Tell them to hold their breath for a minute",
+   "Give them a sugary drink right away"
   ],
-  "id": "firstaid-g8bk9u"
+  "id": "firstaid-19vemtt"
  },
  {
   "r": "hurry",
@@ -1544,7 +891,7 @@ export const BANK = [
   "pairs": [
    [
     "Stopped breathing",
-    "Call 911; start CPR if trained"
+    "Call 911; start CPR"
    ],
    [
     "Severe bleeding",
@@ -1564,18 +911,6 @@ export const BANK = [
  {
   "r": "hurry",
   "t": "mc",
-  "q": "A hiker's leg is bleeding heavily. What do you do first?",
-  "a": "Press hard on the wound",
-  "w": [
-   "Wash it out with water",
-   "Carry him out right away",
-   "Wait to see if it stops"
-  ],
-  "id": "hurry-fxlexn"
- },
- {
-  "r": "hurry",
-  "t": "mc",
   "q": "Someone swallowed a cleaning chemical. Should you make them vomit?",
   "a": "No, unless Poison Control says so",
   "w": [
@@ -1588,7 +923,7 @@ export const BANK = [
  {
   "r": "hurry",
   "t": "order",
-  "q": "Someone pulled from the water isn't breathing. Put the steps in order.",
+  "q": "Someone collapses and isn't breathing. Put the steps in order.",
   "steps": [
    "Make sure the scene is safe",
    "Tap and shout to check if they respond",
@@ -1641,38 +976,14 @@ export const BANK = [
  {
   "r": "prevent",
   "t": "mc",
-  "q": "What should you wear on your feet in the tidepools?",
-  "a": "Closed-toe shoes that grip",
-  "w": [
-   "Flip-flops, so feet can dry fast",
-   "Bare feet, to feel the rocks better",
-   "Thick socks, no shoes"
-  ],
-  "id": "prevent-8dtehm"
- },
- {
-  "r": "prevent",
-  "t": "mc",
   "q": "Which habit does NOT prevent injuries?",
-  "a": "Exploring the far rocks alone to save time",
+  "a": "Hiking off alone to save time",
   "w": [
    "Using the buddy system the whole time",
    "Drinking water often",
-   "Shuffling your feet when wading"
+   "Wearing gloves to handle firewood"
   ],
   "id": "prevent-1w49mrg"
- },
- {
-  "r": "prevent",
-  "t": "mc",
-  "q": "Which habit best prevents a stingray sting at La Jolla Shores?",
-  "a": "Shuffling your feet as you wade",
-  "w": [
-   "Wearing sunglasses in the water",
-   "Splashing loudly with your hands",
-   "Wading only in the late afternoon"
-  ],
-  "id": "prevent-1vn2eej"
  },
  {
   "r": "emergency",
@@ -1707,7 +1018,7 @@ export const BANK = [
   "w": [
    "Two people can carry more water and snacks to share",
    "Rangers listen only to groups",
-   "No one may hike alone, ever"
+   "Rescuers answer only groups of two"
   ],
   "id": "emergency-vtr4jl"
  },
@@ -1736,42 +1047,6 @@ export const BANK = [
   "id": "emergency-1a12l39"
  },
  {
-  "r": "emergency",
-  "t": "match",
-  "q": "Match each piece of information to why responders need it.",
-  "pairs": [
-   [
-    "Exact location",
-    "So they can find you"
-   ],
-   [
-    "What happened",
-    "So they know what injuries to expect"
-   ],
-   [
-    "Number of people hurt",
-    "So they send enough help"
-   ],
-   [
-    "Callback number",
-    "So they can reach you with questions"
-   ]
-  ],
-  "id": "emergency-gjk0r4"
- },
- {
-  "r": "emergency",
-  "t": "mc",
-  "q": "Someone is hurt on the rocks at the beach. Who is the fastest help?",
-  "a": "The nearest lifeguard tower, or 911",
-  "w": [
-   "The parking enforcement officer",
-   "A post on social media asking for help",
-   "The nearest restaurant"
-  ],
-  "id": "emergency-sgong1"
- },
- {
   "r": "vehicle",
   "t": "mc",
   "q": "You come upon a car crash. What is the most important first rule?",
@@ -1794,19 +1069,6 @@ export const BANK = [
    "Whenever they ask to get out"
   ],
   "id": "vehicle-q9p27"
- },
- {
-  "r": "vehicle",
-  "t": "order",
-  "q": "Put the response to a vehicle accident in order.",
-  "steps": [
-   "Stay well off the road, away from traffic",
-   "Call 911 with the location and what you see",
-   "Help warn other drivers only if safe",
-   "Let adults lead; first aid only if trained",
-   "Stay and tell responders what you saw"
-  ],
-  "id": "vehicle-1w2cijc"
  },
  {
   "r": "ceremony",
@@ -1836,7 +1098,7 @@ export const BANK = [
   "id": "ceremony-1lc5mtf"
  },
  {
-  "r": "ceremony",
+  "r": "flag",
   "t": "mc",
   "q": "When the US flag is carried with other flags, where does it go?",
   "a": "On its own right, or in front",
@@ -1850,14 +1112,14 @@ export const BANK = [
  {
   "r": "flag",
   "t": "mc",
-  "q": "How is the flag raised and lowered?",
-  "a": "Up briskly, down slowly",
+  "q": "The flag is carried past you in a parade. What do you do?",
+  "a": "Stand at attention and salute until it passes",
   "w": [
-   "Up slowly, then down briskly",
-   "Up and down slowly",
-   "Up and down briskly"
+   "Keep walking so you don't block anyone's view",
+   "Wave at the color guard as it goes by",
+   "Sit back down once you've seen it"
   ],
-  "id": "flag-1s62e8w"
+  "id": "flag-1n92xi"
  },
  {
   "r": "flag",
@@ -1865,7 +1127,6 @@ export const BANK = [
   "q": "Put flying a flag at half-staff in order.",
   "steps": [
    "Raise the flag briskly to the top",
-   "Pause at the top",
    "Lower it slowly to half-staff",
    "At day's end, raise it to the top again",
    "Lower it slowly and fold it"
@@ -1927,18 +1188,6 @@ export const BANK = [
    "Wait a few months, then decide"
   ],
   "id": "threer-1hm979l"
- },
- {
-  "r": "threer",
-  "t": "mc",
-  "q": "What does 'Resist' mean in the three R's?",
-  "a": "Say no firmly and get away from the person",
-  "w": [
-   "Argue until they agree with you",
-   "Stay quiet and wait it out",
-   "Fight back as hard as you can"
-  ],
-  "id": "threer-13d1694"
  },
  {
   "r": "bullying",
@@ -2013,42 +1262,6 @@ export const BANK = [
   "id": "campsite-17nxghd"
  },
  {
-  "r": "campsite",
-  "t": "mc",
-  "q": "Why stake and guy out a tent even on a calm afternoon?",
-  "a": "Wind can come up hard at night",
-  "w": [
-   "Rangers check every stake each evening",
-   "The stakes keep scorpions out of the tent",
-   "Calm air makes tents sag by morning"
-  ],
-  "id": "campsite-veepbl"
- },
- {
-  "r": "campsite",
-  "t": "mc",
-  "q": "Your tent spot is right under a big rock overhang. What's the concern?",
-  "a": "Rocks can fall, and rattlesnakes rest in shady cracks",
-  "w": [
-   "Boulders block your phone signal",
-   "The overhang gets too hot at night",
-   "Climbers need that spot"
-  ],
-  "id": "campsite-q1s3q3"
- },
- {
-  "r": "campsite",
-  "t": "mc",
-  "q": "The night will drop below freezing. How does that change your tent spot?",
-  "a": "Avoid the lowest ground, where cold air settles",
-  "w": [
-   "Pick the lowest spot so wind can't reach you",
-   "It doesn't matter in a good sleeping bag",
-   "Camp right next to the fire ring"
-  ],
-  "id": "campsite-1ri2t3l"
- },
- {
   "r": "firewood",
   "t": "mc",
   "q": "Your kindling is damp. What happens when you try to light it?",
@@ -2059,26 +1272,6 @@ export const BANK = [
    "It explodes from the steam inside"
   ],
   "id": "firewood-171t2bt"
- },
- {
-  "r": "buildfire",
-  "t": "match",
-  "q": "Match each fire lay to the job it's best at.",
-  "pairs": [
-   [
-    "Tepee",
-    "A fast, hot start for boiling water"
-   ],
-   [
-    "Log cabin",
-    "Steady coals for cooking"
-   ],
-   [
-    "Lean-to",
-    "Getting tinder lit when it's windy"
-   ]
-  ],
-  "id": "buildfire-1vo9m2q"
  },
  {
   "r": "buildfire",
@@ -2093,18 +1286,6 @@ export const BANK = [
   "id": "buildfire-15eza0e"
  },
  {
-  "r": "firewood",
-  "t": "mc",
-  "q": "When is it safe to use a saw or axe?",
-  "a": "With clear space and an adult's OK",
-  "w": [
-   "When no one is close enough to see you",
-   "Any time you have earned the Totin' Chip",
-   "Only on live trees, since dead ones splinter"
-  ],
-  "id": "firewood-jmjbmc"
- },
- {
   "r": "knots",
   "t": "mc",
   "q": "Why use a sheet bend, not a square knot, to join a thin rope to a thick one?",
@@ -2115,18 +1296,6 @@ export const BANK = [
    "A sheet bend uses less rope"
   ],
   "id": "knots-1f26z1a"
- },
- {
-  "r": "knots",
-  "t": "mc",
-  "q": "What's a weakness of the bowline?",
-  "a": "It can loosen when not under load",
-  "w": [
-   "It always slips under a heavy pull",
-   "It can't be untied after it's wet",
-   "It only works on thin cord"
-  ],
-  "id": "knots-gcdc0b"
  },
  {
   "r": "knots",
@@ -2146,7 +1315,7 @@ export const BANK = [
     "Bowline"
    ],
    [
-    "Tying a rope to the corner grommet of a tarp",
+    "Joining two ropes of different sizes",
     "Sheet bend"
    ]
   ],
@@ -2190,18 +1359,6 @@ export const BANK = [
  },
  {
   "r": "compass",
-  "t": "mc",
-  "q": "What does 'shoot a bearing' mean?",
-  "a": "Read the direction to a landmark",
-  "w": [
-   "Take a picture of a landmark with your phone",
-   "Measure the distance to a landmark in steps",
-   "Mark north on a map with a pencil"
-  ],
-  "id": "compass-1jpqj74"
- },
- {
-  "r": "compass",
   "t": "match",
   "q": "Match each bearing to its direction.",
   "pairs": [
@@ -2237,42 +1394,6 @@ export const BANK = [
   "id": "compass-q81741"
  },
  {
-  "r": "compass",
-  "t": "mc",
-  "q": "You shoot a bearing to a peak and get 45 degrees. Which way is the peak?",
-  "a": "Northeast",
-  "w": [
-   "Southeast",
-   "Northwest",
-   "Due east"
-  ],
-  "id": "compass-1k78i4r"
- },
- {
-  "r": "compass",
-  "t": "mc",
-  "q": "In San Diego, the declination is about 11 degrees east. What does that mean?",
-  "a": "Magnetic north is 11° east of true north",
-  "w": [
-   "True north is 11 degrees east of magnetic north",
-   "The compass is broken by 11 degrees",
-   "Maps are drawn 11 degrees crooked"
-  ],
-  "id": "compass-1mne4rc"
- },
- {
-  "r": "compass",
-  "t": "mc",
-  "q": "What does the contour interval on a map tell you?",
-  "a": "The height change between lines",
-  "w": [
-   "How far apart the lines are on the paper",
-   "How many trails cross the area",
-   "The highest point on the whole map"
-  ],
-  "id": "compass-xtu7vb"
- },
- {
   "r": "hazards",
   "t": "mc",
   "q": "Dark storm clouds are over the mountains, but it's sunny where you're hiking in a canyon. What do you do?",
@@ -2287,20 +1408,8 @@ export const BANK = [
  {
   "r": "animals",
   "t": "mc",
-  "q": "You find a purple spiny ball in a rock pocket in the low zone. What helps confirm it's a purple sea urchin?",
-  "a": "It sits in a hole it carved",
-  "w": [
-   "It glows faintly in the dark",
-   "It feels soft and squishy",
-   "It swims away fast when touched"
-  ],
-  "id": "animals-fsewbf"
- },
- {
-  "r": "animals",
-  "t": "mc",
   "q": "What counts as a different kind of animal?",
-  "a": "A different type, like a sea star versus a sea urchin",
+  "a": "A different type, like a crow versus a hawk",
   "w": [
    "Each animal you see, even two of exactly the same type",
    "Only mammals and birds",
@@ -2345,54 +1454,6 @@ export const BANK = [
   "id": "rescue-dcjbga"
  },
  {
-  "r": "hurry",
-  "t": "mc",
-  "q": "Grandpa's slurred speech goes away after 5 minutes and he says he's fine. What do you do?",
-  "a": "Call 911 anyway; it can be a warning stroke",
-  "w": [
-   "Let him rest, since it's over",
-   "Give him water and see how he feels tomorrow",
-   "Have him walk around to test it"
-  ],
-  "id": "hurry-18j6a0m"
- },
- {
-  "r": "hurry",
-  "t": "mc",
-  "q": "Which is NOT a warning sign of a stroke?",
-  "a": "Sweaty and thirsty after a long hike",
-  "w": [
-   "Sudden droop on one side of the face",
-   "Sudden weakness in one arm",
-   "Suddenly slurred or strange speech"
-  ],
-  "id": "hurry-o4yu8q"
- },
- {
-  "r": "hurry",
-  "t": "match",
-  "q": "Match each person's signs to what's most likely going on.",
-  "pairs": [
-   [
-    "Face droops on one side, speech slurred",
-    "Stroke"
-   ],
-   [
-    "Pale, sweaty, dizzy after a hot hike",
-    "Heat exhaustion"
-   ],
-   [
-    "Fast breathing and tingling hands after a scare",
-    "Hyperventilation"
-   ],
-   [
-    "Shivering, stumbling, wet and windy",
-    "Hypothermia"
-   ]
-  ],
-  "id": "hurry-u6gsq7"
- },
- {
   "r": "vehicle",
   "t": "mc",
   "q": "At a crash, you smell gasoline. What does that change?",
@@ -2415,30 +1476,6 @@ export const BANK = [
    "Help them stand up and walk"
   ],
   "id": "vehicle-yvplwt"
- },
- {
-  "r": "ceremony",
-  "t": "mc",
-  "q": "During the opening ceremony, when do you start and stop the Scout salute?",
-  "a": "Start at 'Scout salute,' hold through the Pledge, drop at 'Two'",
-  "w": [
-   "Start at 'Troop, attention' and drop when the flag is posted",
-   "Salute only while the color guard is marching",
-   "Start at the first word of the Pledge and drop at the last"
-  ],
-  "id": "ceremony-5l6vtu"
- },
- {
-  "r": "ceremony",
-  "t": "mc",
-  "q": "Spot the error: 'Color guard, advance.' Pledge of Allegiance. 'Color guard, post the colors.' 'Scout salute.'",
-  "a": "The salute came too late",
-  "w": [
-   "The color guard should never advance",
-   "The Pledge should come after 'Two'",
-   "Nothing is wrong with that order"
-  ],
-  "id": "ceremony-s9yj6y"
  },
  {
   "r": "ceremony",
@@ -2467,6 +1504,18 @@ export const BANK = [
  {
   "r": "ceremony",
   "t": "mc",
+  "q": "How does the Pledge of Allegiance start?",
+  "a": "I pledge allegiance",
+  "w": [
+   "I pledge of allegiance",
+   "I pledge my allegiance",
+   "We pledge allegiance"
+  ],
+  "id": "ceremony-2he9bs"
+ },
+ {
+  "r": "flag",
+  "t": "mc",
   "q": "On a stage, which side does the US flag stand on?",
   "a": "The speaker's right",
   "w": [
@@ -2477,7 +1526,7 @@ export const BANK = [
   "id": "ceremony-13dgwz"
  },
  {
-  "r": "ceremony",
+  "r": "flag",
   "t": "mc",
   "q": "During a ceremony, the flag slips and touches the ground. What do you do?",
   "a": "Pick it up with care and continue",
@@ -2487,18 +1536,6 @@ export const BANK = [
    "Start the whole ceremony over from the beginning"
   ],
   "id": "ceremony-41rllf"
- },
- {
-  "r": "ceremony",
-  "t": "mc",
-  "q": "On Memorial Day, how is the flag flown?",
-  "a": "Half-staff until noon, then full",
-  "w": [
-   "At half-staff all day",
-   "Upside down, as a sign of mourning",
-   "At the top all day, with a black ribbon"
-  ],
-  "id": "ceremony-128mz02"
  },
  {
   "r": "ceremony",
@@ -2514,31 +1551,7 @@ export const BANK = [
   "id": "ceremony-mf9bn6"
  },
  {
-  "r": "ceremony",
-  "t": "match",
-  "q": "Match each command to why it's given.",
-  "pairs": [
-   [
-    "\"Troop, attention!\"",
-    "Everyone stands still and quiet, facing the flag"
-   ],
-   [
-    "\"Color guard, advance!\"",
-    "The flag is brought forward"
-   ],
-   [
-    "\"Scout salute!\"",
-    "Everyone salutes together"
-   ],
-   [
-    "\"Two!\"",
-    "Everyone drops the salute together"
-   ]
-  ],
-  "id": "ceremony-176cbtz"
- },
- {
-  "r": "ceremony",
+  "r": "flag",
   "t": "mc",
   "q": "How is the US flag folded for storage?",
   "a": "A triangle, blue field showing",
@@ -2552,237 +1565,37 @@ export const BANK = [
  {
   "r": "threer",
   "t": "mc",
-  "q": "An adult you know online offers you a gift and says, 'Don't tell your parents.' Which R comes first?",
-  "a": "Recognize: that's a warning sign",
+  "q": "An adult you met online offers you a gift and says, 'Don't tell your parents.' What is that?",
+  "a": "A warning sign to tell a trusted adult about",
   "w": [
-   "Resist: say no to the gift right away",
-   "Report: tell your friends about it",
-   "None, since it's just a gift"
+   "A nice surprise to keep between you two",
+   "Normal, since it's only a gift",
+   "Something to share only with your friends"
   ],
   "id": "threer-1naqsir"
  },
  {
-  "r": "animals",
+  "r": "prevent",
   "t": "mc",
-  "q": "What is this tidepool animal?",
-  "a": "Ochre sea star",
+  "q": "Which habit best prevents hypothermia on a campout?",
+  "a": "Stay dry and carry a warm layer",
   "w": [
-   "Bat star",
-   "Brittle star",
-   "Sunflower star"
+   "Wear cotton so your skin can breathe",
+   "Skip the rain jacket on sunny mornings",
+   "Sleep on the bare ground to stay cool"
   ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg/960px-Ochre_sea_star_%28Pisaster_ochraceus%29_Tofino.jpg",
-   "credit": "Photo: Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
-  },
-  "id": "animals-1lo4glf"
+  "id": "prevent-1257acm"
  },
  {
-  "r": "animals",
+  "r": "firstaid",
   "t": "mc",
-  "q": "What is this animal wedged among the rocks?",
-  "a": "Purple sea urchin",
+  "q": "When should you NOT raise the feet of someone in shock?",
+  "a": "When you suspect a head, neck, back or leg injury",
   "w": [
-   "Aggregating anemone",
-   "Sea cucumber",
-   "Red sea urchin"
+   "When the person is lying on the ground",
+   "When the person says they feel cold",
+   "When someone has already called for help"
   ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Strongylocentrotus_purpuratus_1.jpg/960px-Strongylocentrotus_purpuratus_1.jpg",
-   "credit": "Photo: Taollan82, CC BY 3.0, via Wikimedia Commons"
-  },
-  "id": "animals-1hh2316"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this green animal in a low pool?",
-  "a": "Giant green anemone",
-  "w": [
-   "Surfgrass",
-   "Green sea urchin",
-   "Sea lettuce"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Anthopleura_xanthogrammica_1.jpg/960px-Anthopleura_xanthogrammica_1.jpg",
-   "credit": "Photo: Stan Shebs, CC BY-SA 3.0, via Wikimedia Commons"
-  },
-  "id": "animals-wstvoi"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this big, low shell stuck tight to the rock?",
-  "a": "Owl limpet",
-  "w": [
-   "Abalone",
-   "Acorn barnacle",
-   "Black turban snail"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Lottia_gigantea.jpg/960px-Lottia_gigantea.jpg",
-   "credit": "Photo: Jerry Kirkhart, CC BY 2.0, via Wikimedia Commons"
-  },
-  "id": "animals-1wech4m"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this crab?",
-  "a": "Striped shore crab",
-  "w": [
-   "Hermit crab",
-   "Spiny lobster",
-   "Sand crab"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Striped_shore_crab%2C_Pachygrapsus_crassipes_crop.jpg/960px-Striped_shore_crab%2C_Pachygrapsus_crassipes_crop.jpg",
-   "credit": "Photo: Peter D. Tillman, CC BY-SA 3.0, via Wikimedia Commons"
-  },
-  "id": "animals-1ruducn"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What are these shells clustered on a wave-hit rock?",
-  "a": "California mussels",
-  "w": [
-   "Black turban snails",
-   "Owl limpets",
-   "Gooseneck barnacles"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/California_Mussels_002.jpg/960px-California_Mussels_002.jpg",
-   "credit": "Photo: Sharon Mollerus, CC BY 2.0, via Wikimedia Commons"
-  },
-  "id": "animals-yanh7y"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What are these animals on rubbery stalks?",
-  "a": "Gooseneck barnacles",
-  "w": [
-   "California mussels",
-   "Acorn barnacles",
-   "Sea anemones"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Pollicipes_polymerus_Gooseneck_Barnacle_6935_cr2.jpg/960px-Pollicipes_polymerus_Gooseneck_Barnacle_6935_cr2.jpg",
-   "credit": "Photo: Paul Harrison, CC BY-SA 4.0, via Wikimedia Commons"
-  },
-  "id": "animals-1aem5ed"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What are these dark, rounded shells?",
-  "a": "Black turban snails",
-  "w": [
-   "Owl limpets",
-   "Purple sea urchins",
-   "California mussels"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Tegula_funebralis.jpg/960px-Tegula_funebralis.jpg",
-   "credit": "Photo: Steve Lonhart (SIMoN / MBNMS), public domain, via Wikimedia Commons"
-  },
-  "id": "animals-vu9k3o"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "This animal is on the rocks at La Jolla Cove. What is it?",
-  "a": "California sea lion",
-  "w": [
-   "Harbor seal",
-   "Elephant seal",
-   "Sea otter"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/California_sea_lion_in_La_Jolla_%2870568%29.jpg/960px-California_sea_lion_in_La_Jolla_%2870568%29.jpg",
-   "credit": "Photo: Rhododendrites, CC BY-SA 4.0, via Wikimedia Commons"
-  },
-  "id": "animals-1dd8edb"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "This animal is resting at the Children's Pool. What is it?",
-  "a": "Harbor seal",
-  "w": [
-   "California sea lion",
-   "Elephant seal",
-   "Sea otter"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Harbor_seal_hauled_out_on_the_rocks%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg/960px-Harbor_seal_hauled_out_on_the_rocks%2C_Children%27s_Pool_Beach%2C_San_Diego%2C_California.jpg",
-   "credit": "Photo: Christian David, CC BY-SA 4.0, via Wikimedia Commons"
-  },
-  "id": "animals-xoh86n"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this big bird?",
-  "a": "Brown pelican",
-  "w": [
-   "Western gull",
-   "Brandt's cormorant",
-   "Great blue heron"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Pelecanus_occidentalis_at_Bodega_Head.jpg/960px-Pelecanus_occidentalis_at_Bodega_Head.jpg",
-   "credit": "Photo: Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons"
-  },
-  "id": "animals-njjsmy"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this bright orange fish?",
-  "a": "Garibaldi",
-  "w": [
-   "Goldfish",
-   "California sheephead",
-   "Opaleye"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hypsypops_rubicundus_adult.jpg/960px-Hypsypops_rubicundus_adult.jpg",
-   "credit": "Photo: Stan Shebs, CC BY-SA 3.0, via Wikimedia Commons"
-  },
-  "id": "animals-163v8pp"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this animal in the surfgrass?",
-  "a": "California two-spot octopus",
-  "w": [
-   "Squid",
-   "Sea hare",
-   "Brittle star"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg/960px-Two-Spot_Octopus_%28Octopus_bimaculoides%29.jpg",
-   "credit": "Photo: Jerry Kirkhart, CC BY 2.0, via Wikimedia Commons"
-  },
-  "id": "animals-1yaaevn"
- },
- {
-  "r": "animals",
-  "t": "mc",
-  "q": "What is this crab doing in a snail shell?",
-  "a": "Hermit crab living in a borrowed shell",
-  "w": [
-   "Snail that grew crab legs",
-   "Shore crab hiding for the night",
-   "Crab eating the snail inside"
-  ],
-  "img": {
-   "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Hermit_Crab_%28Pagurus_samuelis%29_%283108615732%29.jpg/960px-Hermit_Crab_%28Pagurus_samuelis%29_%283108615732%29.jpg",
-   "credit": "Photo: Jerry Kirkhart, CC BY 2.0, via Wikimedia Commons"
-  },
-  "id": "animals-1qtfbol"
+  "id": "firstaid-111u1tj"
  }
 ];
